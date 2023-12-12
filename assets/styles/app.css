@@ -1,6 +1,600 @@
-body {
-    background-color: lightgray;
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Comfortaa:wght@300;400;500;600;700&display=swap');
+@font-face {
+    font-family: blackjack;
+    src: url(../../public/fonts/BLACKJAR.TTF);
 }
-h1{
-    color: red;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Arapey', serif;
+    overflow-x: hidden;
+}    
+button{
+    cursor: pointer;
+}
+.open{
+    top: 0 !important;
+    display: flex !important;
+}
+#menuResponsive{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, #024959 0%, #0CACBE 100%);
+    position: fixed;
+    z-index: 99;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+#menuResponsive ul{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#menuResponsive ul li{
+    width: 100% !important;
+    text-align: center;
+    list-style: none;
+}
+#menuResponsive ul li a{
+    color: white;
+    font-size: 15pt;
+    text-decoration: none;
+}
+#langue{
+    padding-top: 50px !important;
+}
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(2, 73, 89, 0.48);
+    align-items: center;
+    color: white;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+.titre h1{
+    font-family: blackjack;
+}
+nav ul{
+    display: none;
+}
+nav ul li{
+    list-style: none;
+    padding: 0px 20px 0px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.burger{
+    display: block;
+    cursor: pointer;
+}
+.burger .bar{
+    width: 40px;
+    height: 4px;
+    margin: 6px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.slide{
+    width: 100%;
+}
+span .script{
+    font-family: blackjack;
+    color: black !important;
+}
+#introhome{
+    background-image: url(../../public/images/introHome.png);
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.sep{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.sep img{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+#sepDiscover{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+#sepDiscover h3, #sepDiscover h4, #sepDiscover p{
+    width: 100% !important;
+    text-align: center;
+}
+#sepDiscover h3{
+    font-size: 2em;
+    font-weight: 400 !important;
+}
+#sepDiscover h4{
+    font-size: 1em;
+}
+.buttons{
+    margin-top: 20px;
+}
+.azurButton{
+    background: linear-gradient(183deg, #024959 0%, #08C4D9 100%);
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    min-width: 200px; 
+    cursor: pointer;
+}
+.florideButton{
+    background: linear-gradient(183deg, #08C4D9 0%, #024959 100%);
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    min-width: 200px;
+}
+.florideButton a, .azurButton a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Arapey', serif;
+}
+
+/*  Top 3 Floride */
+#topFlorida{
+    background-image: url(../../public/images/gradient-top3.png);
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 20vh;
+    overflow-x: hidden;
+}
+
+.top3 h4{
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    font-size: 24pt;
+    color: white;
+}
+
+/******************ImmoCard****************/
+.row{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    background-color: rgba(245, 245, 245, 1);
+    max-width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.card-title{
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card-caract{
+    text-align: center;
+    margin-top: 10px;
+}
+.card-price{
+    text-align: center;
+    font-size: 16pt;
+}
+.card-img img{
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.card-btn{
+    width: 100%;
+    margin-top: 10px;
+}
+.card-btn button{
+    background-color: rgba(8, 196, 217, 1);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.card-btn button a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+@media all and (max-width: 800px){
+    .row{
+        flex: block !important;
+        flex-wrap: wrap !important;
+    }
+    .card{
+        max-width: 90% !important;
+    }
+}
+
+/*********************************/
+
+.more{
+    display: flex;
+    min-height: 5vh;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+.more p{
+    width: 100%;
+    font-size: 20pt;
+}
+.more button{
+    background-color: #024959;
+    width: fit-content;
+    padding: 10px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    min-width: 200px;
+}
+.more button a{
+    text-decoration: none;
+    color: white;
+    width: 50%;
+}
+
+/* Ajout à la collection */
+#collection{
+    background-image: url(../../public/images/miami-view.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.collectionadd{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.collectionadd p{
+    width: 60%;
+    font-size: 16pt;
+}
+.collectionadd a{
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+}
+.collectionadd a button{
+    width: 40%;
+    background-color: white;
+    border: none;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+}
+.sep-top{
+    width: 100%;
+    position: absolute;
+    top: -5px;
+}
+.sep-top img{
+    width: 100%;
+    margin-top: -2px;
+}
+
+.sep-bottom{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.sep-bottom img{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+/* Top 3 Azur */
+#topAzur h4{
+    color: black !important;
+}
+
+/*  Events slide  */
+#eventsHome{
+    position: relative;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+#eventsHome .sep-top{
+    margin-top: -2px;
+}
+#eventsHome{
+    background-image: url(../../public/images/rect-gradient.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 30vh;
+}
+#eventsHome h3{
+    color: white !important;
+    font-size: 20pt;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+}
+#eventsHome h4{
+    color: white !important;
+    font-size: 20pt;
+    width: 100%;
+    text-align: center;
+}
+.rowEvent{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.event{
+    width: 25%;
+}
+.event img{
+    width: 100%;
+}
+.event .eventTitle{
+    text-align: center;
+    width: 100%;
+    font-size: 16pt;
+}
+
+.discoverButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.discoverButton a button{
+    background-color: #024959;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+
+
+/*********** Footer *********/
+footer{
+    background-color: rgba(2, 73, 89, 1);
+    display: flex;
+    position: relative;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    padding-top: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoFooter{
+    width: 150px;
+    height: 150px;
+}
+.logoFooter img{
+    width: 100%
+}
+.telcontainer{
+    display: flex;
+    justify-content: space-between;
+}
+.tel{
+    margin: 10px;
+    display: flex;
+    background-color: white;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    align-items: center;
+    padding-right: 10px;
+}
+.telLocal{
+    background-color: #08C4D9;
+    color: white;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+.tel p{
+    padding-left: 0px 10px 0px 10px;
+}
+.contact #question{
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+.contact #contactTitle{
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 16pt;
+}
+.btnContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.btnContainer a{
+    background-color: white;
+    color: #024959;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 40%;
+    text-align: center;
+    font-family: 'Arapey', serif;
+}
+.btnContainer a button{
+    border: none;
+    background-color: transparent;
+}
+.social{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.language{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.language a{
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.reseaux{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 16pt;
+}
+.reseaux p{
+    width: 100%;
+    text-align: center;
+}
+.reseaux svg{
+    font-size: 20pt;
+    padding: 10px;
+}
+.copyright{
+    background-color: rgba(8, 196, 217, 1);
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+@media all and (max-width: 800px){
+    footer{
+        display: flex;
+        flex-wrap: wrap !important;
+    }
+    footer .logoFooter{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .telcontainer{
+        justify-content: center;
+    }
+    .tel{
+        margin: 10px;
+    }
+    footer .logoFooter img{
+        width: 150px;
+    }
+    footer .contact{
+        width: 80% !important;
+        margin: 0 auto;
+    }
+}
+@media all and (max-width: 500px){
+    .telcontainer{
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+}
+@media all and (max-width: 450px){
+    .buttons{
+        flex-wrap: wrap !important;
+        display: flex !important;
+        justify-content: center;
+
+    }
+    .buttons button{
+        margin-bottom: 10px;
+
+    }
+    .more{
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap !important;
+        text-align: center;
+    }
+    .more a{
+        margin-top: 10px;
+    }
+    .collectionadd{
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap !important;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .collectionadd p{
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+    }
+    .collectionadd a{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    #eventsHome{
+        background-image: url(../../public/images/rect-gradient.png);
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .rowEvent{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .event{
+        width: 80%;
+    }
+    .reseaux p{
+        margin-top: 30px !important;
+    }
 }

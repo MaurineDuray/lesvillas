@@ -1,0 +1,35 @@
+<div class="card">
+                <div class="card-title">
+                    <p>
+                        {% if app.request.locale == "en" %}
+                            TITLE
+                        {% else %}
+                            TITRE
+                        {% endif %}
+                    </p>
+                </div>
+                <div class="card-img">
+                    <img src="{{asset('images/img-example.png')}}" alt="image du logement {}">
+                </div>
+                <div class="card-caract"> 
+                    <p>
+                    {% if app.request.locale == "en" %}
+                        3 travellers  -  2 room(s)
+                    {% else %}
+                        3 voyageurs  -  2 chambre(s)
+                    {% endif %} 
+                    </p>
+                </div>
+                <div class="card-price">
+                    <p>
+                    {% if app.request.locale == "en" %}
+                        Starting at 140$/night
+                    {% else %}
+                        À partir de 140€/nuit
+                    {% endif %}
+                    </p>
+                </div><br>
+                <div class="card-btn">
+                    <button><a href="">{% trans %}More information{% endtrans %}</a></button>
+                </div>
+            </div>

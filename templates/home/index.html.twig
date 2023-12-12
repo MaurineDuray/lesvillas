@@ -1,19 +1,92 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Villas Blue{% endblock %}
 
 {% block body %}
-<div class="example-wrapper">
-<div class="block">
-test
-</div>
-   
-    <h1>{% trans %}
-        Test of traduction
-    {% endtrans %}</h1>
+    <div class="slide" id="introhome">
+        <div class="sep">
+            <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="slide" id="sepDiscover">
+        <h3>{% trans %}
+            Discover the world differently 
+        {% endtrans %}</h3><br>
+        <h4>{% trans %}Book your dream holiday in just a few clicks!{% endtrans %}</h4>
+        <p><span id="script">{% trans %}Choose your destination{% endtrans %}</span></p>
+        <div class="buttons">
+            <button class="azurButton"><a href="#">Côtes d'Azur</a></button>
+            <button class="florideButton"><a href="#">{% trans %}Florida{% endtrans %}</a></button>
+        </div>
+    </div>
+    <div class="slide top3" id="topFlorida">
+        <h4><div class="script">
+            {% trans %}Our top 3 in Florida{% endtrans %}
+        </div></h4>
+        <div class="row">
+            {% include "partials/card.html.twig" %}
+            {% include "partials/card.html.twig" %}
+            {% include "partials/card.html.twig" %}
+        </div>
+        <div class="more">
+            <p>{% trans %}Discover all our homes in Florida...{% endtrans %}</p>
+            <a href="#"><button>{% trans %}See&nbsp;more{% endtrans %}</button></a>
+        </div>
+    </div>
+    <div class="slide" id="collection">
+        <div class="sep-top">
+            <img src="{{asset('images/top-sep.png')}}" alt="separation">
+        </div>
+        <div class="collectionadd">
+            <p>{% trans %}Would you like your home to be part of the Villas Blue collection ...{% endtrans %}</p>
+            <a href=""><button>{% trans %}I offer my accommodation{% endtrans %}</button></a>
+        </div>
+        <div class="sep-bottom top3" id="topAzur">
+            <img src="{{asset('images/bottom-sep.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="slide top3" id="topAzur">
+        <h4><div class="script">
+            {% trans %}Our favourites on the Côte d'Azur{% endtrans %}
+        </div></h4>
+        <div class="row">
+            {% include "partials/card.html.twig" %}
+            {% include "partials/card.html.twig" %}
+            {% include "partials/card.html.twig" %}
+        </div>
+        <div class="more">
+             <p>{% trans %}Discover all our homes on the Côte d'Azur...{% endtrans %}</p>
+            <a href="#"><button>{% trans %}See&nbsp;more{% endtrans %}</button></a>
+        </div>
+    </div>
+    <div class="slide" id="eventsHome">
+        <div class="sep-top">
+            <img src="{{asset('images/top-sep.png')}}" alt="separation">
+        </div>
+        <h3>
+            {% trans %}A unique event to celebrate?{% endtrans %}
+        </h3>
+        <h4>
+            {% trans %}Consider renting a villa in a magical, idyllic setting...{% endtrans %}
+        </h4>
+        <div class="rowEvent">
+            <div class="event">
+                <img src="{{asset('images/lesvillasblue_babyshower.png')}}" alt="">
+                <div class="eventTitle">{% trans %}Baby shower{% endtrans %}</div>
+            </div>
+            <div class="event">
+                <img src="{{asset('images/lesvillasblue_evjf.png')}}" alt="">
+                <div class="eventTitle">{% trans %}EVJF / EVG{% endtrans %}</div>
+            </div>
+            <div class="event">
+                <img src="{{asset('images/lesvillasblue_mariage.png')}}" alt="">
+                <div class="eventTitle">{% trans %}Wedding{% endtrans %}</div>
+            </div>
+        </div>
+        <div class="discoverButton">
+            <a href="" id="discover"><button>{% trans %}Discover our villas{% endtrans %}</button></a>
+        </div>
+    </div>
 
-    <p>{% trans %}
-        This is a traduction test !
-    {% endtrans %}</p>
-</div>
+    {% include "partials/footer.html.twig" %}
 {% endblock %}
