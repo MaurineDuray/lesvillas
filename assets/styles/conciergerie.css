@@ -1,0 +1,46 @@
+#concIntro{
+    height: 60vh;
+    background-image: url(../../public/images/intro2.png);
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#qui{
+    width: 100%;
+}
+#qui h3{
+    width: 100%;
+    text-align: center;
+    font-size: 20pt;
+    padding-top: 30px;
+}
+#qui h4{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.photo{
+    width: 50%;
+    min-height: 60vh;
+    overflow: hidden;
+}
+.photo img{
+    height: 100%;
+}
+.text{
+    width: 50%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.text p{
+    margin: 20px;
+}
