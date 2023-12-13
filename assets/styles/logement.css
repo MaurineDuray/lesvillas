@@ -1,0 +1,138 @@
+.titleLogement{
+    background-color: #E6F8FB;
+    padding-bottom: 20px;
+}
+.titleLogement h2{
+    width: 100%;
+    text-align: center;
+}
+.titleLogement p{
+    width: 100%;
+    text-align: center;
+}
+#price{
+    font-size: 20pt;
+}
+
+.caract{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    font-size: 15pt;
+    margin-top: 20px;
+}
+.priceLogement{
+    margin-top:  20px;
+}
+.galery{
+    width: 80%;
+    margin-bottom: 20px;
+}
+.textIntro{
+    width: 70%;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 15pt;
+}
+.contentLogement{
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr 1fr;
+    height: auto;
+    padding-bottom: 40px;
+}
+.group{
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+.group h3{
+    font-size: 16pt;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.group p.lined{
+    border-left: 3px rgb(99, 98, 98) solid;
+    padding-left: 10px
+}
+.calendar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.calendar h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; 
+}
+.calendar img{
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.simulation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.simulation h2{
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+.simulation form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.simulation form input{
+    background-color: rgba(217, 217, 217, 0.3);
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: var(--normals);
+    font-size: 15pt;
+    margin: 5px;
+}
+.simulation button{
+    background-color: rgba(2, 73, 89, 1);
+    border: none;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.result{
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+}
+#booking{
+    background-color:rgba(8, 196, 217, 1) ;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    border-radius: 20px;
+    font-family: var(--cursive);
+    color: white;
+    font-size: 15pt;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+@media all and (max-width: 850px){
+    .textIntro{
+        margin-top: 20px;
+        width: 80%;
+    }
+    .contentLogement{
+        width: 90%;
+        grid-template-columns: 1fr !important;
+    }
+}

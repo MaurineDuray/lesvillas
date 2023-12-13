@@ -20,8 +20,8 @@
         </div>
         <p id="question">{% trans %}You need more information?{% endtrans %}</p>
         <div class="btnContainer">
-            <a href=""><button>{% trans %}Consult the FAQ{% endtrans %}</button></a>
-            <a href=""><button>{% trans %}Contact us{% endtrans %}</button></a>
+            <a href="{{path('faq')}}"><button>{% trans %}Consult the FAQ{% endtrans %}</button></a>
+            <a href="{{path('contact')}}"><button>{% trans %}Contact us{% endtrans %}</button></a>
         </div>
     </div>
      <div class="social">

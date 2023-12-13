@@ -1,0 +1,35 @@
+#titlePartners{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#titlePartners h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24pt;
+}
+#titlePartners h4{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 16pt;
+    font-weight: 100;
+}
+#partnersContainer{
+    display: flex;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+.partner{
+    width: 200px;
+    height: 200px;
+}
+.partner img{
+    width: 100%;
+}

@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Villas Blue{% endblock %}
+
+{% block body %}
+    <div class="slide" id="introGalery">
+         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+        <div class="sep">
+            <img src="{{asset('images/blue-sep.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="titleLogement">
+        {% if app.request.locale == "en" %}
+            <h2>Title of accomodation</h2>
+        {% else %}
+            <h2>Titre du logement</h2>
+        {% endif %}
+        <p>Adress</p>
+        <div class="caract">
+            <div class="travellers">
+                <p><i class="fa-solid fa-person"></i> NB {% trans %}traveller(s){% endtrans %}</p>
+            </div>
+            <div class="rooms">
+                <p><i class="fa-solid fa-bed"></i> NB {% trans %}room(s){% endtrans %}</p>
+            </div>
+            <div class="bathrooms">
+                <p><i class="fa-solid fa-shower"></i> NB {% trans %}bathroom(s){% endtrans %}</p>
+            </div>
+        </div>
+        <div class="priceLogement">
+            <p id="price">{% trans %}Start from {% endtrans %} Prix€/nuit</p>
+            <p>{% trans %}Arrival after 14:00 and departure by 10:00{% endtrans %}</p>
+        </div>
+    </div>
+    <div class="galery">
+        <div class="containerGalery">
+            <img src="{{asset('images/galery_01.png')}}" alt="galerie">
+        </div>
+    </div>
+
+    <div class="textIntro">
+        <p>WE ARE CONSTANTLY CONCERNED ABOUT THE WELL-BEING OF OUR TRAVELLERS, WHICH IS WHY YOUR ARRIVAL WILL BE WELL LOOKED AFTER</p>
+        <p>Basic necessities, baby equipment, housekeeping, concierge service...</p>
+    </div>
+
+    <div class="contentLogement">
+        <div class="description">
+            <div class="group">
+                <h3>{% trans %}Description{% endtrans %}</h3>
+                <p class="lined">Lovely ground floor flat in a house located at the top of the Plaines de Valescure. This flat has its own private swimming pool and a splendid view over the bay of Saint-Raphael, and is sure to make your stay in this idyllic, peaceful setting an unforgettable one!</p>
+            </div>
+            <div class="group">
+                <h3>{% trans %}Need to know{% endtrans %}</h3>
+                <p class="lined">L’appartement, situé dans un quartier résidentiel, ne permet pas d’organiser des fêtes, des soirées.C’est très calme donc on vous demandera de respecter ce calme et de ne plus faire de bruit après 22h.Nous souhaitons un réel respect des lieux.Nous n’acceptons pas les animaux.Ce logement comprend des marches ou escaliers.Logement fumeur.</p>
+            </div>
+        </div>
+        <div class="logement">
+            <div class="group">
+                <h3>{% trans %}Housing{% endtrans %}</h3>
+                <p> 
+                    <ul>
+                    <li>1 salon</li>
+                    <li>1 salon</li>
+                    <li>1 salon</li>
+                    <li>1 salon</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <div class="equipement">
+            <div class="group">
+                <h3>{% trans %}Equipment{% endtrans %}</h3>
+                <p> 
+                    <ul>
+                    <li>1 salon</li>
+                    <li>1 salon</li>
+                    <li>1 salon</li>
+                    <li>1 salon</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="calendar">
+        <h2>{% trans %}Check availability{% endtrans %}</h2>
+        <div class="calendrier">
+            <img src="{{asset('images/calendar.png')}}" alt="">
+        </div>
+    </div>
+    <div class="simulation">
+        <h2>{% trans %}Calculate the cost of my stay{% endtrans %}</h2>
+        <form id="priceForm" action="">
+            <input type="date" id="dateArrivee" placeholder="Date d'arrivée">
+            <input type="date" id="dateDepart" placeholder="Date de départ">
+            <button>{% trans %}Estimate{% endtrans %}</button>
+            <div class="result">
+                <p>
+                    {% trans %}Le coût total de votre séjour comprenant 7 nuits est estimé à 3750€ hors taxe de séjour.{% endtrans %}
+                </p>
+            </div>
+        </form>
+    </div>
+    <button id="booking"><div id="script">Je souhaite réserver</div></button>
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

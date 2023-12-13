@@ -15,15 +15,13 @@
       
     </head>
     <body>
-    {% include "partials/navbar.html.twig" %}        
+    {% include "partials/navbar.html.twig" %} 
     {% block body %}{% endblock %}
 
 
         {{ encore_entry_script_tags('app') }}
-        {% block javascripts %}   
-            <script>
-            console.log('test')
-            </script>
+        {% block javascripts %}  
+           
         {% endblock %}
     </body>
 </html>

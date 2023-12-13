@@ -3,7 +3,34 @@
 {% block title %}Villas Blue{% endblock %}
 
 {% block body %}
-    {% include "partials/navbar.html.twig" %}
-
+    <div class="slide" id="concIntro">
+        <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+        <div class="sep">
+            <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="adresses">
+        <div class="blockAdress">
+            <p>330 Boulevard Jean Moulin</p>
+            <p>Saint-Raphaël, Provence-Alpes-Côte d’Azur 83700</p>
+            <p>FRANCE</p>
+            <p>contact@lesvillasblue.com</p>
+            <p>+33 7 84 40 75 23</p>
+        </div>
+        <div class="blockAdress">
+            <p>330 Boulevard Jean Moulin</p>
+            <p>Saint-Raphaël, Provence-Alpes-Côte d’Azur 83700</p>
+            <p>FRANCE</p>
+            <p>contact@lesvillasblue.com</p>
+            <p>+33 7 84 40 75 23</p>
+        </div>
+    </div>
+    <div class="formulaireContact">
+        <h2>{% trans %}Contact us{% endtrans %}</h2>
+        <p class="script">{% trans %}Looking for a home? Are you a property owner?{% endtrans %}</p>
+        <form action="">
+            <p>{% trans %}If you have any questions, leave us a message...{% endtrans %}</p>
+        </form>
+    </div>
     {% include "partials/footer.html.twig" %}
 {% endblock %}

@@ -4,7 +4,73 @@
 {% endblock %}
 
 {% block body %}
-    {% include "partials/navbar.html.twig" %}
+<div class="slide" id="concIntro">
+    <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+     <div class="sep">
+        <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
+    </div>
+</div>
+<div class="slide" id="qui">
+    <h3><div class="script">Qui sommes-nous ?</div></h3>
+    <h4>Notre rôle est de vous offrir la possibilité de passer des vacances de rêve...</h4>
+</div>
+<div class="container">
+    <div class="line">
+        <div class="photo">
+            <img src="{{asset('images/photo1.png')}}" alt="image conciergerie">
+            <img class="deco-right" src="{{asset('images/triangle-right.png')}}" alt="image conciergerie">
+        </div>
+        <div class="text">
+            <div>
+                <p>MY NAME IS MARIE REYNARD,</p>
+                <p>accompanied by my team of receptionists, cleaners and technicians, who are on hand all year round to ensure that your stay is one of the most memorable you'll ever have.</p>
+                <p>As an interior designer by trade and a resident of Saint-Raphaël, I started by responding to my clients' requests to improve and embellish their homes. By gaining the trust of my customers, I now have full responsibility for these different properties, so as to make the most of their profitability. By listening to people and constantly striving to do things right, I know how to make a place unique, functional and as pleasant as possible for the happiness of our tenants and owners. It is without pretension that I am offering you a selection of the region's magnificent and unique villas and flats, which I hope you will enjoy.
+                Marie.</p>
+            </div>
+        </div>
+    </div>
+    <div class="line line-flex">
+        <div class="text">
+            <div>
+                <p>OUR ENTIRE TEAM LIVES IN AND AROUND SAINT-RAPHAËL, WHICH WE PROMOTE.</p>
+                <p>On the lookout for new restaurant openings, with a rucksack on your back to discover a new hiking trail, in contact with various local service providers, we can advise you, in addition to your holiday rental, on the places you shouldn't miss. In other words, we can give you the best of the destination!</p>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="{{asset('images/photo2.png')}}" alt="image conciergerie">
+            <img class="deco-left" src="{{asset('images/triangle-left.png')}}" alt="image conciergerie">
+        </div>
+    </div>
+    <div class="line">
+        <div class="photo">
+            <img src="{{asset('images/photo3.png')}}" alt="image conciergerie">
+            <img class="deco-right" src="{{asset('images/triangle-right.png')}}" alt="image conciergerie">
+        </div>
+        <div class="text">
+            <div>
+                <p>AT VILLAS BLUE, WE'RE CONVINCED THAT TO CAPTURE THE EMOTION OF A DESTINATION, YOU HAVE TO LIVE THERE!</p>
+                <p>When to go, where to sleep, what to visit, where to eat the best specialities, so many legitimate questions to ask when travelling to an unknown destination. Don't miss out on the best addresses, let us share our experiences of the destination with you. We are present in your future travel destination and regularly update our address book. We know quality service providers and can advise you not only on accommodation, but also on excursions and additional services in your rental accommodation, for a tailor-made holiday!</p>
+            </div>
+        </div>
+    </div>
+    <div class="line line-flex">
+        <div class="text">
+            <div>
+                <p>EASY NECESSITIES</p>
+                <p>Your stay includes the provision of towels, sheets, bedding and basic necessities on arrival.</p>
+                <p>CLEANING</p>
+                <p>Your stay includes cleaning on departure.</p>
+                <p>BABY EQUIPMENT</p>
+                <p>We can provide baby equipment if required.On request (extra charge to be paid on site) we can provide a bathtub, pushchair, booster seat, high chair, bed etc.Please do not hesitate to ask us for any Baby-sitter requirements.</p>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="{{asset('images/photo4.png')}}" alt="image conciergerie">
+            <img class="deco-left" src="{{asset('images/triangle-left.png')}}" alt="image conciergerie">
+        </div>
+    </div>
+
+</div>
 
     {% include "partials/footer.html.twig" %}
 {% endblock %}

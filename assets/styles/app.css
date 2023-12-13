@@ -1,9 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Comfortaa:wght@300;400;500;600;700&display=swap');
-@font-face {
-    font-family: blackjack;
-    src: url(../../public/fonts/BLACKJAR.TTF);
-}
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Comfortaa:wght@300;400;500;600;700&family=Whisper&display=swap');
 
+:root{
+    --cursive: 'script';
+    --normal: 'Arapey', serif;
+}
+@font-face {
+    font-family: 'script';
+    src: 
+        url('./fonts/BLACKJAR.TTF') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+h1, h2, h3{
+    font-weight: normal;
+}
 *{
     padding: 0;
     margin: 0;
@@ -97,9 +107,11 @@ nav ul li a{
 .slide{
     width: 100%;
 }
-span .script{
-    font-family: blackjack;
-    color: black !important;
+.script{
+    font-family: 'script';
+}
+span #script{
+    font-family: var(--cursive);
 }
 #introhome{
     background-image: url(../../public/images/introHome.png);
@@ -108,6 +120,13 @@ span .script{
     width: 100%;
     min-height: 100vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#intro-logo{
+  
+   max-height: 40vh;
 }
 .sep{
     width: 100%;
@@ -146,6 +165,7 @@ span .script{
     border-radius: 20px;
     min-width: 200px; 
     cursor: pointer;
+    color: white;
 }
 .florideButton{
     background: linear-gradient(183deg, #08C4D9 0%, #024959 100%);
@@ -153,6 +173,7 @@ span .script{
     padding: 15px;
     border-radius: 20px;
     min-width: 200px;
+    color: white;
 }
 .florideButton a, .azurButton a{
     color: white;
@@ -228,6 +249,7 @@ span .script{
     border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
+    color: white;
 }
 .card-btn button a{
     text-decoration: none;

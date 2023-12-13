@@ -1,0 +1,51 @@
+.contentFAQ{
+    width: 80%;
+}
+#titleFaq h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+#titleFaq p{
+    width: 100%;
+    text-align: center;
+}
+#contentFAQ{
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+.questionCard{
+    background-color: rgba(8, 196, 217, 0.1);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.questionCard .question{
+    font-size: 16pt;
+}
+.questionCard .responses{
+    margin-top: 10px;
+}
+.contactUs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.contactUs p{
+    width: 100%;
+    text-align: center;
+    font-size: 16pt;
+}
+.contactUs a button{
+    background-color:  #024959;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    min-width: 200px;
+}

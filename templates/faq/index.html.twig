@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Villsa Blue{% endblock %}
+
+{% block body %}
+    <div class="slide" id="introGalery">
+         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+        <div class="sep">
+            <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="slide" id="titleFaq">
+        <h2>They asked themselves the same questions...</h2>
+        <p class="script">Here's our response!</p>
+    </div>
+    <div class="slide" id="contentFAQ">
+        <div class="questionCard">
+            <p class="question"> Quels sont les types de logements que vous proposez ?</p>
+            <p class="responses"> Nous proposons appartments, villas, maisons...</p>
+        </div>
+        <div class="questionCard">
+            <p class="question"> Quels sont les types de logements que vous proposez ?</p>
+            <p class="responses"> Nous proposons appartments, villas, maisons...</p>
+        </div>
+        <div class="questionCard">
+            <p class="question"> Quels sont les types de logements que vous proposez ?</p>
+            <p class="responses"> Nous proposons appartments, villas, maisons...</p>
+        </div>
+        <div class="questionCard">
+            <p class="question"> Quels sont les types de logements que vous proposez ?</p>
+            <p class="responses"> Nous proposons appartments, villas, maisons...</p>
+        </div>
+        <div class="questionCard">
+            <p class="question"> Quels sont les types de logements que vous proposez ?</p>
+            <p class="responses"> Nous proposons appartments, villas, maisons...</p>
+        </div>
+    </div>
+    <div class="contactUs">
+        <p>Haven't found the answer to your question?</p>
+        <a href="{{path('contact')}}"><button>Contact us</button></a>
+    </div>
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

@@ -1,0 +1,88 @@
+#concIntro{
+    height: 60vh;
+    background-image: url(../../public/images/intro2.png);
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#qui{
+    width: 100%;
+}
+#qui h3{
+    width: 100%;
+    text-align: center;
+    font-size: 20pt;
+    padding-top: 30px;
+}
+#qui h4{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.container{
+    width: 100%;
+}
+.line{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.line .photo{
+    width: 50%;
+    min-height: 60vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.line .photo img{
+    height: 100%;
+}
+.line .text{
+    width: 50%;
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.line .text p{
+    margin: 20px;
+}
+.deco-right{
+    position: absolute;
+    max-height: 100px !important;
+    right: 0px;
+}
+.deco-left{
+    position: absolute;
+    max-height: 100px !important;
+    left: 0px;
+}
+
+@media all and (max-width: 850px){
+    .line{
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    .line .text{
+        width: 100% !important;
+    }
+    .line .photo{
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        
+    }
+    .line .photo img{
+       height: auto !important;
+    }
+    .line-flex{
+        flex-wrap: wrap-reverse !important;
+    }
+}

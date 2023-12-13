@@ -1,0 +1,37 @@
+#titleActivities{
+    width: 80%;
+    margin: 0 auto;
+}
+#titleActivities h2{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+#titleActivities p{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#activitiesContainer{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.activityCard{
+    min-width: 25%;
+    margin-bottom: 20px;
+}
+.activityImg{
+    width: 100%;
+    max-height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.activityTitle{
+    text-align: center;
+    font-size: 16pt;
+}
