@@ -24,3 +24,25 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.filter{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.filter input{
+    background-color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.filter select{
+    background-color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}

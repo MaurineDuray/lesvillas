@@ -1,0 +1,19 @@
+<form class="filter" action="{{path('azur')}}">
+    <div class="form-group">
+        <select name="theme" id="theme" name="theme">
+            <option value="" disabled selected>{% trans %}Type of housing{% endtrans %}</option>
+            <option value="appartement">{% trans %}Flat{% endtrans %}</option>
+            <option value="villa">Villa</option>
+            <option value="maison">House</option>
+            <option value="autre">Other</option>
+        </select>
+    </div>
+    <div class="from-group">
+        <input id="travellers" name="travellers" type="number" placeholder="Number of travellers/ Nombre de voyageurs">
+    </div>
+    <div class="form-group">
+        <input id="rooms" name="rooms" type="number" placeholder="Number of bedrooms/ Nombre de chambres">
+    </div>
+    <input type="submit" class="btn" value="Filter / Filtrer">
+
+</form>
