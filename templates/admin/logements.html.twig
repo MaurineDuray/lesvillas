@@ -13,6 +13,9 @@
         <h3 class="script"> Boujour {{app.user.firstName}},</h3>
         <h2>Bienvenue dans le tableau de bord !</h2>
         <a href="{{path('admin')}}">Retour au tableau de bord</a>
+        <div class="addBtn">
+            <a href="{{path('admin_logement_add')}}" id="addButtons"><button>Ajouter un logement au catalogue</button></a>
+        </div>
     </div>
    <div class="tableau">
     <table>

@@ -48,4 +48,22 @@ td{
 .actions{
     display: flex;
     justify-content: space-around;
+    height: 100% !important;
+}
+.addBtn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.addButtons a{
+    background-color: #024959;
+    padding: 10px;
+}
+.addBtn a button{
+    border: none;
+    color: white;
+    border-radius: 20px;
+    background-color: #024959;
+    padding: 10px;
 }
