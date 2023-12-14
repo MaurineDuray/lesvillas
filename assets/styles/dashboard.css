@@ -1,0 +1,51 @@
+#dasboardTitle{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#dasboardTitle h3{
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+#dasboardTitle h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+#dasboardTitle a{
+    padding: 0;
+    text-align: center;
+}
+#containerAdminButton .buttons{
+    margin-bottom: 30px;
+    margin-top: 60px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+#containerAdminButton .buttons a{
+    margin: 10px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.tableau{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+table{
+    width: 80%;
+    margin: 0 auto;
+}
+td{
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.actions{
+    display: flex;
+    justify-content: space-around;
+}

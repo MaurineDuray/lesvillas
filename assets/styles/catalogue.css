@@ -46,3 +46,10 @@
     border: none;
     border-radius: 5px;
 }
+#filterBtn{
+    background-color:#024959;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}

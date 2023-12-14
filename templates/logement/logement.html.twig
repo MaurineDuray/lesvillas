@@ -11,24 +11,30 @@
     </div>
     <div class="titleLogement">
         {% if app.request.locale == "en" %}
-            <h2>Title of accomodation</h2>
+            <h2>{{immo.Titre}}</h2>
         {% else %}
-            <h2>Titre du logement</h2>
+            <h2>{{immo.TitreEn}}</h2>
         {% endif %}
         <p>Adress</p>
         <div class="caract">
             <div class="travellers">
-                <p><i class="fa-solid fa-person"></i> NB {% trans %}traveller(s){% endtrans %}</p>
+                <p><i class="fa-solid fa-person"></i> {{immo.travellers}} {% trans %}traveller(s){% endtrans %}</p>
             </div>
             <div class="rooms">
-                <p><i class="fa-solid fa-bed"></i> NB {% trans %}room(s){% endtrans %}</p>
+                <p><i class="fa-solid fa-bed"></i> {{immo.bedrooms}} {% trans %}room(s){% endtrans %}</p>
             </div>
             <div class="bathrooms">
-                <p><i class="fa-solid fa-shower"></i> NB {% trans %}bathroom(s){% endtrans %}</p>
+                <p><i class="fa-solid fa-shower"></i> {{immo.bathrooms}} {% trans %}bathroom(s){% endtrans %}</p>
             </div>
         </div>
         <div class="priceLogement">
-            <p id="price">{% trans %}Start from {% endtrans %} Prix€/nuit</p>
+            <p id="price">{% trans %}Start from {% endtrans %} 
+            {% if app.request.locale == "en" %}
+                {{immo.priceEn}}
+            {% else %}
+                {{immo.price}}
+            {% endif %}
+            €/nuit</p>
             <p>{% trans %}Arrival after 14:00 and departure by 10:00{% endtrans %}</p>
         </div>
     </div>
@@ -47,23 +53,28 @@
         <div class="description">
             <div class="group">
                 <h3>{% trans %}Description{% endtrans %}</h3>
-                <p class="lined">Lovely ground floor flat in a house located at the top of the Plaines de Valescure. This flat has its own private swimming pool and a splendid view over the bay of Saint-Raphael, and is sure to make your stay in this idyllic, peaceful setting an unforgettable one!</p>
+                <p class="lined">
+                    {% if app.request.locale == "en" %}
+                        {{immo.descriptionEn}}
+                    {% else %}
+                        {{immo.description}}
+                    {% endif %}
+                </p>
             </div>
             <div class="group">
                 <h3>{% trans %}Need to know{% endtrans %}</h3>
-                <p class="lined">L’appartement, situé dans un quartier résidentiel, ne permet pas d’organiser des fêtes, des soirées.C’est très calme donc on vous demandera de respecter ce calme et de ne plus faire de bruit après 22h.Nous souhaitons un réel respect des lieux.Nous n’acceptons pas les animaux.Ce logement comprend des marches ou escaliers.Logement fumeur.</p>
+                <p class="lined">{% trans %}L’appartement, situé dans un quartier résidentiel, ne permet pas d’organiser des fêtes, des soirées.C’est très calme donc on vous demandera de respecter ce calme et de ne plus faire de bruit après 22h.Nous souhaitons un réel respect des lieux. Nous n’acceptons pas les animaux.Ce logement comprend des marches ou escaliers. Logement fumeur.{% endtrans %}</p>
             </div>
         </div>
         <div class="logement">
             <div class="group">
                 <h3>{% trans %}Housing{% endtrans %}</h3>
                 <p> 
-                    <ul>
-                    <li>1 salon</li>
-                    <li>1 salon</li>
-                    <li>1 salon</li>
-                    <li>1 salon</li>
-                    </ul>
+                    {% if app.request.locale == "en" %}
+                        {{immo.logement}}
+                    {% else %}
+                        {{immo.logementEn}}
+                    {% endif %}
                 </p>
             </div>
         </div>
@@ -71,12 +82,11 @@
             <div class="group">
                 <h3>{% trans %}Equipment{% endtrans %}</h3>
                 <p> 
-                    <ul>
-                    <li>1 salon</li>
-                    <li>1 salon</li>
-                    <li>1 salon</li>
-                    <li>1 salon</li>
-                    </ul>
+                    {% if app.request.locale == "en" %}
+                        {{immo.equipement}}
+                    {% else %}
+                        {{immo.equipement}}
+                    {% endif %}
                 </p>
             </div>
         </div>

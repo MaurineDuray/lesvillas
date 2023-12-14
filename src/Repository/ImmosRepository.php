@@ -21,15 +21,64 @@ class ImmosRepository extends ServiceEntityRepository
         parent::__construct($registry, Immos::class);
     }
 
+    public function findByConciergerie($value): array
+   {
+       return $this->createQueryBuilder('i')
+           ->andWhere('i.conciergerie = :val')
+           ->setParameter('val', $value)
+           ->orderBy('i.id', 'ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
 
-    public function findByLocal($value): ?Immos
+   public function findByTopAzur($value): array
+   {
+       return $this->createQueryBuilder('i')
+           ->andWhere('i.conciergerie = :val')
+           ->setParameter('val', $value)
+           ->orderBy('i.id', 'DESC')
+           ->setMaxResults(3)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
+   public function findByTopFloride($value): array
+   {
+       return $this->createQueryBuilder('i')
+           ->andWhere('i.conciergerie = :val')
+           ->setParameter('val', $value)
+           ->orderBy('i.id', 'DESC')
+           ->setMaxResults(3)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+    
+   /**
+     * Recherche des motifs par filtre
+    * @return Immos[] Returns an array of Pattern objects
+    */
+    public function findByFilter(string $housetype, int $travellers, int $rooms, int $price): array
     {
-        return $this->createQueryBuilder('i')
-            ->andWhere('i.conciergerie = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            
-        ;
+       return $this->createQueryBuilder('i')
+           ->select('i as immos, i.slug, i.bathrooms, i.bedrooms, i.calendrier, i.conciergerie, i.cover, i.description, i.descriptionEn, i.equipement, i.equipementEn, i.logement, i.logementEn, i.price, i.priceEn, i.titre, i.titreEn, i.travellers, i.type')
+           ->groupBy('i')
+           ->orderBy('i.id', 'DESC')
+           ->where('i.travellers= :travellers')
+           ->andWhere('i.bedrooms: :rooms')
+           ->andwhere('i.price= :price')
+           ->andWhere()('i.type= :housetype')
+           ->setParameters([
+            'travellers'=> $travellers,
+            'bedrooms' => $rooms,
+            'price' => $price,
+            'type'=>$housetype
+           ])
+           ->getQuery()
+           ->getResult()
+       ;
     }
 
 

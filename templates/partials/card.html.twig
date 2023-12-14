@@ -2,34 +2,34 @@
                 <div class="card-title">
                     <p>
                         {% if app.request.locale == "en" %}
-                            TITLE
+                            {{immo.titreEn}}
                         {% else %}
-                            TITRE
+                            {{immo.titre}}
                         {% endif %}
                     </p>
                 </div>
                 <div class="card-img">
-                    <img src="{{asset('images/img-example.png')}}" alt="image du logement {}">
+                    <img src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}">
                 </div>
                 <div class="card-caract"> 
                     <p>
                     {% if app.request.locale == "en" %}
-                        3 travellers  -  2 room(s)
+                        {{immo.travellers}} travellers  -  {{immo.bedrooms}} room(s)
                     {% else %}
-                        3 voyageurs  -  2 chambre(s)
+                        {{immo.travellers}} voyageurs  -  {{immo.bedrooms}} chambre(s)
                     {% endif %} 
                     </p>
                 </div>
                 <div class="card-price">
                     <p>
                     {% if app.request.locale == "en" %}
-                        Starting at 140$/night
+                        Starting at {{immo.priceEn}}$/night
                     {% else %}
-                        À partir de 140€/nuit
+                        À partir de {{immo.price}}€/nuit
                     {% endif %}
                     </p>
                 </div><br>
                 <div class="card-btn">
-                    <a href="{{path('logement')}}"><button>{% trans %}More information{% endtrans %}</button></a>
+                    <a href="{{path('logement',{'slug':immo.slug})}}"><button>{% trans %}More information{% endtrans %}</button></a>
                 </div>
             </div>

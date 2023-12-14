@@ -12,26 +12,27 @@
     <div class="slide" id="titleActivities">
         <h2>{% trans %}Discover all our activities{% endtrans %}</h2>
         <p>{% trans %}What to do during your stay? Don't ask yourself any more questions... We'll take care of everything!{% endtrans %}</p>
+        <p><span class="script">{% trans %}Choose your destination{% endtrans %}</span></p>
+        <div class="buttons" style="display: flex; justify-content:center">
+           <a href="{{path('azur_activities')}}"> <button class="azurButton">{% trans %}Côte d'Azur{% endtrans %}</button></a>
+            <a href="{{path('floride_activities')}}"><button class="florideButton">{% trans %}Florida{% endtrans %}</button></a>
+            <a href="{{path('activities')}}"> <button class="azurButton">{% trans %}All activities{% endtrans %}</button></a>
+        </div>
     </div>
     <div class="slide" id="activitiesContainer">
-        <div class="activityCard">
+        {% for activity in activities %}
+            <div class="activityCard">
             <div class="activityImg">
-                <img src="{{asset('images/lesvillasblue_evjf.png')}}" alt="Image de l'activité">
+                <img src="../../images/{{activity.image}}" alt="Image de {{activity.titreEn}}">
             </div>
-            <p class="activityTitle">Titre de l'activité</p>
+            {% if app.request.locale == "en" %}
+                <p class="activityTitle">{{activity.titreEn}}</p>
+            {% else %}
+                <p class="activityTitle">{{activity.titre}}</p>
+            {% endif %} 
+            
         </div>
-        <div class="activityCard">
-            <div class="activityImg">
-                <img src="{{asset('images/lesvillasblue_evjf.png')}}" alt="Image de l'activité">
-            </div>
-            <p class="activityTitle">Titre de l'activité</p>
-        </div>
-        <div class="activityCard">
-            <div class="activityImg">
-                <img src="{{asset('images/lesvillasblue_evjf.png')}}" alt="Image de l'activité">
-            </div>
-            <p class="activityTitle">Titre de l'activité</p>
-        </div>
+        {% endfor %}
     </div>
     {% include "partials/footer.html.twig" %}
 {% endblock %}

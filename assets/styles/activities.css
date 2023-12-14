@@ -12,6 +12,12 @@
     text-align: center;
     margin-bottom: 20px;
 }
+#titleActivities .buttons{
+    margin-bottom: 20px;
+}
+#titleActivities .buttons a{
+    margin: 5px;
+}
 #activitiesContainer{
     width: 90%;
     margin: 0 auto;
@@ -22,16 +28,25 @@
 .activityCard{
     min-width: 25%;
     margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .activityImg{
-    width: 100%;
-    max-height: 300px; 
+    max-width: 300px;
+    height: 300px; 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
+.activityImg img{
+    height: 100%;
+  
+}
 .activityTitle{
     text-align: center;
     font-size: 16pt;
+    width: 100%;
 }

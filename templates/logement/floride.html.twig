@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Villas Blue{% endblock %}
+
+{% block body %}
+    <div class="slide" id="introGalery">
+         <img id="intro-logo" src="{{asset('images/logo-04.png')}}" alt="Logo">
+        <div class="sep">
+            <img src="{{asset('images/blue-sep.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="slide" id="search">
+        <h2>{% trans %}Welcome in Florida !{% endtrans %}</h2>
+        <h2>Are you looking for specific accommodation?</h2>
+        {# {{form_start(search)}}
+        {{form_end(search)}} #}
+         {% if app.request.locale =="en" %}
+            {% include "partials/filterEn.html.twig" %} 
+        {% else %}
+            {% include "partials/filter.html.twig" %} 
+        {% endif %}
+    </div>
+    <div class="galery">
+        {% for immo in immos %}
+            {% include "partials/card.html.twig" %}
+        {% endfor %}
+    </div>
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

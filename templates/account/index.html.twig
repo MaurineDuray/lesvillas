@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion au site{% endblock %}
+
+{% block body %}
+    <div class="slide" id="introGalery">
+         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+        <div class="sep">
+            <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="slide" id="connexion">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 bg-light p-3">
+                <h1 style="margin-top: 50px">Connexion à l'administration</h1>
+                {% if hasError %}
+                    <div class="alert alert-danger">
+                        Une erreur est survenue, le nom d'utilisateur ou le mot de passe est invalide
+                    </div>
+                {% endif %}
+                
+                <form action="{{path('account_login')}}" method="POST" style="margin-bottom: 50px; display: flex; flex-wrap: wrap; justify-content:center">
+                    <div class="form-group" style="width:100%">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="_username" class="form-control" placeholder="Adresse email..." required value="{{username}}">
+                    </div>
+                    <div class="form-group" style="width:100%">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="_password" class="form-control" placeholder="votre mot de passe" required >
+                    </div>
+                    <div class="form-group" style="width:100%">
+                        <button type="submit" class="btn btn-success my-3">Connexion</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

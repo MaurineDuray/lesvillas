@@ -25,9 +25,11 @@
             {% trans %}Our top 3 in Florida{% endtrans %}
         </div></h4>
         <div class="row">
-            {% include "partials/card.html.twig" %}
-            {% include "partials/card.html.twig" %}
-            {% include "partials/card.html.twig" %}
+            {% for immo in immosFloride %}
+                {% include "partials/card.html.twig" %}
+               
+            {% endfor %}
+                
         </div>
         <div class="more">
             <p>{% trans %}Discover all our homes in Florida...{% endtrans %}</p>
@@ -51,9 +53,10 @@
             {% trans %}Our favourites on the Côte d'Azur{% endtrans %}
         </div></h4>
         <div class="row">
-            {% include "partials/card.html.twig" %}
-            {% include "partials/card.html.twig" %}
-            {% include "partials/card.html.twig" %}
+            {% for immo in immosAzur %}
+                {% include "partials/card.html.twig" %}
+                
+            {% endfor %}
         </div>
         <div class="more">
              <p>{% trans %}Discover all our homes on the Côte d'Azur...{% endtrans %}</p>

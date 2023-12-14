@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Villas Blue{% endblock %}
+
+{% block body %}
+    <div class="slide" id="introGalery">
+         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+        <div class="sep">
+            <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="slide" id="dasboardTitle">
+        <h3 class="script"> Boujour {{app.user.firstName}},</h3>
+        <h2>Bienvenue dans le tableau de bord !</h2>
+        <a href="{{path('admin')}}">Retour au tableau de bord</a>
+    </div>
+   <div class="tableau">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Logement</th>
+                <th>Conciergerie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for immo in immos %}
+                <tr>
+                    <td>{{immo.id}}</td>
+                    <td>{{immo.Titre}}</td>
+                    <td>{{immo.conciergerie}}</td>
+                    <td class="actions">
+                        <a href="" class="btn-yellow"><i class="fas fa-edit"></i></a>
+                        <a href="" class="btn-red" ><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+   </div>
+    </div>
+    {% include "partials/footer.html.twig" %}
+{% endblock %}
