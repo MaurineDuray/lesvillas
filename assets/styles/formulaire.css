@@ -1,0 +1,47 @@
+#formulaire{
+    margin-top: 30px;
+}
+#formulaire form{
+    background-color: rgba(8, 196, 217, 0.1);
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 20px 20px 0px 0px;
+}
+#formulaire form div label{
+    width: 100%;
+    font-size: 14pt;
+    font-weight: bold;
+}
+#formulaire form div input{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    font-family: var(--normal);
+    font-size: 14pt;
+}
+#formulaire form div textarea{
+    width: 100%;
+    border: none;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    resize: none;
+    font-family: var(--normal);
+    font-size: 14pt;
+}
+#formulaire form div select{
+    width: 100%;
+    border: none;
+    margin: 5px 0px 5px 0px;
+    padding: 5px;
+}
+#formulaire button[type="submit"]{
+    background-color: #024959;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+}

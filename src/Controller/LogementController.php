@@ -14,8 +14,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class LogementController extends AbstractController
 {
     
-    #[Route('/logement/{slug}', name: 'logement')]
-    public function showLogement(string $slug, Immos $immo, Request $request, EntityManagerInterface $manager):Response
+    #[Route('/logement/{id}', name: 'logement')]
+    public function showLogement( Immos $immo, Request $request, EntityManagerInterface $manager):Response
     {
         return $this->render('logement/logement.html.twig', [
             'immo'=>$immo

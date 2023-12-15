@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ActivitiesController!{% endblock %}
+{% block title %}Villas Blue{% endblock %}
 
 {% block body %}
     <div class="slide" id="introGalery">
@@ -23,7 +23,7 @@
         {% for activity in activities %}
             <div class="activityCard">
             <div class="activityImg">
-                <img src="../../images/{{activity.image}}" alt="Image de {{activity.titreEn}}">
+                <img src="../../upload/{{activity.image}}" alt="image de l'activité {{activity.titre}}">
             </div>
             {% if app.request.locale == "en" %}
                 <p class="activityTitle">{{activity.titreEn}}</p>

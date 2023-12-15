@@ -14,21 +14,13 @@
         <h4>{% trans %}Our role is to give you the chance to enjoy a dream holiday...{% endtrans %}</h4>
     </div>
     <div class="slide" id="partnersContainer">
-        <div class="partner">
-            <img src="{{asset('images/logo_01.png')}}" alt="logo partner">
-        </div>
-        <div class="partner">
-            <img src="{{asset('images/logo_01.png')}}" alt="logo partner">
-        </div>
-        <div class="partner">
-            <img src="{{asset('images/logo_01.png')}}" alt="logo partner">
-        </div>
-        <div class="partner">
-            <img src="{{asset('images/logo_01.png')}}" alt="logo partner">
-        </div>
-        <div class="partner">
-            <img src="{{asset('images/logo_01.png')}}" alt="logo partner">
-        </div>
+        {% for partner in partners %}
+            <div class="partner">
+                 <img src="../../upload/{{partner.logo}}" alt="logo du partenaire {{partner.name}}">
+            </div>
+        {% endfor %}
+        
+
 
     </div>
     {% include "partials/footer.html.twig" %}

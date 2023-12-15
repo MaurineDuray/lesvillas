@@ -18,6 +18,7 @@
         </div>
     </div>
    <div class="tableau">
+   <h1 style="text-align: center">Gestion des logements du catalogue</h1>
     <table>
         <thead>
             <tr>
@@ -31,11 +32,12 @@
             {% for immo in immos %}
                 <tr>
                     <td>{{immo.id}}</td>
-                    <td>{{immo.Titre}}</td>
+                    <td><a href="{{path('logement',{'id':immo.id})}}">{{immo.Titre}}</a></td>
                     <td>{{immo.conciergerie}}</td>
                     <td class="actions">
-                        <a href="" class="btn-yellow"><i class="fas fa-edit"></i></a>
-                        <a href="" class="btn-red" ><i class="fas fa-trash"></i></a>
+                        <a href="{{path('admin_logement_edit',{'id': immo.id})}}" class="btn-yellow"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('admin_logement_img', {'id':immo.id})}}"><i class="fa-solid fa-image"></i></a>
+                        <a href="{{path('admin_logements_delete',{'id': immo.id})}}" class="btn-red" ><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
             {% endfor %}

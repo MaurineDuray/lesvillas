@@ -3,8 +3,6 @@
 namespace App\Form;
 
 use App\Entity\Immos;
-use App\Form\ApplicationType;
-use Doctrine\DBAL\Types\FloatType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -16,7 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 
-class ImmosType extends ApplicationType
+class UpdateImmosType extends ApplicationType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -92,10 +90,7 @@ class ImmosType extends ApplicationType
                 'label'=>'Lien de calendrier Google',
                 'required' => false
             ])
-            ->add('cover', FileType::class, [
-                "data_class"=>null,
-                "label"=>"Image de couverture du logement"
-            ])
+            
             ->add('type',ChoiceType::class, [
                 'choices'=>[
                     'Villa' => "Villa",
@@ -104,15 +99,7 @@ class ImmosType extends ApplicationType
                     'Autres'=>"Autres"
                 ]
             ])
-            ->add(
-                'images',
-                CollectionType::class,
-                [
-                    'entry_type' => FileType::class,
-                    'allow_add' => true, // permet d'ajouter des éléments et surtout avoir data_prototype
-                    'allow_delete' => true
-                ]
-            )
+            
             ->add('submit', SubmitType::class,['label' => 'Enregistrer'],
             [
                 'attr' => ['class' => 'btn'],

@@ -16,6 +16,7 @@ import './styles/faq.css';
 import './styles/partners.css';
 import './styles/activities.css';
 import './styles/dashboard.css';
+import './styles/formulaire.css';
 
 require('@fortawesome/fontawesome-free/css/all.min.css');
 require('@fortawesome/fontawesome-free/js/all.js');

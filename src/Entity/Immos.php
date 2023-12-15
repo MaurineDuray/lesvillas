@@ -8,6 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ImmosRepository;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ImmosRepository::class)]
 class Immos
@@ -18,51 +19,70 @@ class Immos
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Le titre du logement doit être mentionné")]
+    #[Assert\Length(min: 2, max:255, minMessage:"Le titre doit faire au minimum 2 caractères", maxMessage: "Le titre ne peut dépasser 255 caractères")]
     private ?string $Titre = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Le titre du logement doit être mentionné")]
+    #[Assert\Length(min: 2, max:255, minMessage:"Le titre doit faire au minimum 2 caractères", maxMessage: "Le titre ne peut dépasser 255 caractères")]
     private ?string $TitreEn = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Le nombre de voyageurs maximum doit être mentionné")]
     private ?int $travellers = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Le nombre de chambre(s) doit être mentionné")]
     private ?int $bedrooms = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Le nombre de salle(s) de bain doit être mentionné")]
     private ?int $bathrooms = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Le prix par nuit doit être mentionné")]
     private ?float $price = null;
 
     #[ORM\Column]
+    #[Assert\NotBlank(message:"Le prix par nuit doit être mentionné")]
     private ?float $priceEn = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"Une description en français doit être mentionnée")]
     private ?string $description = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"Une description en anglais doit être mentionnée")]
     private ?string $descriptionEn = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La composition du logement en français doit être fournie ")]
     private ?string $logement = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La composition du logement en anglais doit être fournie")]
     private ?string $logementEn = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"L'équipement' du logement en français doit être fournie ")]
     private ?string $equipement = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"L'équipement' du logement en français doit être fournie ")]
     private ?string $equipementEn = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"La conciergerie du logement doit être mentionnée")]
     private ?string $conciergerie = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $calendrier = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"L'image principale du logement doit être fournie")]
+    #[Assert\Image(mimeTypes:["image/png","image/jpeg","image/jpg","image/gif"], mimeTypesMessage:"Vous devez ajouter un fichier jpg, jpeg, png ou gif")]
+    #[Assert\File(maxSize:"1024k", maxSizeMessage:"La taille du fichier est trop grande")]
     private ?string $cover = null;
 
     #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Images::class)]
@@ -72,7 +92,11 @@ class Immos
     private ?string $slug = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"La type du logement doit être sélectionné")]
     private ?string $type = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $address = null;
 
     public function __construct()
     {
@@ -89,7 +113,7 @@ class Immos
     public function initializeSlug():void{
         if (empty($this->slug)){
             $slugify = new Slugify();
-            $this->slug = $slugify->slugify($this->Titre.'-'.rand());
+            $this->slug = $slugify->slugify(rand());
         }
     }
 
@@ -320,6 +344,7 @@ class Immos
         return $this;
     }
 
+
     public function getSlug(): ?string
     {
         return $this->slug;
@@ -340,6 +365,18 @@ class Immos
     public function setType(string $type): static
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(string $address): static
+    {
+        $this->address = $address;
 
         return $this;
     }

@@ -90,6 +90,7 @@ class AccountController extends AbstractController
 
             $hash = $hasher->hashPassword($user, $user->getPassword());
             $user->setPassword($hash);
+            $user->setRoles(["ROLE_ADMIN"]);
 
             $manager->persist($user);
             $manager->flush();

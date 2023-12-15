@@ -14,28 +14,27 @@
         <h2>Bienvenue dans le tableau de bord !</h2>
         <a href="{{path('admin')}}">Retour au tableau de bord</a>
         <div class="addBtn">
-            <a href="{{path('admin_activity_add')}}" id="addButtons"><button>Ajouter une activité</button></a>
+            <a href="{{path('admin_partners_add')}}" class="addButtons"><button>Ajouter un partenaire</button></a>
         </div>
+        
     </div>
    <div class="tableau">
-   <h1 style="text-align: center">Gestion des activités</h1>
+   <h1 style="text-align: center">Gestion des partenaires</h1>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Titre de l'activité</th>
+                <th>Partenaires</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            {% for activity in activities %}
+            {% for partner in partners %}
                 <tr>
-                    <td>{{activity.id}}</td>
-                    <td>{{activity.Titre}}</td>
+                    <td>{{partner.id}}</td>
+                    <td>{{partner.name}}</td>
                     <td class="actions">
-                        <a href="{{path('admin_activities_edit',{'id': activity.id})}}" class="btn-yellow"><i class="fas fa-edit"></i></a>
-                        <a href="{{path('admin_activity_img',{'id': activity.id})}}"><i class="fa-solid fa-image"></i></a>
-                        <a href="{{path('admin_activities_delete',{'id':activity.id})}}" class="btn-red" ><i class="fas fa-trash"></i></a>
+                        <a href="{{path('admin_partner_delete',{'id': partner.id})}}" class="btn-red" ><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
             {% endfor %}

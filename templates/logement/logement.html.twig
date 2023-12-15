@@ -10,12 +10,14 @@
         </div>
     </div>
     <div class="titleLogement">
-        {% if app.request.locale == "en" %}
-            <h2>{{immo.Titre}}</h2>
-        {% else %}
-            <h2>{{immo.TitreEn}}</h2>
-        {% endif %}
-        <p>Adress</p>
+            {% if app.request.locale == "en" %}
+                <h2>{{immo.Titre}}</h2>
+            {% else %}
+                <h2>{{immo.TitreEn}}</h2>
+            {% endif %}
+        <p>
+            {{immo.address}}
+        </p>
         <div class="caract">
             <div class="travellers">
                 <p><i class="fa-solid fa-person"></i> {{immo.travellers}} {% trans %}traveller(s){% endtrans %}</p>
@@ -55,9 +57,9 @@
                 <h3>{% trans %}Description{% endtrans %}</h3>
                 <p class="lined">
                     {% if app.request.locale == "en" %}
-                        {{immo.descriptionEn}}
+                        {{immo.descriptionEn | nl2br}}
                     {% else %}
-                        {{immo.description}}
+                        {{immo.description | nl2br}}
                     {% endif %}
                 </p>
             </div>
@@ -71,9 +73,9 @@
                 <h3>{% trans %}Housing{% endtrans %}</h3>
                 <p> 
                     {% if app.request.locale == "en" %}
-                        {{immo.logement}}
+                        {{immo.logement | nl2br}}
                     {% else %}
-                        {{immo.logementEn}}
+                        {{immo.logementEn | nl2br}}
                     {% endif %}
                 </p>
             </div>
@@ -83,9 +85,9 @@
                 <h3>{% trans %}Equipment{% endtrans %}</h3>
                 <p> 
                     {% if app.request.locale == "en" %}
-                        {{immo.equipement}}
+                        {{immo.equipement | nl2br}}
                     {% else %}
-                        {{immo.equipement}}
+                        {{immo.equipement | nl2br}}
                     {% endif %}
                 </p>
             </div>

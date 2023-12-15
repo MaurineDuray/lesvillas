@@ -14,11 +14,12 @@
         <h2>Bienvenue dans le tableau de bord !</h2>
         <a href="{{path('admin')}}">Retour au tableau de bord</a>
         <div class="addBtn">
-            <a href="" class="addButtons"><button>Ajouter une question à la FAQ</button></a>
+            <a href="{{path('admin_faq_add')}}" class="addButtons"><button>Ajouter une question à la FAQ</button></a>
         </div>
         
     </div>
    <div class="tableau">
+   <h1 style="text-align: center">Gestion de la FAQ</h1>
     <table>
         <thead>
             <tr>
@@ -33,8 +34,8 @@
                     <td>{{question.id}}</td>
                     <td>{{question.question}}</td>
                     <td class="actions">
-                        <a href="" class="btn-yellow"><i class="fas fa-edit"></i></a>
-                        <a href="" class="btn-red" ><i class="fas fa-trash"></i></a>
+                        <a href="{{path('admin_faq_edit',{'id': question.id})}}" class="btn-yellow"><i class="fas fa-edit"></i></a>
+                        <a href="{{path('admin_faq_delete',{'id':question.id})}}" class="btn-red" ><i class="fas fa-trash"></i></a>
                     </td>
                 </tr>
             {% endfor %}
