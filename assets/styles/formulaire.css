@@ -52,3 +52,23 @@
 #reservation_arrival_month, #reservation_arrival_day, #reservation_arrival_year,#reservation_departure_month, #reservation_departure_day, #reservation_departure_year{
     margin: 5px !important;
 }
+
+form[name="search"]{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#search_search{
+    border: none;
+    padding: 5px;
+    margin-right: 20px;
+}
+#search_Research{
+    background-color: #024959;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    box-sizing: content-box;
+}

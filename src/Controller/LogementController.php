@@ -85,9 +85,11 @@ class LogementController extends AbstractController
 
         $immos = $queryBuilder->getQuery()->getResult();
 
-        return $this->render('logement/sort.html.twig',[
+        return $this->render('logement/result.html.twig',[
             'immos'=>$immos,
         ]);
 
     }
+
+
 }

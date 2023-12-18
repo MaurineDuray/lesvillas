@@ -11,9 +11,9 @@
     </div>
     <div class="slide" id="search">
         <h2>{% trans %}Welcome on the Côte d'Azur !{% endtrans %}</h2>
-        <h2>Are you looking for specific accommodation?</h2>
-        {# {{form_start(search)}}
-        {{form_end(search)}} #}
+        <h2>{% trans %}Are you looking for specific accommodation?{% endtrans %}</h2>
+        {{form_start(search)}}
+        {{form_end(search)}}
         {% if app.request.locale =="en" %}
             {% include "partials/filterEn.html.twig" %} 
         {% else %}

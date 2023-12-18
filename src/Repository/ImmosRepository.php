@@ -21,6 +21,28 @@ class ImmosRepository extends ServiceEntityRepository
         parent::__construct($registry, Immos::class);
     }
 
+    public function findByCriteria(string $criteria)
+   {
+       $qb = $this->createQueryBuilder('i');
+       $qb
+           ->where(
+               $qb->expr()->andX(
+                   $qb->expr()->orX(
+                       $qb->expr()->like('i.Titre', ':criteria'),
+                       $qb->expr()->like('i.TitreEn', ':criteria'),
+                       $qb->expr()->like('i.description', ':criteria'),
+                       $qb->expr()->like('i.descriptionEn', ':criteria'),
+                       $qb->expr()->like('i.type', ':criteria'),
+                       $qb->expr()->like('i.address', ':criteria')
+                   ),
+               )
+           )
+           ->setParameter('criteria', '%' . $criteria . '%');
+       return $qb
+           ->getQuery()
+           ->getResult();
+   }
+
     public function findByConciergerie($value): array
    {
        return $this->createQueryBuilder('i')

@@ -10,16 +10,26 @@
         </div>
     </div>
     <div class="slide" id="search">
-        <h2>{% trans %}Result of your research{% endtrans %}</h2>
+        <h2>{% trans %}Welcome !{% endtrans %}</h2>
         <h2>{% trans %}Are you looking for specific accommodation?{% endtrans %}</h2>
         {{form_start(search)}}
         {{form_end(search)}}
-        {% include "partials/filter.html.twig" %}
+        {% if app.request.locale =="en" %}
+            {% include "partials/filterEn.html.twig" %} 
+        {% else %}
+            {% include "partials/filter.html.twig" %} 
+        {% endif %}
+        
     </div>
     <div class="galery">
-       {% for immo in immos %}
-            {% include "partials/card.html.twig" %}
-       {% endfor %}
+        {% if immos %}
+            {% for immo in immos %}
+                {% include "partials/card.html.twig" %}
+            {% endfor %}
+        {% else %}
+            <h2>Il n'y a pas de résultat pour votre recherche !</h2>
+        {% endif %}
+        
     </div>
     {% include "partials/footer.html.twig" %}
 {% endblock %}
