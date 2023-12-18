@@ -8,21 +8,27 @@ use App\Form\FaqType;
 use App\Form\ImmosType;
 use App\Entity\Partners;
 use App\Entity\Activities;
-use App\Entity\ActivityImgModify;
 use App\Form\ActivityType;
 use App\Form\PartnersType;
 use App\Form\UpdateImmoType;
 use App\Entity\ImmoImgModify;
-use App\Form\ActivityImgModifyType;
 use App\Form\UpdateImmosType;
 use App\Security\UserChecker;
 use App\Form\ImmoImgModifyType;
 use App\Form\UpdateActivityType;
+use App\Entity\ActivityImgModify;
+use App\Entity\Conciergerie;
+use App\Entity\Contact;
+use App\Entity\Reservation;
 use App\Repository\FaqRepository;
 use App\Repository\UserRepository;
+use App\Form\ActivityImgModifyType;
 use App\Repository\ImmosRepository;
+use App\Repository\ContactRepository;
 use App\Repository\PartnersRepository;
 use App\Repository\ActivitiesRepository;
+use App\Repository\ConciergerieRepository;
+use App\Repository\ReservationRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Request;
@@ -92,6 +98,100 @@ class AdminController extends AbstractController
         ]);
     } 
 
+    #[Route('/admincontact', name: 'admin_contacts')]
+    public function adminContact(ContactRepository $repo):Response
+    {
+        $contacts = $repo->findAll();
+        return $this->render('admin/contact.html.twig', [
+            'contacts' => $contacts,
+        ]);
+    } 
+
+    #[Route('/admincontact/{id}', name: 'admin_contacts_message')]
+    public function adminContactShow(ContactRepository $repo, Contact $message):Response
+    {
+        return $this->render('admin/message.html.twig', [
+            'message'=>$message
+        ]);
+    } 
+
+    #[Route("/admincontact/{id}/delete", name:"admin_contacts_delete")]
+    public function contactdelete(Contact $contact, EntityManagerInterface $manager): Response
+    {
+        $this->addFlash(
+            'success',
+            "Le contact {$contact->getId()}</strong> a bien été supprimé"
+        );
+
+        $manager->remove($contact);
+        $manager->flush();
+
+        return $this->redirectToRoute('admin_contacts');
+    }
+
+    #[Route('/adminreservation', name: 'admin_reservations')]
+    public function adminReservation(ReservationRepository $repo):Response
+    {
+        $reservations = $repo->findAll();
+        return $this->render('admin/reservations.html.twig', [
+            'reservations' => $reservations,
+        ]);
+    } 
+
+    #[Route('/adminreservation/{id}', name: 'admin_reservations_demande')]
+    public function adminreservationsShow(ContactRepository $repo, Reservation $reservation):Response
+    {
+        return $this->render('admin/reservation.html.twig', [
+            'reservation'=>$reservation
+        ]);
+    } 
+
+
+    #[Route("/adminreservation/{id}/delete", name:"admin_reservation_delete")]
+    public function reservationdelete(Reservation $reservation, EntityManagerInterface $manager): Response
+    {
+        $this->addFlash(
+            'success',
+            "Le contact {$reservation->getId()}</strong> a bien été supprimé"
+        );
+
+        $manager->remove($reservation);
+        $manager->flush();
+
+        return $this->redirectToRoute('admin_reservations');
+    }
+
+    #[Route('/adminconciergerie', name: 'admin_conciergerie')]
+    public function adminconciergerie(ConciergerieRepository $repo):Response
+    {
+        $conciergeries = $repo->findAll();
+        return $this->render('admin/conciergerie.html.twig', [
+            'conciergeries' => $conciergeries,
+        ]);
+    } 
+
+    #[Route('/adminconciergerie/{id}', name: 'admin_conciergerie_demande')]
+    public function adminconciergerieShow(ConciergerieRepository $repo, Conciergerie $conciergerie):Response
+    {
+        return $this->render('admin/demande.html.twig', [
+            'conciergerie'=>$conciergerie
+        ]);
+    } 
+
+    #[Route("/adminconciergerie/{id}/delete", name:"admin_conciergerie_delete")]
+    public function conciergeriedelete(Conciergerie $conciergerie, EntityManagerInterface $manager): Response
+    {
+        $this->addFlash(
+            'success',
+            "La demande de conciergerie {$conciergerie->getId()}</strong> a bien été supprimée"
+        );
+
+        $manager->remove($conciergerie);
+        $manager->flush();
+
+        return $this->redirectToRoute('admin_conciergerie');
+    }
+    
     #[Route('/adminlogement/add', name: 'admin_logement_add')]
     public function adminImmosAdd(Request $request, EntityManagerInterface $manager):Response
     {

@@ -25,7 +25,7 @@ class LogementController extends AbstractController
         $form -> handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            
+            $reservation->setImmoId($immo);
             $manager->persist($reservation);
             $manager->flush();
 
