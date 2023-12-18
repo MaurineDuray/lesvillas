@@ -42,8 +42,13 @@
     </div>
     <div class="galery">
         <div class="containerGalery">
-            <img src="{{asset('images/galery_01.png')}}" alt="galerie">
+             <img src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}">
         </div>
+    </div>
+    <div class="diaporama">
+        {% for image in immo.images %}
+             <img class="diapo" src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}">
+        {% endfor %}
     </div>
 
     <div class="textIntro">

@@ -104,17 +104,6 @@ class ImmosType extends ApplicationType
                     'Autres'=>"Autres"
                 ]
             ])
-            ->add(
-                'images',
-                FileType::class, [
-                    'multiple' => true,
-                    "data_class"=>null,
-                    "label"=>"Image de couverture du logement",
-                    'attr'=>[
-                        'multiple' => 'multiple' 
-                    ]
-                ]
-            )
             ->add('submit', SubmitType::class,['label' => 'Enregistrer'],
             [
                 'attr' => ['class' => 'btn'],

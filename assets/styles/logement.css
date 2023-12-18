@@ -25,9 +25,28 @@
 .priceLogement{
     margin-top:  20px;
 }
+.containerGalery{
+    width: 100%;
+    display: flex;
+}
+.containerGalery img{
+    width: 100%;
+}
 .galery{
     width: 80%;
     margin-bottom: 20px;
+}
+.diaporama{
+    width: 80%;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.diapo{
+    width: 50px;
+    margin: 3px;
+    cursor: pointer;
 }
 .textIntro{
     width: 70%;

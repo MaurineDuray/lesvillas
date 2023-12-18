@@ -24,11 +24,13 @@ use App\Entity\Reservation;
 use App\Repository\FaqRepository;
 use App\Repository\UserRepository;
 use App\Form\ActivityImgModifyType;
+use App\Form\ImageType;
 use App\Repository\ImmosRepository;
 use App\Repository\ContactRepository;
 use App\Repository\PartnersRepository;
 use App\Repository\ActivitiesRepository;
 use App\Repository\ConciergerieRepository;
+use App\Repository\ImagesRepository;
 use App\Repository\ReservationRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\SecurityBundle\Security;
@@ -107,6 +109,79 @@ class AdminController extends AbstractController
             'contacts' => $contacts,
         ]);
     } 
+
+
+    #[Route('/admingalery/{id}', name: 'admin_galery')]
+    public function adminGalery(ImagesRepository $repo, EntityManagerInterface $manager, Request $request, Immos $immo):Response
+    {
+        $pictures = $repo ->findByImmo($immo->getId());
+        $image = new Images;
+        $form = $this->createForm(ImageType::class, $image);
+        $form -> handleRequest($request);
+        $immoId = $request->attributes->get('id');
+        
+        if($form->isSubmitted() && $form->isValid()){
+           
+            $file = $form['file']->getData();
+            if (!empty($file)) {
+                $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = transliterator_transliterate('Any-Latin;Latin-ASCII;[^A-Za-z0-9_]remove;Lower()', $originalFilename);
+                $newFilename = $safeFilename . "-" . uniqid() . "." . $file->guessExtension();
+                try {
+                    $file->move(
+                        $this->getParameter('uploads_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    return $e->getMessage();
+                }
+                $image->setFile($newFilename);
+            }
+            $image->setImmoId($immo);
+            $manager->persist($image);
+            $manager->flush();
+
+            $this->addFlash(
+                'success',
+                "L'image {$image->getFile()} a bien été ajouté"
+            );
+
+            
+            return $this->render("admin/galery.html.twig",[
+                'myform'=>$form->createView(),
+                'immo'=>$immo,
+                'pictures'=>$pictures
+            ]);
+        }
+    
+        return $this->render("admin/galery.html.twig",[
+            'myform'=>$form->createView(),
+            'immo'=>$immo,
+            'pictures'=>$pictures
+        ]);
+        
+    } 
+
+    #[Route("/admingalery/{id}/delete", name: "admin_galery_delete")]
+    public function galerydelete(Images $image, EntityManagerInterface $manager): Response
+    {
+        $immo = $image->getImmoId();
+        $this->addFlash(
+            'success',
+            "L'image {$image->getFile()}</strong> a bien été supprimée"
+        );
+
+        unlink($this->getParameter('uploads_directory').'/'.$image->getFile());
+        
+
+        $manager->remove($image);
+        $manager->flush();
+
+        return $this->redirectToRoute('admin_galery',[
+            'id'=>$immo->getId()
+        ]);
+    }
+
 
     #[Route('/admincontact/{id}', name: 'admin_contacts_message')]
     public function adminContactShow(ContactRepository $repo, Contact $message):Response
@@ -198,18 +273,12 @@ class AdminController extends AbstractController
     {
         $immo = new Immos;
         $form = $this->createForm(ImmosType::class, $immo);
-        $image = new Images();
+        
         
         $form -> handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            
-            foreach($immo->getImages() as $image)
-            {
-                $image->setImmoId($immo);
-                $manager->persist($image);
-            }
-
+           
             $file = $form['cover']->getData();
             if (!empty($file)) {
                 $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);

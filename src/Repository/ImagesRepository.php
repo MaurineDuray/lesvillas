@@ -36,6 +36,18 @@ class ImagesRepository extends ServiceEntityRepository
 //        ;
 //    }
 
+
+   public function findByImmo($value): array
+   {
+       return $this->createQueryBuilder('i')
+           ->andWhere('i.immoId = :val')
+           ->setParameter('val', $value)
+           ->orderBy('i.id', 'ASC')
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
 //    public function findOneBySomeField($value): ?Images
 //    {
 //        return $this->createQueryBuilder('i')
