@@ -19,6 +19,7 @@ use App\Form\UpdateActivityType;
 use App\Entity\ActivityImgModify;
 use App\Entity\Conciergerie;
 use App\Entity\Contact;
+use App\Entity\Images;
 use App\Entity\Reservation;
 use App\Repository\FaqRepository;
 use App\Repository\UserRepository;
@@ -197,10 +198,18 @@ class AdminController extends AbstractController
     {
         $immo = new Immos;
         $form = $this->createForm(ImmosType::class, $immo);
+        $image = new Images();
+        
         $form -> handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
             
+            foreach($immo->getImages() as $image)
+            {
+                $image->setImmoId($immo);
+                $manager->persist($image);
+            }
+
             $file = $form['cover']->getData();
             if (!empty($file)) {
                 $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
@@ -216,7 +225,10 @@ class AdminController extends AbstractController
                 }
                 $immo->setCover($newFilename);
             }
-        
+
+
+            
+
             $immo->setSlug(rand());
             $manager->persist($immo);
             $manager->flush();

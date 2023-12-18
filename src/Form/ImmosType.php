@@ -106,11 +106,13 @@ class ImmosType extends ApplicationType
             ])
             ->add(
                 'images',
-                CollectionType::class,
-                [
-                    'entry_type' => FileType::class,
-                    'allow_add' => true, // permet d'ajouter des éléments et surtout avoir data_prototype
-                    'allow_delete' => true
+                FileType::class, [
+                    'multiple' => true,
+                    "data_class"=>null,
+                    "label"=>"Image de couverture du logement",
+                    'attr'=>[
+                        'multiple' => 'multiple' 
+                    ]
                 ]
             )
             ->add('submit', SubmitType::class,['label' => 'Enregistrer'],

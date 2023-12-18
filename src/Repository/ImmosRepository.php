@@ -22,7 +22,7 @@ class ImmosRepository extends ServiceEntityRepository
     }
 
     public function findByCriteria(string $criteria)
-   {
+    {
        $qb = $this->createQueryBuilder('i');
        $qb
            ->where(
