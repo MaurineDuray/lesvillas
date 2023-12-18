@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\FaqRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: FaqRepository::class)]
 class Faq
@@ -15,15 +16,19 @@ class Faq
     private ?int $id = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La question initiale doit être mentionnée")]
     private ?string $question = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La question initiale en anglais doit être mentionnée")]
     private ?string $questionEn = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La réponse à la question doit être mentionnée")]
     private ?string $response = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La réponse (en anglais) à la question doit être mentionnée")]
     private ?string $responseEn = null;
 
     public function getId(): ?int

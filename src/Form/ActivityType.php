@@ -43,7 +43,8 @@ class ActivityType extends ApplicationType
             ])
             ->add('localisation', ChoiceType::class, [
                 'choices'=>[
-                    "Côte d'Azur" => "Cotes d'Azur",
+                    "Côte d'Azur et Floride"=>" ",
+                    "Côte d'Azur" => "Côte d'Azur",
                     'Floride' => "Floride",
                 ]
             ])

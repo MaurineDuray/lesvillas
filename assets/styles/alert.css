@@ -1,0 +1,25 @@
+.alert{
+    position: absolute;
+    width: 80%;
+    background: linear-gradient(183deg, #08c4d9c4 0%, #024959b6 100%);
+    color: white;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.alert button{
+    width: 100px;
+    border: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}

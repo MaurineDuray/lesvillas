@@ -6,6 +6,7 @@ use Cocur\Slugify\Slugify;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\ActivitiesRepository;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ActivitiesRepository::class)]
 class Activities
@@ -16,9 +17,13 @@ class Activities
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Le titre de l'activité doit être mentionné")]
+    #[Assert\Length(min: 2, max:255, minMessage:"Le titre de l'activité doit faire au minimum 2 caractères", maxMessage: "Le titre de l'activité ne peut dépasser 255 caractères")]
     private ?string $titre = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Le titre anglais de l'activité doit être mentionné")]
+    #[Assert\Length(min: 2, max:255, minMessage:"Le titre de l'activité doit faire au minimum 2 caractères", maxMessage: "Le titre de l'activité ne peut dépasser 255 caractères")]
     private ?string $titreEn = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
@@ -28,6 +33,9 @@ class Activities
     private ?string $descriptionEn = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"L'image de l'activité doit être fournie")]
+    #[Assert\Image(mimeTypes:["image/png","image/jpeg","image/jpg","image/gif"], mimeTypesMessage:"Vous devez ajouter un fichier jpg, jpeg, png ou gif")]
+    #[Assert\File(maxSize:"1024k", maxSizeMessage:"La taille du fichier est trop grande")]
     private ?string $image = null;
 
     #[ORM\Column(length: 255, nullable: true)]

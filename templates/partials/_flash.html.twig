@@ -6,3 +6,8 @@
         </div>
     {% endfor %}
 {% endfor %}
+
+
+{% block javascripts %}
+    {{encore_entry_script_tags('alert')}}
+{% endblock %}
