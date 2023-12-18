@@ -17,21 +17,18 @@
         
     </div>
    <div class="tableau">
-   <h1 style="text-align: center">Gestion de la galerie de "{{immo.Titre}}"</h1>
+   <h1 style="text-align: center">Gestion de la galerie de </h1>
    
     <div class="message" style="display: flex; justify-content:center; flex-wrap: wrap">
     <div class="admingalery" style="display:flex; flex-wrap: wrap">
     {% for picture in pictures %}
-       <div class="card-img">
+       <div class="card-img-galery">
             <a class="deleteBtn" href="{{path('admin_galery_delete',{'id': picture.id})}}">X</a>
             <img style="width: 300px" src="../../upload/{{picture.file}}" alt="image du logement {{picture.immoId.Titre}}">
         </div>
     {% endfor %}
     </div>
-   
-    {{form_start(myform)}}
-        {{form_widget(myform)}}
-    {{form_end(myform)}}
+    <a href="{{path('admin_galery_add',{'id': immo.id})}}"><button class="azurButton">Ajouter une photo</button></a>
     </div> 
     </div>
     </div>

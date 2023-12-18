@@ -47,7 +47,7 @@
     </div>
     <div class="diaporama">
         {% for image in immo.images %}
-             <img class="diapo" src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}">
+             <img class="diapo" src="../../upload/{{image.file}}" alt="image du logement {{image.file}}">
         {% endfor %}
     </div>
 
@@ -109,10 +109,10 @@
         <form id="priceForm" action="">
             <input type="date" id="dateArrivee" placeholder="Date d'arrivée">
             <input type="date" id="dateDepart" placeholder="Date de départ">
-            <button>{% trans %}Estimate{% endtrans %}</button>
+            <button id="estimate">{% trans %}Estimate{% endtrans %}</button>
             <div class="result">
                 <p>
-                    {% trans %}The total cost of your 7-night stay is estimated at €3750, excluding tourist tax.{% endtrans %}
+                    {% trans %}The total cost of your{% endtrans %} <span id="days">7 </span>{% trans %}nights stay is estimated at {% endtrans %} <span id="tarif">€3750</span>{% trans %}, excluding tourist tax.{% endtrans %}
                 </p>
             </div>
         </form>

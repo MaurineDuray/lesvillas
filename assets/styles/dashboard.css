@@ -72,6 +72,11 @@ td{
     width: 90%;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+.admingalery img{
+    padding: 10px;
 }
 .admingalery .deleteBtn{
     background-color: red;

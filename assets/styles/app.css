@@ -122,6 +122,7 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 .burger{
     display: none;
@@ -237,9 +238,11 @@ span #script{
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .card{
     background-color: rgba(245, 245, 245, 1);
+    min-width: 29%;
     max-width: 30%;
     padding: 10px;
     border-radius: 20px;
@@ -264,10 +267,18 @@ span #script{
     text-align: center;
     font-size: 16pt;
 }
-.card-img img{
-    width: 90%;
+.card-img{
     margin-left: 50%;
     transform: translateX(-50%);
+    width: 90%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.card-img img{
+    height: 100%;
 }
 .card-btn{
     width: 100%;
@@ -568,6 +579,12 @@ footer{
     width: 100%;
     color: white;
 }
+@media all and (max-width: 1000px){
+    .card{
+        min-width: 44% !important;
+        max-width: 45% !important;
+    }
+}
 @media all and (max-width: 800px){
     nav ul{
         display: none;
@@ -596,6 +613,10 @@ footer{
     footer .contact{
         width: 80% !important;
         margin: 0 auto;
+    }
+    .card{
+        min-width: 89% !important;
+        max-width: 90% !important;
     }
 }
 @media all and (max-width: 500px){

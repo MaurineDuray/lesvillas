@@ -5,11 +5,16 @@ namespace App\Controller;
 use App\Entity\Faq;
 use App\Entity\Immos;
 use App\Form\FaqType;
+use App\Entity\Images;
+use App\Entity\Contact;
+use App\Form\ImageType;
 use App\Form\ImmosType;
 use App\Entity\Partners;
 use App\Entity\Activities;
 use App\Form\ActivityType;
 use App\Form\PartnersType;
+use App\Entity\Reservation;
+use App\Entity\Conciergerie;
 use App\Form\UpdateImmoType;
 use App\Entity\ImmoImgModify;
 use App\Form\UpdateImmosType;
@@ -17,27 +22,23 @@ use App\Security\UserChecker;
 use App\Form\ImmoImgModifyType;
 use App\Form\UpdateActivityType;
 use App\Entity\ActivityImgModify;
-use App\Entity\Conciergerie;
-use App\Entity\Contact;
-use App\Entity\Images;
-use App\Entity\Reservation;
 use App\Repository\FaqRepository;
 use App\Repository\UserRepository;
 use App\Form\ActivityImgModifyType;
-use App\Form\ImageType;
 use App\Repository\ImmosRepository;
+use App\Repository\ImagesRepository;
 use App\Repository\ContactRepository;
 use App\Repository\PartnersRepository;
 use App\Repository\ActivitiesRepository;
-use App\Repository\ConciergerieRepository;
-use App\Repository\ImagesRepository;
-use App\Repository\ReservationRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Repository\ReservationRepository;
+use App\Repository\ConciergerieRepository;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -110,57 +111,64 @@ class AdminController extends AbstractController
         ]);
     } 
 
-
     #[Route('/admingalery/{id}', name: 'admin_galery')]
-    public function adminGalery(ImagesRepository $repo, EntityManagerInterface $manager, Request $request, Immos $immo):Response
+    public function adminAddGalery(ImagesRepository $repo, int $id, ImmosRepository $reposi):Response
     {
-        $pictures = $repo ->findByImmo($immo->getId());
-        $image = new Images;
-        $form = $this->createForm(ImageType::class, $image);
-        $form -> handleRequest($request);
-        $immoId = $request->attributes->get('id');
-        
-        if($form->isSubmitted() && $form->isValid()){
-           
-            $file = $form['file']->getData();
-            if (!empty($file)) {
-                $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
-                $safeFilename = transliterator_transliterate('Any-Latin;Latin-ASCII;[^A-Za-z0-9_]remove;Lower()', $originalFilename);
-                $newFilename = $safeFilename . "-" . uniqid() . "." . $file->guessExtension();
-                try {
-                    $file->move(
-                        $this->getParameter('uploads_directory'),
-                        $newFilename
-                    );
-                } catch (FileException $e) {
-                    return $e->getMessage();
-                }
-                $image->setFile($newFilename);
-            }
-            $image->setImmoId($immo);
-            $manager->persist($image);
-            $manager->flush();
-
-            $this->addFlash(
-                'success',
-                "L'image {$image->getFile()} a bien été ajouté"
-            );
-
-            
-            return $this->render("admin/galery.html.twig",[
-                'myform'=>$form->createView(),
-                'immo'=>$immo,
-                'pictures'=>$pictures
-            ]);
-        }
-    
-        return $this->render("admin/galery.html.twig",[
-            'myform'=>$form->createView(),
-            'immo'=>$immo,
-            'pictures'=>$pictures
+        $pictures = $repo->findByImmo($id);
+        $immo = $reposi->findById($id);
+        return $this->render('admin/galery.html.twig', [
+            'pictures' => $pictures,
+            'immo'=>$immo
         ]);
-        
     } 
+
+    
+
+
+    #[Route('/admingalery/{id}/add', name: 'admin_galery_add')]
+    public function adminGalery(ImagesRepository $repo, int $id, Request $request, EntityManagerInterface $manager, Immos $immo): Response
+    {
+    
+    $image = new Images;
+    $form = $this->createForm(ImageType::class, $image);
+    $form->handleRequest($request);
+
+    if ($form->isSubmitted() && $form->isValid()) {
+        $file = $form['file']->getData();
+        if (!empty($file)) {
+            $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+            $safeFilename = transliterator_transliterate('Any-Latin;Latin-ASCII;[^A-Za-z0-9_]remove;Lower()', $originalFilename);
+            $newFilename = $safeFilename . "-" . uniqid() . "." . $file->guessExtension();
+            try {
+                $file->move(
+                    $this->getParameter('uploads_directory'),
+                    $newFilename
+                );
+            } catch (FileException $e) {
+                return $e->getMessage();
+            }
+            $image->setFile($newFilename);
+        }
+
+        $image->setImmoId($manager->getRepository(Immos::class)->find($id));
+        $manager->persist($image);
+        $manager->flush();
+
+        $this->addFlash(
+            'success',
+            "L'image a bien été ajoutée"
+        );
+
+        return $this->redirectToRoute('admin_galery', [
+            'id' => $id,
+        ]);
+    }
+
+    return $this->render("admin/addgalery.html.twig", [
+        'myform' => $form->createView()
+    ]);
+}
+
 
     #[Route("/admingalery/{id}/delete", name: "admin_galery_delete")]
     public function galerydelete(Images $image, EntityManagerInterface $manager): Response
@@ -454,7 +462,7 @@ class AdminController extends AbstractController
      * Permet d'afficher le formulaire pour éditer un logement
      */
     #[Route('/adminlogements/{id}/edit', name: 'admin_logement_edit')]
-    public function editPattern(Immos $immo, Request $request, EntityManagerInterface $manager):Response
+    public function editlogement(Immos $immo, Request $request, EntityManagerInterface $manager):Response
     {
         $user = $this->getUser(); //récupération de l'utilisateur connecté
 

@@ -82,7 +82,7 @@ class Immos
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(message:"L'image principale du logement doit être fournie")]
     #[Assert\Image(mimeTypes:["image/png","image/jpeg","image/jpg","image/gif"], mimeTypesMessage:"Vous devez ajouter un fichier jpg, jpeg, png ou gif")]
-    #[Assert\File(maxSize:"1024k", maxSizeMessage:"La taille du fichier est trop grande")]
+    #[Assert\File(maxSize:"2024k", maxSizeMessage:"La taille du fichier est trop grande")]
     private ?string $cover = null;
 
     #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Images::class)]

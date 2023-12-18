@@ -43,6 +43,8 @@ class ImmosRepository extends ServiceEntityRepository
            ->getResult();
    }
 
+  
+
     public function findByConciergerie($value): array
    {
        return $this->createQueryBuilder('i')
@@ -102,6 +104,16 @@ class ImmosRepository extends ServiceEntityRepository
            ->getResult()
        ;
     }
+
+       public function findById($value): ?Immos
+   {
+       return $this->createQueryBuilder('i')
+           ->andWhere('i.id = :val')
+           ->setParameter('val', $value)
+           ->getQuery()
+           ->getOneOrNullResult()
+       ;
+   }
 
 
 //    /**
