@@ -45,3 +45,10 @@
     border-radius: 20px;
     margin-top: 20px;
 }
+#reservation_arrival, #reservation_departure{
+    display: flex !important;
+    flex-wrap: nowrap !important;
+}
+#reservation_arrival_month, #reservation_arrival_day, #reservation_arrival_year,#reservation_departure_month, #reservation_departure_day, #reservation_departure_year{
+    margin: 5px !important;
+}

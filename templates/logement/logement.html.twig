@@ -113,5 +113,16 @@
         </form>
     </div>
     <button id="booking"><div id="script">{% trans %}I would like to book{% endtrans %}</div></button>
+    <div class="slide logementFormulaire" id="formulaire">
+        <h2 style="text-align: center">{% trans %}Interested in this property?{% endtrans %}</h2>
+        <p style="text-align: center" class="script">{% trans %}Fill in the form and we'll get back to you as soon as possible!{% endtrans %}</p>
+         {{form_start(myform)}}
+            {{form_widget(myform)}}
+        {{form_end(myform)}}
+    </div>
     {% include "partials/footer.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    {{encore_entry_script_tags('booking')}}
 {% endblock %}

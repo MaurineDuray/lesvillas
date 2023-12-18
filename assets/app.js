@@ -24,8 +24,8 @@ require('@fortawesome/fontawesome-free/js/all.js');
 
 console.log('test')
  document.addEventListener('DOMContentLoaded',()=>{
-    
-    
+
+   
  })
 
    

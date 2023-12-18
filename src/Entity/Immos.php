@@ -98,9 +98,13 @@ class Immos
     #[ORM\Column(type: Types::TEXT)]
     private ?string $address = null;
 
+    #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Reservation::class)]
+    private Collection $reservations;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
+        $this->reservations = new ArrayCollection();
     }
 
     /**
@@ -377,6 +381,36 @@ class Immos
     public function setAddress(string $address): static
     {
         $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Reservation>
+     */
+    public function getReservations(): Collection
+    {
+        return $this->reservations;
+    }
+
+    public function addReservation(Reservation $reservation): static
+    {
+        if (!$this->reservations->contains($reservation)) {
+            $this->reservations->add($reservation);
+            $reservation->setImmoId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReservation(Reservation $reservation): static
+    {
+        if ($this->reservations->removeElement($reservation)) {
+            // set the owning side to null (unless already changed)
+            if ($reservation->getImmoId() === $this) {
+                $reservation->setImmoId(null);
+            }
+        }
 
         return $this;
     }

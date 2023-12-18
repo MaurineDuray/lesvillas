@@ -126,6 +126,12 @@
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.logementFormulaire{
+    display: block ;
+}
+
+
 @media all and (max-width: 850px){
     .textIntro{
         margin-top: 20px;

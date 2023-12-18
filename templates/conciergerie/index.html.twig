@@ -16,12 +16,12 @@
         drafting contracts, managing the schedule, monitoring payments and reminders (from the deposit to the security deposit).
         Enjoy the freedom of renting without constraints and benefit from our experience and expertise!{% endtrans %}</p>
     </div>
-    <div class="slide" id="formulaireConc">
-        <h2>{% trans %}Offer your property for rent{% endtrans %}</h2>
-        <p>{% trans %}Fill in the form and we'll get back to you as soon as possible...{% endtrans %}</p>
-        <form id="addConciergerie" action="">
-            <input type="text" placeholder="nom">
-        </form>
+    <div class="slide" id="formulaire">
+        <h2 style="text-align: center">{% trans %}Offer your property for rent{% endtrans %}</h2>
+        <p style="text-align: center">{% trans %}Fill in the form and we'll get back to you as soon as possible...{% endtrans %}</p>
+        {{form_start(myform)}}
+            {{form_widget(myform)}}
+        {{form_end(myform)}}
     </div>
 {% include "partials/footer.html.twig" %}
 {% endblock %}

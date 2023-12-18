@@ -3,15 +3,16 @@
 {% block title %}Villas Blue{% endblock %}
 
 {% block body %}
+    <div class="cookies">
+        <p>{% trans %}We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.{% endtrans %}</p>
+        <button class="btnCookie">OK</button>
+    </div>
     <div class="slide" id="introhome">
         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
         <div class="sep">
             <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
         </div>
     </div>
-    {% if app.user %}
-         <a href="{{path('contact_mail',{'id':app.user.id})}}">Contact</a>
-    {% endif %}
    
     <div class="slide" id="sepDiscover">
         <h3>{% trans %}
@@ -97,4 +98,8 @@
     </div>
 
     {% include "partials/footer.html.twig" %}
+{% endblock %}
+
+{% block javascripts %}
+    {{encore_entry_script_tags('cookies')}}
 {% endblock %}

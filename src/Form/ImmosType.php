@@ -84,7 +84,7 @@ class ImmosType extends ApplicationType
             ])
             ->add('conciergerie', ChoiceType::class, [
                 'choices'=>[
-                    "Côte d'Azur" => "Cotes d'Azur",
+                    "Côte d'Azur" => "Azur",
                     'Floride' => "Floride",
                 ]
             ])

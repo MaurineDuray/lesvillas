@@ -25,12 +25,12 @@
             <p>+33 7 84 40 75 23</p>
         </div>
     </div>
-    <div class="formulaireContact">
-        <h2>{% trans %}Contact us{% endtrans %}</h2>
-        <p class="script">{% trans %}Looking for a home? Are you a property owner?{% endtrans %}</p>
-        <form action="">
-            <p>{% trans %}If you have any questions, leave us a message...{% endtrans %}</p>
-        </form>
+    <div class="slide" id="formulaire">
+        <h2 style="text-align: center">{% trans %}Contact us{% endtrans %}</h2>
+        <p style="text-align: center" class="script">{% trans %}Looking for a home? Are you a property owner?{% endtrans %}</p>
+            {{form_start(myform)}}
+                  {{form_widget(myform)}}
+            {{form_end(myform)}}
     </div>
     {% include "partials/footer.html.twig" %}
 {% endblock %}

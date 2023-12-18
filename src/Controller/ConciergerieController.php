@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Conciergerie;
 use App\Entity\User;
+use App\Form\ConciergerieType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,10 +17,29 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ConciergerieController extends AbstractController
 {
     #[Route('/conciergerie', name: 'conciergerie')]
-    public function index(): Response
+    public function index(Request $request, EntityManagerInterface $manager): Response
     {
-        return $this->render('conciergerie/index.html.twig', [
-            'controller_name' => 'ConciergerieController',
+        $contact = new Conciergerie;
+        $form = $this->createForm(ConciergerieType::class, $contact);
+        $form -> handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            
+            $manager->persist($contact);
+            $manager->flush();
+
+            $this->addFlash(
+                'success',
+                "Votre demande a bien été envoyée ! / Your request has been sent!"
+            );
+
+            return $this->redirectToRoute('contact', [
+                
+            ]);
+        }
+
+        return $this->render("conciergerie/index.html.twig",[
+            'myform'=>$form->createView()
         ]);
     }
 

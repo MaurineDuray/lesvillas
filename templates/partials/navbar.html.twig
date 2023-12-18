@@ -4,8 +4,8 @@
     <li><a href="{{path('conciergerie')}}">{% trans %}Conciergerie{% endtrans %}</a></li>
     <li><a href="{{path('azur')}}">{% trans %}Côte d'Azur{% endtrans %}</a></li>
     <li><a href="{{path('floride')}}">{% trans %}Florida{% endtrans %}</a></li>
-    <li><a href="#">{% trans %}Our partners{% endtrans %}</a></li>
-    <li><a href="#">{% trans %}About{% endtrans %}</a></li>
+    <li><a href="{{path('partners')}}">{% trans %}Our partners{% endtrans %}</a></li>
+    <li><a href="{{path('about')}}">{% trans %}About{% endtrans %}</a></li>
     <li>
       {% for locale in locales %}
       {% if locale != app.request.locale %}

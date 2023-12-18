@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Immos;
+use App\Entity\Reservation;
+use App\Form\ReservationType;
 use App\Repository\ImmosRepository;
 use Cocur\Slugify\Slugify;
 use Doctrine\ORM\EntityManagerInterface;
@@ -17,9 +19,32 @@ class LogementController extends AbstractController
     #[Route('/logement/{id}', name: 'logement')]
     public function showLogement( Immos $immo, Request $request, EntityManagerInterface $manager):Response
     {
+
+        $reservation = new Reservation;
+        $form = $this->createForm(ReservationType::class, $reservation);
+        $form -> handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            
+            $manager->persist($reservation);
+            $manager->flush();
+
+            $this->addFlash(
+                'success',
+                "Votre demande de réservation a bien été envoyé ! / Your booking request has been sent ! "
+            );
+            
+
+            return $this->redirectToRoute('logement', [
+                'id' => $immo->getId()
+            ]);
+        }
         return $this->render('logement/logement.html.twig', [
-            'immo'=>$immo
+            'immo'=>$immo,
+            'myform'=>$form->createView()
         ]);
+
+
     }
 
     #[Route('/logement/sort', name: 'sort')]
