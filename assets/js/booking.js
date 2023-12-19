@@ -24,3 +24,4 @@ pictures.forEach(picture=>{
       diapo.appendChild(newImg)
    })
 })
+

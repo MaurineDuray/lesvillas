@@ -61,6 +61,7 @@ class AccountController extends AbstractController
      * @return Response
      */
     #[Route("/register", name:"account_register")]
+    #[IsGranted("ROLE_ADMIN")]
     public function register(Request $request, EntityManagerInterface $manager, UserPasswordHasherInterface $hasher): Response
     {
         $user = new User();
@@ -111,54 +112,7 @@ class AccountController extends AbstractController
 
     }
 
-    /**
-     * Permet d'afficher les informations d'un utilisateur connecté
-     *
-     * @param Request $request
-     * @param EntityManagerInterface $manager
-     * @return Response
-     */
-    #[Route("/account/profile", name:"account_profile")]
-    public function profile(Request $request, EntityManagerInterface $manager): Response
-    {
-        $user = $this->getUser(); // récup l'utilisateur connecté
-
-        // pour la validation des images ou utiliser une validation Groups
-        $fileName = $user->getPicture();
-        if(!empty($fileName))
-        {
-            $user->setPicture(
-                new File($this->getParameter('uploads_directory').'/'.$user->getPicture())
-            );
-        } 
-
-        $form = $this->createForm(AccountType::class, $user);
-        $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid())
-        {
-            // gestion image 
-            $user->setPicture($fileName);
-
-            // gestion du slug 
-            $user->setSlug('');
-
-            $manager->persist($user);
-            $manager->flush();
-
-            $this->addFlash(
-                'success',
-                "Les données ont été enregistrées avec succès"
-            );
-
-            return $this->redirectToRoute('account_index');
-        }
-
-        return $this->render("account/profile.html.twig",[
-            'myform' => $form->createView()
-        ]);
-    }
-
+    
     /**
      * Permet de modifier le mot de passe utilisateur
      *
@@ -206,88 +160,4 @@ class AccountController extends AbstractController
         ]);
     }
 
-    /**
-     * Permet de modifier l'image de l'utilisateur
-     *
-     * @param Request $request
-     * @param EntityManagerInterface $manager
-     * @return Response
-     */
-    #[Route("/account/imgmodify", name:"account_modifimg")]
-    public function imgModify(Request $request, EntityManagerInterface $manager): Response
-    {
-        $imgModify = new UserImgModify();
-        $user = $this->getUser(); 
-        $form = $this->createForm(ImgModifyType::class, $imgModify);
-        $form->handleRequest($request);
-
-        if($form->isSubmitted() && $form->isValid())
-        {
-            // supprimer l'image dans le dossier
-            if(!empty($user->getPicture()))
-            {
-                unlink($this->getParameter('uploads_directory').'/'.$user->getPicture());
-            }
-
-            $file = $form['newPicture']->getData();
-            if(!empty($file))
-            {
-                $originalFilename = pathinfo($file->getClientOriginalName(),PATHINFO_FILENAME);
-                $safeFilename = transliterator_transliterate('Any-Latin;Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
-                $newFilename = $safeFilename."-".uniqid().".".$file->guessExtension();
-                try{
-                    $file->move(
-                        $this->getParameter('uploads_directory'),
-                        $newFilename
-                    );
-                }catch(FileException $e)
-                {
-                    return $e->getMessage();
-                }
-                $user->setPicture($newFilename);
-            }
-
-            $manager->persist($user);
-            $manager->flush();
-
-            $this->addFlash(
-                'success',
-                'Votre avatar a bien été modifié'
-            );
-
-            return $this->redirectToRoute('account_index');
-
-        }
-
-        return $this->render("account/imgModify.html.twig",[
-            'myform' => $form->createView()
-        ]);
-    }
-
-    /**
-     * Permet de supprimer l'avatar d'un user
-     *
-     * @param EntityManagerInterface $manager
-     * @return Response
-     */
-    #[Route("/account/delimg", name:'account_delimg')]
-    #[IsGranted("IS_AUTHENTICATE_FULLY", "ROLE_ADMIN")]
-    public function removeImg(EntityManagerInterface $manager): Response
-    {
-        $user = $this->getUser();
-        if(!empty($user->getPicture()))
-        {
-            unlink($this->getParameter('uploads_directory').'/'.$user->getPicture());
-            $user->setPicture('');
-            $manager->persist($user);
-            $manager->flush();
-
-            $this->addflash(
-                'success',
-                'Votre avatar a bien été supprimé'
-            );
-        }
-
-        return $this->redirectToRoute('account_index');
-    }
 }

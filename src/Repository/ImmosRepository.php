@@ -80,30 +80,26 @@ class ImmosRepository extends ServiceEntityRepository
        ;
    }
     
-   /**
-     * Recherche des motifs par filtre
-    * @return Immos[] Returns an array of Pattern objects
-    */
-    public function findByFilter(string $housetype, int $travellers, int $rooms, int $price): array
-    {
-       return $this->createQueryBuilder('i')
-           ->select('i as immos, i.slug, i.bathrooms, i.bedrooms, i.calendrier, i.conciergerie, i.cover, i.description, i.descriptionEn, i.equipement, i.equipementEn, i.logement, i.logementEn, i.price, i.priceEn, i.titre, i.titreEn, i.travellers, i.type')
-           ->groupBy('i')
-           ->orderBy('i.id', 'DESC')
-           ->where('i.travellers= :travellers')
-           ->andWhere('i.bedrooms: :rooms')
-           ->andwhere('i.price= :price')
-           ->andWhere()('i.type= :housetype')
-           ->setParameters([
-            'travellers'=> $travellers,
-            'bedrooms' => $rooms,
-            'price' => $price,
-            'type'=>$housetype
-           ])
-           ->getQuery()
-           ->getResult()
-       ;
-    }
+   
+  public function findByFilter(string $type, int $travellers, int $rooms, int $price): array
+  {
+      return $this->createQueryBuilder('i')
+          ->select('i as immos, i.slug, i.bathrooms, i.bedrooms, i.calendrier, i.conciergerie, i.cover, i.description, i.descriptionEn, i.equipement, i.equipementEn, i.logement, i.logementEn, i.price, i.priceEn, i.titre, i.titreEn, i.travellers, i.type')
+          ->groupBy('i.id') // Je suppose que vous voulez grouper par l'ID
+          ->orderBy('i.id', 'DESC')
+          ->where('i.travellers = :travellers')
+          ->andWhere('i.bedrooms = :rooms') // Utilisez "=" pour la comparaison
+          ->andWhere('i.price = :price')
+          ->andWhere('i.type = :type')
+          ->setParameters([
+              'travellers' => $travellers,
+              'rooms' => $rooms, // Utilisez la même clé 'rooms' ici
+              'price' => $price,
+              'type' => $type, // Utilisez la même clé 'housetype' ici
+          ])
+          ->getQuery()
+          ->getResult();
+  }
 
        public function findById($value): ?Immos
    {

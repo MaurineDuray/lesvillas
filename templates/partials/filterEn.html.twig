@@ -1,6 +1,6 @@
-<form class="filter" action="{{path('azur')}}">
+<form class="filter" action="{{path('sort')}}">
     <div class="form-group">
-        <select name="housetype" id="housetype" name="housetype">
+        <select name="type" id="type" name="type">
             <option value="" disabled selected>{% trans %}Type of housing{% endtrans %}</option>
             <option value="appartement">{% trans %}Flat{% endtrans %}</option>
             <option value="villa">Villa</option>
@@ -15,7 +15,7 @@
         <input id="rooms" name="rooms" type="number" placeholder="Number of bedrooms">
     </div>
     <div class="form-group">
-        <input id="maxprice" name="maxprice" type="number" placeholder="Max price/nigth">
+        <input id="maxprice" name="maxprice" type="number" placeholder="Price">
     </div>
     <input type="submit" class="btn" value="Filter" id="filterBtn">
 

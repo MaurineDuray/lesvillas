@@ -47,49 +47,97 @@ class LogementController extends AbstractController
 
     }
 
+    // #[Route('/logement/sort', name: 'sort', methods: ['GET'])]
+    // public function sort(Request $request, EntityManagerInterface $manager):Response
+    // {
+    //     $type = $request->query->get('housetype');
+    //     $travellers = $request->query->get('travellers');
+    //     $rooms = $request->query->get('rooms');
+    //     $price = $request->query->get('price');
+
+    //     $repository = $manager->getRepository(Immos::class);
+    //     $queryBuilder = $repository->createQueryBuilder('i');
+    //     $queryBuilder->orderBy('i.id',"ASC");
+
+    //     if ($type) {
+    //         $queryBuilder
+    //             ->andWhere('i.type = :type')
+    //             ->setParameter('type', $type);
+    //     }
+
+    //     if ($travellers) {
+    //         $queryBuilder
+    //             ->andWhere('i.travellers = :travellers')
+    //             ->setParameter('travellers', $travellers);
+    //     }
+
+    //     if ($rooms) {
+    //         $queryBuilder
+    //             ->andWhere('i.rooms = :rooms')
+    //             ->setParameter('rooms', $rooms);
+    //     }
+
+    //     if ($price) {
+    //         $queryBuilder
+    //             ->andWhere('i.price < :price')
+    //             ->setParameter('price', $price);
+    //     }
+
+    //     $immos = $queryBuilder->getQuery()->getResult();
+
+    //     return $this->render('logement/result.html.twig',[
+    //         'immos'=>$immos,
+    //     ]);
+
+    // }
+
+         /**
+     * Afficher les motifs triés
+     */
     #[Route('/logement/sort', name: 'sort')]
-    public function sort(ImmosRepository $repo, Request $request, EntityManagerInterface $manager):Response
+    public function index(ImmosRepository $repo, Request $request, EntityManagerInterface $manager, Immos $immos):Response
     {
-        $type = $request->query->get('housetype');
-        $travellers = $request->query->get('travellers');
+
+        $type = $request->query->get('type');
         $rooms = $request->query->get('rooms');
+        $travellers = $request->query->get('travellers');
         $price = $request->query->get('price');
 
         $repository = $manager->getRepository(Immos::class);
         $queryBuilder = $repository->createQueryBuilder('i');
-        $queryBuilder->orderBy('i.id',"ASC");
 
-        if ($type) {
-            $queryBuilder
-                ->andWhere('i.type = :type')
-                ->setParameter('type', $type);
-        }
+        $queryBuilder
+            ->orderBy("i.id", "ASC");
 
-        if ($travellers) {
-            $queryBuilder
-                ->andWhere('i.travellers = :travellers')
-                ->setParameter('travellers', $travellers);
-        }
-
-        if ($rooms) {
-            $queryBuilder
-                ->andWhere('i.rooms = :rooms')
-                ->setParameter('rooms', $rooms);
-        }
-
-        if ($price) {
-            $queryBuilder
-                ->andWhere('i.price < :price')
-                ->setParameter('price', $price);
-        }
-
-        $immos = $queryBuilder->getQuery()->getResult();
-
-        return $this->render('logement/result.html.twig',[
-            'immos'=>$immos,
-        ]);
-
+    if ($type) {
+        $queryBuilder
+            ->andWhere('i.type = :type')
+            ->setParameter('type', $type);
     }
 
+    if ($rooms) {
+        $queryBuilder
+            ->andWhere('i.rooms = :rooms')
+            ->setParameter('rooms', $rooms);
+    }
 
+    if ($travellers) {
+        $queryBuilder
+            ->andWhere('i.travellers = :travellers')
+            ->setParameter('travellers', $travellers);
+    }
+    if ($price) {
+        $queryBuilder
+            ->andWhere('i.price = :price')
+            ->setParameter('price', $price);
+    }
+
+    $immos = $queryBuilder->getQuery()->getResult();
+
+    return $this->render('logement/result.html.twig', [
+        'immos' => $immos
+    ]);
+
+        
+    }
 }

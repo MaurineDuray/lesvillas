@@ -58,6 +58,7 @@ class AdminController extends AbstractController
     }
 
     #[Route('/adminlogement', name: 'admin_logement')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminLogements(ImmosRepository $repo):Response
     {
         $immos = $repo->findAll();
@@ -67,6 +68,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminactivities', name: 'admin_activities')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminActivities(ActivitiesRepository $repo):Response
     {
         $activities = $repo->findAll();
@@ -76,6 +78,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminafaq', name: 'admin_faq')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminFaq(FaqRepository $repo):Response
     {
         $questions = $repo->findAll();
@@ -85,6 +88,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminuser', name: 'admin_user')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminUser(UserRepository $repo):Response
     {
         $users = $repo->findAll();
@@ -94,6 +98,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminpartners', name: 'admin_partners')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminPartners(PartnersRepository $repo):Response
     {
         $partners = $repo->findAll();
@@ -103,6 +108,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/admincontact', name: 'admin_contacts')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminContact(ContactRepository $repo):Response
     {
         $contacts = $repo->findAll();
@@ -112,6 +118,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/admingalery/{id}', name: 'admin_galery')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminAddGalery(ImagesRepository $repo, int $id, ImmosRepository $reposi):Response
     {
         $pictures = $repo->findByImmo($id);
@@ -126,6 +133,7 @@ class AdminController extends AbstractController
 
 
     #[Route('/admingalery/{id}/add', name: 'admin_galery_add')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminGalery(ImagesRepository $repo, int $id, Request $request, EntityManagerInterface $manager, Immos $immo): Response
     {
     
@@ -171,6 +179,7 @@ class AdminController extends AbstractController
 
 
     #[Route("/admingalery/{id}/delete", name: "admin_galery_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function galerydelete(Images $image, EntityManagerInterface $manager): Response
     {
         $immo = $image->getImmoId();
@@ -192,6 +201,7 @@ class AdminController extends AbstractController
 
 
     #[Route('/admincontact/{id}', name: 'admin_contacts_message')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminContactShow(ContactRepository $repo, Contact $message):Response
     {
         return $this->render('admin/message.html.twig', [
@@ -200,6 +210,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route("/admincontact/{id}/delete", name:"admin_contacts_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function contactdelete(Contact $contact, EntityManagerInterface $manager): Response
     {
         $this->addFlash(
@@ -214,6 +225,7 @@ class AdminController extends AbstractController
     }
 
     #[Route('/adminreservation', name: 'admin_reservations')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminReservation(ReservationRepository $repo):Response
     {
         $reservations = $repo->findAll();
@@ -223,6 +235,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminreservation/{id}', name: 'admin_reservations_demande')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminreservationsShow(ContactRepository $repo, Reservation $reservation):Response
     {
         return $this->render('admin/reservation.html.twig', [
@@ -232,6 +245,7 @@ class AdminController extends AbstractController
 
 
     #[Route("/adminreservation/{id}/delete", name:"admin_reservation_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function reservationdelete(Reservation $reservation, EntityManagerInterface $manager): Response
     {
         $this->addFlash(
@@ -246,6 +260,7 @@ class AdminController extends AbstractController
     }
 
     #[Route('/adminconciergerie', name: 'admin_conciergerie')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminconciergerie(ConciergerieRepository $repo):Response
     {
         $conciergeries = $repo->findAll();
@@ -255,6 +270,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminconciergerie/{id}', name: 'admin_conciergerie_demande')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminconciergerieShow(ConciergerieRepository $repo, Conciergerie $conciergerie):Response
     {
         return $this->render('admin/demande.html.twig', [
@@ -263,6 +279,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route("/adminconciergerie/{id}/delete", name:"admin_conciergerie_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function conciergeriedelete(Conciergerie $conciergerie, EntityManagerInterface $manager): Response
     {
         $this->addFlash(
@@ -277,6 +294,7 @@ class AdminController extends AbstractController
     }
     
     #[Route('/adminlogement/add', name: 'admin_logement_add')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminImmosAdd(Request $request, EntityManagerInterface $manager):Response
     {
         $immo = new Immos;
@@ -328,6 +346,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminactivities/add', name: 'admin_activity_add')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminActivityAdd(Request $request, EntityManagerInterface $manager):Response
     {
         $activity = new Activities;
@@ -372,6 +391,7 @@ class AdminController extends AbstractController
     } 
 
     #[Route('/adminpartners/add', name: 'admin_partners_add')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminPartnersAdd(Request $request, EntityManagerInterface $manager):Response
     {
         $partners = new Partners;
@@ -416,6 +436,7 @@ class AdminController extends AbstractController
     }
 
     #[Route("/adminpartners/{id}/delete", name:"admin_partner_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function partnersdelete(Partners $partners, EntityManagerInterface $manager): Response
     {
         $this->addFlash(
@@ -432,6 +453,7 @@ class AdminController extends AbstractController
     }
     
     #[Route('/adminfaq/add', name: 'admin_faq_add')]
+    #[IsGranted("ROLE_ADMIN")]
     public function adminFaqAdd(Request $request, EntityManagerInterface $manager):Response
     {
         $faq = new Faq;
@@ -462,6 +484,7 @@ class AdminController extends AbstractController
      * Permet d'afficher le formulaire pour éditer un logement
      */
     #[Route('/adminlogements/{id}/edit', name: 'admin_logement_edit')]
+    #[IsGranted("ROLE_ADMIN")]
     public function editlogement(Immos $immo, Request $request, EntityManagerInterface $manager):Response
     {
         $user = $this->getUser(); //récupération de l'utilisateur connecté
@@ -500,6 +523,7 @@ class AdminController extends AbstractController
 
     
     #[Route("/adminlogements/{id}/delete", name:"admin_logements_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function delete(Immos $immo, EntityManagerInterface $manager): Response
     {
         $this->addFlash(
@@ -533,6 +557,7 @@ class AdminController extends AbstractController
      * @return Response
      */
     #[Route("/adminlogements/{id}/imgmodify", name:"admin_logement_img")]
+    #[IsGranted("ROLE_ADMIN")]
     public function imgModify(Immos $immo, Request $request, EntityManagerInterface $manager): Response
     {
         $imgModify = new ImmoImgModify();
@@ -591,6 +616,7 @@ class AdminController extends AbstractController
      * Permet d'afficher le formulaire pour éditer un logement
      */
     #[Route('/adminfaq/{id}/edit', name: 'admin_faq_edit')]
+    #[IsGranted("ROLE_ADMIN")]
     public function editFaq(Faq $faq, Request $request, EntityManagerInterface $manager):Response
     {
        
@@ -619,6 +645,7 @@ class AdminController extends AbstractController
     }
 
     #[Route("/adminfaq/{id}/delete", name:"admin_faq_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function faqdelete(Faq $faq, EntityManagerInterface $manager): Response
     {
         $this->addFlash(
@@ -636,6 +663,7 @@ class AdminController extends AbstractController
      * Permet d'afficher le formulaire pour éditer un logement
      */
     #[Route('/adminactivities/{id}/edit', name: 'admin_activities_edit')]
+    #[IsGranted("ROLE_ADMIN")]
     public function editActivity(Activities $activity, Request $request, EntityManagerInterface $manager):Response
     {
         $fileName = $activity->getImage();
@@ -678,6 +706,7 @@ class AdminController extends AbstractController
      * @return Response
      */
     #[Route("/adminactivity/{id}/imgmodify", name:"admin_activity_img")]
+    #[IsGranted("ROLE_ADMIN")]
     public function imgActivityModify(Activities $activity, Request $request, EntityManagerInterface $manager): Response
     {
         $imgModify = new ActivityImgModify();
@@ -731,6 +760,7 @@ class AdminController extends AbstractController
     }
 
     #[Route("/adminactivities/{id}/delete", name:"admin_activities_delete")]
+    #[IsGranted("ROLE_ADMIN")]
     public function activitiesdelete(Activities $activity, EntityManagerInterface $manager): Response
     {
         $this->addFlash(
