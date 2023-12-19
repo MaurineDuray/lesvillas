@@ -1,7 +1,7 @@
 .alert{
     position: absolute;
     width: 80%;
-    background: linear-gradient(183deg, #08c4d9c4 0%, #024959b6 100%);
+    background: linear-gradient(183deg, #08c4d9 0%, #024959 100%);
     color: white;
     z-index: 1000;
     padding: 20px;

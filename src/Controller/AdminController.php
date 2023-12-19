@@ -299,8 +299,6 @@ class AdminController extends AbstractController
     {
         $immo = new Immos;
         $form = $this->createForm(ImmosType::class, $immo);
-        
-        
         $form -> handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
@@ -394,13 +392,13 @@ class AdminController extends AbstractController
     #[IsGranted("ROLE_ADMIN")]
     public function adminPartnersAdd(Request $request, EntityManagerInterface $manager):Response
     {
-        $partners = new Partners;
-        $form = $this->createForm(PartnersType::class, $partners);
+        $partner = new Partners;
+        $form = $this->createForm(PartnersType::class, $partner);
         $form -> handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
             
-            $file = $form['logo']->getData();
+            $file = $form['image']->getData();
             if (!empty($file)) {
                 $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
                 $safeFilename = transliterator_transliterate('Any-Latin;Latin-ASCII;[^A-Za-z0-9_]remove;Lower()', $originalFilename);
@@ -413,11 +411,11 @@ class AdminController extends AbstractController
                 } catch (FileException $e) {
                     return $e->getMessage();
                 }
-                $partners->setLogo($newFilename);
+                $partner->setLogo($newFilename);
             }
         
             
-            $manager->persist($partners);
+            $manager->persist($partner);
             $manager->flush();
 
             $this->addFlash(

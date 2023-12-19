@@ -35,7 +35,7 @@ class Activities
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(message:"L'image de l'activité doit être fournie")]
     #[Assert\Image(mimeTypes:["image/png","image/jpeg","image/jpg","image/gif"], mimeTypesMessage:"Vous devez ajouter un fichier jpg, jpeg, png ou gif")]
-    #[Assert\File(maxSize:"1024k", maxSizeMessage:"La taille du fichier est trop grande")]
+    #[Assert\File(maxSize:"2024k", maxSizeMessage:"La taille du fichier est trop grande")]
     private ?string $image = null;
 
     #[ORM\Column(length: 255, nullable: true)]
