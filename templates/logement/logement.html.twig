@@ -32,11 +32,12 @@
         <div class="priceLogement">
             <p id="price">{% trans %}Start from {% endtrans %} 
             {% if app.request.locale == "en" %}
-                {{immo.priceEn}}
+                <span class="prix">{{immo.priceEn}}</span>$/night
             {% else %}
-                {{immo.price}}
+                <span class="prix">{{immo.price}}</span>€/nuit
             {% endif %}
-            €/nuit</p>
+            
+            </p>
             <p>{% trans %}Arrival after 14:00 and departure by 10:00{% endtrans %}</p>
         </div>
     </div>
@@ -109,10 +110,11 @@
         <form id="priceForm" action="">
             <input type="date" id="dateArrivee" placeholder="Date d'arrivée">
             <input type="date" id="dateDepart" placeholder="Date de départ">
-            <button id="estimate">{% trans %}Estimate{% endtrans %}</button>
+            <div id="estimate">{% trans %}Estimate{% endtrans %}</div>
             <div class="result">
+                <span id="alert"></span>
                 <p>
-                    {% trans %}The total cost of your{% endtrans %} <span id="days">7 </span>{% trans %}nights stay is estimated at {% endtrans %} <span id="tarif">€3750</span>{% trans %}, excluding tourist tax.{% endtrans %}
+                    {% trans %}The total cost of your{% endtrans %} <span id="days"></span>{% trans %}nights stay is estimated at {% endtrans %} <span id="tarif"></span>{% trans %}$, excluding tourist tax.{% endtrans %}
                 </p>
             </div>
         </form>
