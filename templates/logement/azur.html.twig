@@ -22,9 +22,14 @@
         
     </div>
     <div class="galery">
-        {% for immo in immos %}
+    {% if immos %}
+    {% for immo in immos %}
             {% include "partials/card.html.twig" %}
         {% endfor %}
+    {% else %}
+        <h2>Oups ! There's no result for your search !</h2>
+    {% endif %}
+        
     </div>
     {% include "partials/footer.html.twig" %}
 {% endblock %}

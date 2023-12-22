@@ -101,6 +101,18 @@ class Immos
     #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Reservation::class)]
     private Collection $reservations;
 
+    #[ORM\Column(nullable: true)]
+    private ?bool $piscine = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?bool $animals = null;
+
+    #[ORM\Column]
+    private ?bool $seafront = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $typeEn = null;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -411,6 +423,54 @@ class Immos
                 $reservation->setImmoId(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isPiscine(): ?bool
+    {
+        return $this->piscine;
+    }
+
+    public function setPiscine(?bool $piscine): static
+    {
+        $this->piscine = $piscine;
+
+        return $this;
+    }
+
+    public function isAnimals(): ?bool
+    {
+        return $this->animals;
+    }
+
+    public function setAnimals(?bool $animals): static
+    {
+        $this->animals = $animals;
+
+        return $this;
+    }
+
+    public function isSeafront(): ?bool
+    {
+        return $this->seafront;
+    }
+
+    public function setSeafront(bool $seafront): static
+    {
+        $this->seafront = $seafront;
+
+        return $this;
+    }
+
+    public function getTypeEn(): ?string
+    {
+        return $this->typeEn;
+    }
+
+    public function setTypeEn(string $typeEn): static
+    {
+        $this->typeEn = $typeEn;
 
         return $this;
     }

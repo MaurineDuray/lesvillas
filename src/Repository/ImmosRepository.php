@@ -33,6 +33,7 @@ class ImmosRepository extends ServiceEntityRepository
                        $qb->expr()->like('i.description', ':criteria'),
                        $qb->expr()->like('i.descriptionEn', ':criteria'),
                        $qb->expr()->like('i.type', ':criteria'),
+                       $qb->expr()->like('i.typeEn', ':criteria'),
                        $qb->expr()->like('i.address', ':criteria')
                    ),
                )
@@ -91,10 +92,10 @@ class ImmosRepository extends ServiceEntityRepository
           ->andWhere('i.bedrooms = :rooms') // Utilisez "=" pour la comparaison
           ->andWhere('i.price = :price')
           ->andWhere('i.type = :type')
+          ->andWhere('i.typeEn = :type')
           ->setParameters([
               'travellers' => $travellers,
               'rooms' => $rooms, // Utilisez la même clé 'rooms' ici
-              'price' => $price,
               'type' => $type, // Utilisez la même clé 'housetype' ici
           ])
           ->getQuery()

@@ -72,3 +72,13 @@ form[name="search"]{
     border: none;
     box-sizing: content-box;
 }
+#reservation_animal{
+    width: fit-content !important;
+    margin: 10px !important;
+    padding: 5px;
+}
+#reservation_kidbed{
+    width: fit-content !important;
+    margin: 10px !important;
+    padding: 5px;
+}

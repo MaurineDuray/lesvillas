@@ -21,6 +21,7 @@
     justify-content: space-around;
     font-size: 15pt;
     margin-top: 20px;
+    align-items: center;
 }
 .priceLogement{
     margin-top:  20px;
@@ -153,7 +154,17 @@
 .logementFormulaire{
     display: block ;
 }
-
+#nodogs{
+    width: 30px;
+}
+.noanimals{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.noanimals p{
+    line-height: 0;
+}
 
 @media all and (max-width: 850px){
     .textIntro{

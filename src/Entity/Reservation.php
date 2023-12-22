@@ -36,6 +36,18 @@ class Reservation
     #[ORM\JoinColumn(nullable: false)]
     private ?Immos $immoId = null;
 
+    #[ORM\Column]
+    private ?bool $animal = null;
+
+    #[ORM\Column]
+    private ?int $adults = null;
+
+    #[ORM\Column]
+    private ?int $kids = null;
+
+    #[ORM\Column]
+    private ?bool $kidbed = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -121,6 +133,54 @@ class Reservation
     public function setImmoId(?Immos $immoId): static
     {
         $this->immoId = $immoId;
+
+        return $this;
+    }
+
+    public function isAnimal(): ?bool
+    {
+        return $this->animal;
+    }
+
+    public function setAnimal(bool $animal): static
+    {
+        $this->animal = $animal;
+
+        return $this;
+    }
+
+    public function getAdults(): ?int
+    {
+        return $this->adults;
+    }
+
+    public function setAdults(int $adults): static
+    {
+        $this->adults = $adults;
+
+        return $this;
+    }
+
+    public function getKids(): ?int
+    {
+        return $this->kids;
+    }
+
+    public function setKids(int $kids): static
+    {
+        $this->kids = $kids;
+
+        return $this;
+    }
+
+    public function isKidbed(): ?bool
+    {
+        return $this->kidbed;
+    }
+
+    public function setKidbed(bool $kidbed): static
+    {
+        $this->kidbed = $kidbed;
 
         return $this;
     }

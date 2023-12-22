@@ -20,14 +20,36 @@
         </p>
         <div class="caract">
             <div class="travellers">
-                <p><i class="fa-solid fa-person"></i> {{immo.travellers}} {% trans %}traveller(s){% endtrans %}</p>
+                <p><i class="fa-solid fa-person"></i> {{immo.travellers}} {% trans %} traveller(s){% endtrans %}</p>
             </div>
             <div class="rooms">
-                <p><i class="fa-solid fa-bed"></i> {{immo.bedrooms}} {% trans %}room(s){% endtrans %}</p>
+                <p><i class="fa-solid fa-bed"></i> {{immo.bedrooms}} {% trans %} room(s){% endtrans %}</p>
             </div>
             <div class="bathrooms">
-                <p><i class="fa-solid fa-shower"></i> {{immo.bathrooms}} {% trans %}bathroom(s){% endtrans %}</p>
+                <p><i class="fa-solid fa-shower"></i> {{immo.bathrooms}} {% trans %} bathroom(s){% endtrans %}</p>
             </div>
+            {% if immo.piscine == 1 %}
+            <div class="swimmingpool">
+                <p><i class="fa-solid fa-person-swimming"></i> {% trans %} With swimming pool{% endtrans %}</p>
+            </div>
+            {% endif %}
+            
+            {% if immo.animals == 1 %}
+            <div class="animals">
+                <p><i class="fa-solid fa-dog"></i> {% trans %} Pets allowed{% endtrans %}</p>
+            </div>
+            {% else %}
+            <div class="noanimals">
+                <img src="{{asset('images/noDogs.png')}}" alt="no dogs logo" id="nodogs"> <p>{% trans %}Pets not allowed{% endtrans %}</p>
+            </div>
+            {% endif %}
+            
+            {% if immo.seafront == 1%}
+            <div class="sea">
+                <p><i class="fa-solid fa-water"></i> {% trans %} Seaside{% endtrans %}</p>
+            </div>
+            {% endif %}
+            
         </div>
         <div class="priceLogement">
             <p id="price">{% trans %}Start from {% endtrans %} 
