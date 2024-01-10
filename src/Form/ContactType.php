@@ -24,30 +24,30 @@ class ContactType extends ApplicationType
     {
         $builder
             ->add('name', TextType::class, [
-                'label'=> 'Nom / Lastname',
+                'label'=> 'Nom / Lastname / Su nombre',
                 'attr' =>[
-                    'placeholder' => "Votre nom / Your lastname"
+                    'placeholder' => "Votre nom / Your lastname / Su Nombre"
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label'=> 'Email',
                 'attr' =>[
-                    'placeholder' => "Votre e-mail / Your email"
+                    'placeholder' => "Votre e-mail / Your email / Su email"
                 ]
             ])
             ->add('phone', TextType::class, [
-                'label'=> 'Numéro de téléphone / Phone number',
+                'label'=> 'Numéro de téléphone / Phone number / Teléfono',
                 'attr' =>[
-                    'placeholder' => "Votre numéro / Your phone number"
+                    'placeholder' => "Votre numéro / Your phone number / Su teléfono"
                 ]
             ])
             ->add('message', TextareaType::class, [
-                'label'=> 'Message',
+                'label'=> 'Message / Mensaje',
                 'attr' =>[
-                    'placeholder' => "Votre message / Your message"
+                    'placeholder' => "Votre message / Your message / Su mensaje"
                 ]
             ])
-            ->add('submit', SubmitType::class,['label' => 'Enregistrer / Register'],
+            ->add('submit', SubmitType::class,['label' => 'Enregistrer / Register / Registro'],
             [
                 'attr' => ['class' => 'btn'],
             ])

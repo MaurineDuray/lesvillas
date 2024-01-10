@@ -18,43 +18,43 @@ class ConciergerieType extends ApplicationType
     {
         $builder
             ->add('name', TextType::class, [
-                'label'=> 'Nom / Name',
+                'label'=> 'Nom / Name / Nombre',
                 'attr' =>[
-                    'placeholder' => "Votre nom / Your name"
+                    'placeholder' => "Votre nom / Your name / Su nombre"
                 ]
             ])
             ->add('email', EmailType::class,[
                 'label'=> 'Email',
                 'attr' =>[
-                    'placeholder' => "Votre email / Your e-mail"
+                    'placeholder' => "Votre email / Your e-mail / Su email"
                 ]
             ]
             )
             ->add('phone', TextType::class, [
-                'label'=> 'Numéro de téléphone / Phone number',
+                'label'=> 'Numéro de téléphone / Phone number / Teléfono',
                 'attr' =>[
-                    'placeholder' => "Votre numéro téléphone / Your phone number"
+                    'placeholder' => "Votre numéro téléphone / Your phone number / Su teléfono"
                 ]
             ])
             ->add('superficie', NumberType::class, [
-                'label'=> 'Superficie / Surface area',
+                'label'=> 'Superficie / Surface area / Área',
                 'attr' =>[
-                    'placeholder' => "Superficie du logement / Surface area of the property"
+                    'placeholder' => "Superficie du logement / Surface area of the property / Superficie del alojamiento"
                 ]
             ])
             ->add('adress', TextType::class, [
-                'label'=> 'Adresse du logement / Accommodation address',
+                'label'=> 'Adresse du logement / Accommodation address / Dirección postal',
                 'attr' =>[
-                    'placeholder' => "Adresse du logement / Accomodation address"
+                    'placeholder' => "Adresse du logement / Accomodation address / Dirección postal"
                 ]
             ])
             ->add('message', TextareaType::class, [
-                'label'=> 'Message',
+                'label'=> 'Message / Mensaje',
                 'attr' =>[
-                    'placeholder' => "Votre message / Your message"
+                    'placeholder' => "Votre message / Your message / Su mensaje"
                 ]
             ])
-            ->add('submit', SubmitType::class,['label' => 'Enregistrer / Register'],
+            ->add('submit', SubmitType::class,['label' => 'Enregistrer / Register / Registro'],
             [
                 'attr' => ['class' => 'btn'],
             ])

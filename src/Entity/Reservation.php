@@ -48,6 +48,9 @@ class Reservation
     #[ORM\Column]
     private ?bool $kidbed = null;
 
+    #[ORM\Column(nullable: true)]
+    private ?int $nbAnimals = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -181,6 +184,18 @@ class Reservation
     public function setKidbed(bool $kidbed): static
     {
         $this->kidbed = $kidbed;
+
+        return $this;
+    }
+
+    public function getNbAnimals(): ?int
+    {
+        return $this->nbAnimals;
+    }
+
+    public function setNbAnimals(?int $nbAnimals): static
+    {
+        $this->nbAnimals = $nbAnimals;
 
         return $this;
     }

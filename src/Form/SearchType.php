@@ -18,7 +18,7 @@ class SearchType extends AbstractType
             'attr' => [
                 'class' => 'form-control',
                 'id'=>'inputsearch',
-                'placeholder' => 'Rechercher / Research'
+                'placeholder' => 'Rechercher / Research / Buscar'
             ]
         ])
         ->add('Research', SubmitType::class, [

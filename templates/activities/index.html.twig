@@ -34,6 +34,22 @@
             
         </div>
         {% endfor %}
+        
+    </div>
+     <div class="slide" id="eventsHome">
+        <div class="sep-top">
+            <img src="{{asset('images/top-sep.png')}}" alt="separation">
+        </div>
+        <h3>
+            {% trans %}Looking for a tailor-made plan for your stay? {% endtrans %}
+        </h3>
+        <h4>
+            <span class="script">{% trans %}Contact us, we'll take care of everything!{% endtrans %}</span>
+        </h4>
+        
+        <div class="discoverButton">
+            <a href="{{path('contact')}}" id="discover"><button>{% trans %}Contact us{% endtrans %}</button></a>
+        </div>
     </div>
     {% include "partials/footer.html.twig" %}
 {% endblock %}

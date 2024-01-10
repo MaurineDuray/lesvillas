@@ -113,6 +113,18 @@ class Immos
     #[ORM\Column(length: 255)]
     private ?string $typeEn = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $TitreEs = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $descriptionEs = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $logementEs = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $equipementEs = null;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -471,6 +483,54 @@ class Immos
     public function setTypeEn(string $typeEn): static
     {
         $this->typeEn = $typeEn;
+
+        return $this;
+    }
+
+    public function getTitreEs(): ?string
+    {
+        return $this->TitreEs;
+    }
+
+    public function setTitreEs(string $TitreEs): static
+    {
+        $this->TitreEs = $TitreEs;
+
+        return $this;
+    }
+
+    public function getDescriptionEs(): ?string
+    {
+        return $this->descriptionEs;
+    }
+
+    public function setDescriptionEs(string $descriptionEs): static
+    {
+        $this->descriptionEs = $descriptionEs;
+
+        return $this;
+    }
+
+    public function getLogementEs(): ?string
+    {
+        return $this->logementEs;
+    }
+
+    public function setLogementEs(string $logementEs): static
+    {
+        $this->logementEs = $logementEs;
+
+        return $this;
+    }
+
+    public function getEquipementEs(): ?string
+    {
+        return $this->equipementEs;
+    }
+
+    public function setEquipementEs(string $equipementEs): static
+    {
+        $this->equipementEs = $equipementEs;
 
         return $this;
     }

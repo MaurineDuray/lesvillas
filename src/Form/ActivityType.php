@@ -29,12 +29,22 @@ class ActivityType extends ApplicationType
                     'placeholder' => "Titre de l'activité en anglais"
                 ]
             ])
+            ->add('titreEs', TextType::class, [
+                'label'=> "Titre de l'activité en espagnol",
+                'attr' =>[
+                    'placeholder' => "Titre de l'activité en espagnol"
+                ]
+            ])
             ->add('description', TextareaType::class, [
                 'label'=>'Description en français',
                 'required'=> false
             ])
             ->add('descriptionEn', TextareaType::class, [
                 'label'=>'Description en anglais',
+                'required'=> false
+            ])
+            ->add('descriptionEs', TextareaType::class, [
+                'label'=>'Description en espagnol',
                 'required'=> false
             ])
             ->add('image', FileType::class, [

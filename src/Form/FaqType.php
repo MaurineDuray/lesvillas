@@ -27,6 +27,12 @@ class FaqType extends AbstractType
                     'placeholder' => "Question en anglais"
                 ]
             ])
+            ->add('questionEs', TextareaType::class, [
+                'label'=> "Question en espagnol",
+                'attr' =>[
+                    'placeholder' => "Question en espagnol"
+                ]
+            ])
             ->add('response', TextareaType::class, [
                 'label'=> "Réponse en français",
                 'attr' =>[
@@ -37,6 +43,12 @@ class FaqType extends AbstractType
                 'label'=> "Question en anglais",
                 'attr' =>[
                     'placeholder' => "Question en anglais"
+                ]
+            ])
+            ->add('responseEs', TextareaType::class, [
+                'label'=> "Question en espagnol",
+                'attr' =>[
+                    'placeholder' => "Question en espagnol"
                 ]
             ])
             ->add('submit', SubmitType::class,['label' => 'Enregistrer'],

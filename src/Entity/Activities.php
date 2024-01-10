@@ -44,6 +44,12 @@ class Activities
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $titreEs = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $descriptionEs = null;
+
      /**
      * Initialisation automatique du slug 
      *
@@ -144,6 +150,30 @@ class Activities
     public function setSlug(string $slug): static
     {
         $this->slug = $slug;
+
+        return $this;
+    }
+
+    public function getTitreEs(): ?string
+    {
+        return $this->titreEs;
+    }
+
+    public function setTitreEs(string $titreEs): static
+    {
+        $this->titreEs = $titreEs;
+
+        return $this;
+    }
+
+    public function getDescriptionEs(): ?string
+    {
+        return $this->descriptionEs;
+    }
+
+    public function setDescriptionEs(?string $descriptionEs): static
+    {
+        $this->descriptionEs = $descriptionEs;
 
         return $this;
     }

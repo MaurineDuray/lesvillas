@@ -12,6 +12,8 @@
     <div class="titleLogement">
             {% if app.request.locale == "en" %}
                 <h2>{{immo.Titre}}</h2>
+            {% elseif app.request.locale == "es" %}
+                <h2>{{immo.TitreEs}}</h2>
             {% else %}
                 <h2>{{immo.TitreEn}}</h2>
             {% endif %}
@@ -64,6 +66,8 @@
         </div>
     </div>
     <div class="galery">
+        <img class="arrow-right" src="{{asset('images/triangle-right.png')}}" alt="arrow">
+        <img class="arrow-left" src="{{asset('images/triangle-left.png')}}" alt="arrow">
         <div class="containerGalery">
              <img src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}">
         </div>
@@ -145,8 +149,12 @@
     <div class="slide logementFormulaire" id="formulaire">
         <h2 style="text-align: center">{% trans %}Interested in this property?{% endtrans %}</h2>
         <p style="text-align: center" class="script">{% trans %}Fill in the form and we'll get back to you as soon as possible!{% endtrans %}</p>
-         {{form_start(myform)}}
+        
+        {{form_start(myform)}}
             {{form_widget(myform)}}
+            <p>{% trans %}The charge for the addition of a baby chair and cot is 25€.{% endtrans %}</p>
+            <p>{% trans %}The fee for the addition of a high chair is 15€.{% endtrans %}</p>
+            <p>{% trans %}The fee for pets is €50/day per animal.{% endtrans %}</p>
         {{form_end(myform)}}
     </div>
     {% include "partials/footer.html.twig" %}

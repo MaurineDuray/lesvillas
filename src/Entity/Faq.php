@@ -31,6 +31,12 @@ class Faq
     #[Assert\NotBlank(message:"La réponse (en anglais) à la question doit être mentionnée")]
     private ?string $responseEn = null;
 
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $questionEs = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $responseEs = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -80,6 +86,30 @@ class Faq
     public function setResponseEn(string $responseEn): static
     {
         $this->responseEn = $responseEn;
+
+        return $this;
+    }
+
+    public function getQuestionEs(): ?string
+    {
+        return $this->questionEs;
+    }
+
+    public function setQuestionEs(string $questionEs): static
+    {
+        $this->questionEs = $questionEs;
+
+        return $this;
+    }
+
+    public function getResponseEs(): ?string
+    {
+        return $this->responseEs;
+    }
+
+    public function setResponseEs(string $responseEs): static
+    {
+        $this->responseEs = $responseEs;
 
         return $this;
     }

@@ -34,6 +34,7 @@
 .line .photo{
     width: 50%;
     min-height: 60vh;
+    max-height: 60vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -53,6 +54,9 @@
 }
 .line .text p{
     margin: 20px;
+}
+.line .text h3{
+    font-size: 20pt !important;
 }
 .deco-right{
     position: absolute;

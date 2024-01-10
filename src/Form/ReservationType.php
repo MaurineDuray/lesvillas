@@ -21,48 +21,52 @@ class ReservationType extends ApplicationType
     {
         $builder
             ->add('name', TextType::class, [
-                'label'=> 'Nom / Lastname',
+                'label'=> 'Nom / Lastname / Nombre',
                 'attr' =>[
-                    'placeholder' => "Votre nom / Your lastname"
+                    'placeholder' => "Votre nom / Your lastname / Su nombre"
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label'=> 'Email',
                 'attr' =>[
-                    'placeholder' => "Votre e-mail / Your email"
+                    'placeholder' => "Votre e-mail / Your email / Su email"
                 ]
             ])
             ->add('phone', TextType::class, [
-                'label'=> 'Numéro de téléphone / Phone number',
+                'label'=> 'Numéro de téléphone / Phone number / Teléfono',
                 'attr' =>[
-                    'placeholder' => "Votre numéro / Your phone number"
+                    'placeholder' => "Votre numéro / Your phone number / Su teléfono"
                 ]
             ])
             ->add('animal', CheckboxType::class, [
-                'label' => 'Cochez si vous enmener votre animal. / Check if you have animal(s).',
+                'label' => 'Cochez si vous enmener votre animal. / Check if you have animal(s). / Marque la casilla si lleva a su mascota con usted.',
                 'required' => false
             ])
+            ->add('nbAnimals', IntegerType::class, [
+                'label' => "Nombre d'animaux / Number of animals / Número de animales",
+                'required' => true
+            ])
             ->add('adults', IntegerType::class, [
-                'label' => "Nombre d'adultes / Number of adults",
+                'label' => "Nombre d'adultes / Number of adults / Número de adultos",
                 'required' => true
             ])
             ->add('kids', IntegerType::class, [
-                'label' => "Nombre d'enfants / Number of kids",
+                'label' => "Nombre d'enfants / Number of kids / Número de niños",
                 'required' => true
             ])
             ->add('kidbed', CheckboxType::class, [
-                'label' => 'Lit enfant requis / Baby bed required',
+                'label' => 'Lit enfant requis / Baby bed required / Se necesita cuna',
                 'required' => false
             ])
             ->add('arrival', DateType::class, $this->getConfiguration("Date d'arrivée / Arrival date" ,"Date d'arrivée / Arrival date"))
-            ->add('departure', DateType::class, $this->getConfiguration("Date de départ / Departure date" ,"Date d'arrivée / Départure date"))
+            ->add('departure', DateType::class, $this->getConfiguration("Date de départ / Departure date / Fecha de llegada" ,"Date d'arrivée / Départure date / Fecha de llegada"))
             ->add('message', TextareaType::class, [
-                'label'=> 'Message',
+                'label'=> 'Message / Mensaje',
                 'attr' =>[
-                    'placeholder' => "Votre message / Your message"
+                    'placeholder' => "Votre message / Your message / Su mensaje"
                 ]
             ])
-            ->add('submit', SubmitType::class,['label' => 'Enregistrer / Register'],
+            ->add('submit', SubmitType::class,['label' => 'Enregistrer / Register / Registro'],
             [
                 'attr' => ['class' => 'btn'],
             ])

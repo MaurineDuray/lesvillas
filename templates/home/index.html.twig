@@ -27,7 +27,7 @@
     </div>
     <div class="slide top3" id="topFlorida">
         <h4><div class="script">
-            {% trans %}Our top 3 in Florida{% endtrans %}
+            {% trans %}Featured properties in Florida{% endtrans %}
         </div></h4>
         <div class="row">
             {% for immo in immosFloride %}
@@ -55,7 +55,7 @@
     </div>
     <div class="slide top3" id="topAzur">
         <h4><div class="script">
-            {% trans %}Our favourites on the Côte d'Azur{% endtrans %}
+            {% trans %}Featured properties on the Côte d'Azur{% endtrans %}
         </div></h4>
         <div class="row">
             {% for immo in immosAzur %}
@@ -73,25 +73,12 @@
             <img src="{{asset('images/top-sep.png')}}" alt="separation">
         </div>
         <h3>
-            {% trans %}A unique event to celebrate?{% endtrans %}
+            {% trans %}Looking for a tailor-made plan for your stay? We'll take care of everything!{% endtrans %}
         </h3>
         <h4>
-            <span class="script">{% trans %}Consider renting a villa in a magical, idyllic setting...{% endtrans %}</span>
+            <span class="script">{% trans %}View our activities or contact us ...{% endtrans %}</span>
         </h4>
-        <div class="rowEvent">
-            <div class="event">
-                <img src="{{asset('images/lesvillasblue_babyshower.png')}}" alt="">
-                <div class="eventTitle">{% trans %}Baby shower{% endtrans %}</div>
-            </div>
-            <div class="event">
-                <img src="{{asset('images/lesvillasblue_evjf.png')}}" alt="">
-                <div class="eventTitle">{% trans %}EVJF / EVG{% endtrans %}</div>
-            </div>
-            <div class="event">
-                <img src="{{asset('images/lesvillasblue_mariage.png')}}" alt="">
-                <div class="eventTitle">{% trans %}Wedding{% endtrans %}</div>
-            </div>
-        </div>
+        
         <div class="discoverButton">
             <a href="{{path('activities')}}" id="discover"><button>{% trans %}Discover our activities{% endtrans %}</button></a>
         </div>
