@@ -19,3 +19,18 @@ const body = document.body
             menuResponsive.classList.remove("open")
         })
     })
+
+    const sousmenu = document.querySelector('.sous-menu')
+    const deroulant = document.querySelector('.deroulant')
+
+    sousmenu.addEventListener('click',()=>{
+        if(deroulant.getAttribute('open')==="open"){
+            deroulant.style.display="none"
+            deroulant.setAttribute("open", "noopen")
+        }else{
+            console.log('langage')
+            deroulant.style.display="block"
+            deroulant.setAttribute("open", "open")
+        }
+        
+    })

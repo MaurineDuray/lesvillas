@@ -14,9 +14,10 @@
         <p>{% trans %}What to do during your stay? Don't ask yourself any more questions... We'll take care of everything!{% endtrans %}</p>
         <p><span class="script">{% trans %}Choose your destination{% endtrans %}</span></p>
         <div class="buttons" style="display: flex; justify-content:center">
-           <a href="{{path('azur_activities')}}"> <button class="azurButton">{% trans %}Côte d'Azur{% endtrans %}</button></a>
-            <a href="{{path('floride_activities')}}"><button class="florideButton">{% trans %}Florida{% endtrans %}</button></a>
             <a href="{{path('activities')}}"> <button class="azurButton">{% trans %}All activities{% endtrans %}</button></a>
+            <a href="{{path('azur_activities')}}"> <button class="azurButton">{% trans %}Côte d'Azur{% endtrans %}</button></a>
+            <a href="{{path('floride_activities')}}"><button class="azurButton">{% trans %}Florida{% endtrans %}</button></a>
+           
         </div>
     </div>
     <div class="slide" id="activitiesContainer">

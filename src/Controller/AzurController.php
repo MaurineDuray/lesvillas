@@ -41,7 +41,7 @@ class AzurController extends AbstractController
     }
 
    
-    #[Route('/azur/sort', name: 'sort', methods: ['GET'])]
+    #[Route('/sort', name: 'sort', methods: ['GET'])]
     public function sort(Request $request, EntityManagerInterface $manager):Response
     {
         $searchForm = $this->createForm(SearchType::class);
@@ -74,10 +74,9 @@ class AzurController extends AbstractController
 
         if ($conciergerie) {
             $queryBuilder
-                ->andWhere('i.conciergerie = :conciergerie')
-                ->setParameter('conciergerie', $conciergerie);
+            ->andWhere('i.conciergerie = :conciergerie')
+            ->setParameter('conciergerie', $conciergerie);
         }
-
 
         $immos = $queryBuilder->getQuery()->getResult();
 

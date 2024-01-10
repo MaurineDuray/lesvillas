@@ -124,6 +124,23 @@ nav ul li a{
     color: white;
     cursor: pointer;
 }
+.deroulant{
+    position: absolute;
+    flex-wrap: wrap;
+    margin-top: 28px;
+    display: none;
+}
+.deroulant li{
+    display: flex !important;
+    justify-content: center;
+    text-align: end;
+    background-color: rgba(2, 73, 89, 0.48);
+    width: 60px;
+}
+.deroulant li a{
+    text-align: center !important;
+    padding: 5px;
+}
 .burger{
     display: none;
     cursor: pointer;

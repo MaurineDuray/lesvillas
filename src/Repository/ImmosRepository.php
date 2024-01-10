@@ -82,7 +82,7 @@ class ImmosRepository extends ServiceEntityRepository
    }
     
    
-  public function findByFilter(string $type, int $travellers, int $rooms, int $price): array
+  public function findByFilter(string $conciergerie, string $type, int $travellers, int $rooms): array
   {
       return $this->createQueryBuilder('i')
           ->select('i as immos, i.slug, i.bathrooms, i.bedrooms, i.calendrier, i.conciergerie, i.cover, i.description, i.descriptionEn, i.equipement, i.equipementEn, i.logement, i.logementEn, i.price, i.priceEn, i.titre, i.titreEn, i.travellers, i.type')
@@ -90,13 +90,14 @@ class ImmosRepository extends ServiceEntityRepository
           ->orderBy('i.id', 'DESC')
           ->where('i.travellers = :travellers')
           ->andWhere('i.bedrooms = :rooms') // Utilisez "=" pour la comparaison
-          ->andWhere('i.price = :price')
+          ->andWhere('i.conciergerie = :conciergerie')
           ->andWhere('i.type = :type')
           ->andWhere('i.typeEn = :type')
           ->setParameters([
               'travellers' => $travellers,
               'rooms' => $rooms, // Utilisez la même clé 'rooms' ici
               'type' => $type, // Utilisez la même clé 'housetype' ici
+              'conciergerie' => $conciergerie
           ])
           ->getQuery()
           ->getResult();

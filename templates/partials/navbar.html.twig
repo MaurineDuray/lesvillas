@@ -1,17 +1,22 @@
 <nav>
   <div class="titre"><h1><a href="{{path('home')}}">Villas Blue</a></h1></div>
   <ul>
-    <li><a href="{{path('conciergerie')}}">{% trans %}Conciergerie{% endtrans %}</a></li>
+    
     <li><a href="{{path('azur')}}">{% trans %}Côte d'Azur{% endtrans %}</a></li>
     <li><a href="{{path('floride')}}">{% trans %}Florida{% endtrans %}</a></li>
     <li><a href="{{path('activities')}}">{% trans %}Our activities{% endtrans %}</a></li>
+    <li><a href="{{path('conciergerie')}}">{% trans %}Owners{% endtrans %}</a></li>
     <li><a href="{{path('about')}}">{% trans %}About{% endtrans %}</a></li>
-    <li>
+    <li class="sous-menu" style="cursor:pointer">{% trans %}Language<span style="font-size: 9pt"> ▼</span>{% endtrans %}
+      <ul class="deroulant">
       {% for locale in locales %}
-      {% if locale != app.request.locale %}
-         <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link">{{locale|upper}}</a>
-      {% endif %}
+     
+        {% if locale != app.request.locale %} <li>
+          <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link">{{locale|upper}}</a></li>
+        {% endif %}
+      
       {% endfor %}
+      </ul>
     </li>
   </ul>
   <div class="burger">
@@ -23,16 +28,19 @@
 
 <div id="menuResponsive">
   <ul>
-    <li><a href="{{path('conciergerie')}}">{% trans %}Conciergerie{% endtrans %}</a></li>
+    
     <li><a href="{{path('azur')}}">{% trans %}Côte d'Azur{% endtrans %}</a></li>
     <li><a href="{{path('floride')}}">{% trans %}Florida{% endtrans %}</a></li>
     <li><a href="{{path('activities')}}">{% trans %}Our activities{% endtrans %}</a></li>
+    <li><a href="{{path('conciergerie')}}">{% trans %}Owners{% endtrans %}</a></li>
     <li><a href="{{path('about')}}">{% trans %}About{% endtrans %}</a></li>
     <li id="langue">
-      {% for locale in locales %}
-      {% if locale != app.request.locale %}
-         <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link">{{locale|upper}}</a>
-      {% endif %}
+     {% for locale in locales %}
+      <li>
+        {% if locale != app.request.locale %}
+          <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link">{{locale|upper}}</a>
+        {% endif %}
+      </li>
       {% endfor %}
     </li>
   </ul>
