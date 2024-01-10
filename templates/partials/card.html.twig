@@ -3,6 +3,8 @@
                     <p>
                         {% if app.request.locale == "en" %}
                             {{immo.titreEn}}
+                        {% elseif app.request.locale == "es" %}
+                            {{immo.titreEs}}
                         {% else %}
                             {{immo.titre}}
                         {% endif %}
@@ -15,6 +17,8 @@
                     <p>
                     {% if app.request.locale == "en" %}
                         {{immo.travellers}} travellers  -  {{immo.bedrooms}} room(s)
+                    {% elseif app.request.locale == "es" %}
+                        {{immo.travellers}} viajeros   -  {{immo.bedrooms}} dormitorio(s)
                     {% else %}
                         {{immo.travellers}} voyageurs  -  {{immo.bedrooms}} chambre(s)
                     {% endif %} 

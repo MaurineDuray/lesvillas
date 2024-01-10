@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+  <file source-language="en" target-language="es" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="y_NmOS4" resname="Test of traduction">
-        <source>Test of traduction</source>
-        <target>__Test of traduction</target>
-      </trans-unit>
-      <trans-unit id="JswGSf3" resname="This is a traduction test !">
-        <source>This is a traduction test !</source>
-        <target>__This is a traduction test !</target>
-      </trans-unit>
-      <trans-unit id="Tvyg0Qx" resname="About">
-        <source>About</source>
-        <target>À propos</target>
-      </trans-unit>
-      <trans-unit id="tLWAqa2" resname="About us">
-        <source>About us</source>
-        <target>À propos</target>
-      </trans-unit>
       <trans-unit id="SazmA7O" resname="We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.">
         <source>We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.</source>
         <target>__We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.</target>
@@ -39,11 +23,11 @@
       </trans-unit>
       <trans-unit id="sZAIvHd" resname="Côte d'Azur">
         <source>Côte d'Azur</source>
-        <target>Côte d'Azur</target>
+        <target>__Côte d'Azur</target>
       </trans-unit>
       <trans-unit id="jp4mwu_" resname="Florida">
         <source>Florida</source>
-        <target>Florida</target>
+        <target>__Florida</target>
       </trans-unit>
       <trans-unit id="imcjI6O" resname="Featured properties in Florida">
         <source>Featured properties in Florida</source>
@@ -51,7 +35,7 @@
       </trans-unit>
       <trans-unit id="rUL4xUf" resname="Discover all our homes in Florida...">
         <source>Discover all our homes in Florida...</source>
-        <target>Découvrez tous nos logements en Floride...</target>
+        <target>Descubra todas nuestras viviendas en Florida...</target>
       </trans-unit>
       <trans-unit id="Q0kBrqU" resname="See&amp;nbsp;more">
         <source>See&amp;nbsp;more</source>
@@ -281,9 +265,13 @@
         <source>Owners</source>
         <target>__Owners</target>
       </trans-unit>
+      <trans-unit id="Tvyg0Qx" resname="About">
+        <source>About</source>
+        <target>__About</target>
+      </trans-unit>
       <trans-unit id="iMwRS9B" resname="Language&lt;span style=&quot;font-size: 9pt&quot;&gt; ▼&lt;/span&gt;">
         <source>Language&lt;span style="font-size: 9pt"&gt; ▼&lt;/span&gt;</source>
-        <target><![CDATA[Langue<span style="font-size: 9pt"> ▼</span>]]></target>
+        <target><![CDATA[__Language<span style="font-size: 9pt"> ▼</span>]]></target>
       </trans-unit>
       <trans-unit id="KT1ASlA" resname="Destination">
         <source>Destination</source>

@@ -12,9 +12,9 @@
       {% for locale in locales %}
      
         {% if locale != app.request.locale %} <li>
-          <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link">{{locale|upper}}</a></li>
+          <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link"> <img class="drapeau" src="{{asset('images/'~locale~'.png')}}" alt=""> </a></li>
         {% endif %}
-      
+      {# si on laisse les initiales de la langue{{locale|upper}} #}
       {% endfor %}
       </ul>
     </li>
@@ -38,7 +38,7 @@
      {% for locale in locales %}
       <li>
         {% if locale != app.request.locale %}
-          <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link">{{locale|upper}}</a>
+           <a href="{{path('change_locale', {'locale': locale})}}" class="nav-link"> <img class="drapeau" src="{{asset('images/'~locale~'.png')}}" alt=""> </a></li>
         {% endif %}
       </li>
       {% endfor %}

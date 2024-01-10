@@ -14,8 +14,10 @@
         <h2>{% trans %}Are you looking for specific accommodation?{% endtrans %}</h2>
         {{form_start(search)}}
         {{form_end(search)}}
-         {% if app.request.locale =="en" %}
-            {% include "partials/filterEn.html.twig" %} 
+        {% if app.request.locale =="en" %}
+            {% include "partials/filterEn.html.twig" %}
+        {% elseif app.request.locale =="en" %}
+            {% include "partials/filterEs.html.twig" %}
         {% else %}
             {% include "partials/filter.html.twig" %} 
         {% endif %}

@@ -66,11 +66,14 @@
         </div>
     </div>
     <div class="galery">
-        <img class="arrow-right" src="{{asset('images/triangle-right.png')}}" alt="arrow">
-        <img class="arrow-left" src="{{asset('images/triangle-left.png')}}" alt="arrow">
+        <div class="arrowContainer">
+            <div class="arrowFond"><img class="arrow arrow-right" src="{{asset('images/triangle-right.png')}}" alt=""></div>
+            <div class="arrowFond"><img class="arrow arrow-left" src="{{asset('images/triangle-left.png')}}" alt=""></div>
+        </div>
         <div class="containerGalery">
              <img src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}">
         </div>
+        
     </div>
     <div class="diaporama">
         {% for image in immo.images %}
@@ -90,6 +93,8 @@
                 <p class="lined">
                     {% if app.request.locale == "en" %}
                         {{immo.descriptionEn | nl2br}}
+                    {% elseif app.request.locale == "es" %}
+                         {{immo.descriptionEs | nl2br}}
                     {% else %}
                         {{immo.description | nl2br}}
                     {% endif %}
@@ -106,6 +111,8 @@
                 <p> 
                     {% if app.request.locale == "en" %}
                         {{immo.logement | nl2br}}
+                    {% elseif app.request.locale == "es" %}
+                        {{immo.logementEs | nl2br}}
                     {% else %}
                         {{immo.logementEn | nl2br}}
                     {% endif %}
@@ -118,6 +125,8 @@
                 <p> 
                     {% if app.request.locale == "en" %}
                         {{immo.equipement | nl2br}}
+                    {% elseif app.request.locale == "es" %}
+                        {{immo.equipementEs | nl2br}}
                     {% else %}
                         {{immo.equipement | nl2br}}
                     {% endif %}

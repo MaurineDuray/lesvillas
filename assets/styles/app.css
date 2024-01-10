@@ -124,6 +124,9 @@ nav ul li a{
     color: white;
     cursor: pointer;
 }
+.drapeau{
+    width: 20px;
+}
 .deroulant{
     position: absolute;
     flex-wrap: wrap;
@@ -493,7 +496,7 @@ footer{
 }
 .logoFooter{
     width: 150px;
-    height: 150px;
+    
 }
 .logoFooter img{
     width: 100%

@@ -1,25 +1,25 @@
 <form class="filter" action="{{path('sort')}}">
     <div class="form-group">
         <select name="conciergerie" id="conciergerie">
-            <option value="Your destination" disabled selected>{% trans %}Destination{% endtrans %}</option>
+            <option value="Your destination" disabled selected>{% trans %}Destino{% endtrans %}</option>
             <option value="Azur">{% trans %}Côtes d'Azur{% endtrans %}</option>
             <option value="Floride">Floride</option>
         </select>
     </div>
     <div class="form-group">
         <select name="housetype" id="housetype" name="housetype">
-            <option value="" disabled selected>{% trans %}Type of housing{% endtrans %}</option>
-            <option value="Appartement">{% trans %}Flat{% endtrans %}</option>
+            <option value="" disabled selected>{% trans %}Tipo de alojamiento{% endtrans %}</option>
+            <option value="Appartement">{% trans %}Plano{% endtrans %}</option>
             <option value="Villa">Villa</option>
-            <option value="Maison">House</option>
-            <option value="Autres">Other</option>
+            <option value="Maison">Casa</option>
+            <option value="Autres">Otros</option>
         </select>
     </div>
     <div class="from-group">
-        <input id="travellers" name="travellers" type="number" placeholder="Number of travellers" min="0" >
+        <input id="travellers" name="travellers" type="number" placeholder="Número de pasajeros" min="0" >
     </div>
     <div class="form-group">
-        <input id="rooms" name="rooms" type="number" placeholder="Number of bedrooms" min="0" >
+        <input id="rooms" name="rooms" type="number" placeholder="Número de habitaciones" min="0" >
     </div>
     
     <input type="submit" class="btn" value="Filter" id="filterBtn">
