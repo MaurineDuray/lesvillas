@@ -32,9 +32,11 @@ class Faq
     private ?string $responseEn = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La question initiale en espagnol doit être mentionnée")]
     private ?string $questionEs = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La réponse (en espagnol) à la question doit être mentionnée")]
     private ?string $responseEs = null;
 
     public function getId(): ?int

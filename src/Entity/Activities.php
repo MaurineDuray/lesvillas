@@ -45,6 +45,8 @@ class Activities
     private ?string $slug = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Le titre espagnol de l'activité doit être mentionné")]
+    #[Assert\Length(min: 2, max:255, minMessage:"Le titre de l'activité doit faire au minimum 2 caractères", maxMessage: "Le titre de l'activité ne peut dépasser 255 caractères")]
     private ?string $titreEs = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]

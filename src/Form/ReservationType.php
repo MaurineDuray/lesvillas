@@ -44,15 +44,15 @@ class ReservationType extends ApplicationType
             ])
             ->add('nbAnimals', IntegerType::class, [
                 'label' => "Nombre d'animaux / Number of animals / Número de animales",
-                'required' => true
+                'required' => false
             ])
             ->add('adults', IntegerType::class, [
                 'label' => "Nombre d'adultes / Number of adults / Número de adultos",
                 'required' => true
             ])
             ->add('kids', IntegerType::class, [
-                'label' => "Nombre d'enfants / Number of kids / Número de niños",
-                'required' => true
+                'label' => "Nombre d'enfants (+12 ans) / Number of kids(+12 years) / Número de niños (+12años)",
+                'required' => false
             ])
             ->add('kidbed', CheckboxType::class, [
                 'label' => 'Lit enfant requis / Baby bed required / Se necesita cuna',

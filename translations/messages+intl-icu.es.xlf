@@ -329,6 +329,14 @@
         <source>More information</source>
         <target>__More information</target>
       </trans-unit>
+      <trans-unit id="B4bOyY1" resname="Demande de contact">
+        <source>Demande de contact</source>
+        <target>Solicitud de contacto</target>
+      </trans-unit>
+      <trans-unit id="2v52lEY" resname="Hello,">
+        <source>Hello,</source>
+        <target>Holà</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

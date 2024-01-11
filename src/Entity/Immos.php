@@ -69,7 +69,7 @@ class Immos
     private ?string $equipement = null;
 
     #[ORM\Column(type: Types::TEXT)]
-    #[Assert\NotBlank(message:"L'équipement' du logement en français doit être fournie ")]
+    #[Assert\NotBlank(message:"L'équipement' du logement en anglais doit être fournie ")]
     private ?string $equipementEn = null;
 
     #[ORM\Column(length: 255)]
@@ -92,7 +92,7 @@ class Immos
     private ?string $slug = null;
 
     #[ORM\Column(length: 255)]
-    #[Assert\NotBlank(message:"La type du logement doit être sélectionné")]
+    #[Assert\NotBlank(message:"Le type du logement doit être sélectionné")]
     private ?string $type = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -110,19 +110,24 @@ class Immos
     #[ORM\Column]
     private ?bool $seafront = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $typeEn = null;
 
     #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Le titre du logement doit être mentionné")]
+    #[Assert\Length(min: 2, max:255, minMessage:"Le titre doit faire au minimum 2 caractères", maxMessage: "Le titre ne peut dépasser 255 caractères")]
     private ?string $TitreEs = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"Une description en espagnol doit être mentionnée")]
     private ?string $descriptionEs = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"La composition du logement en espagnol doit être fournie")]
     private ?string $logementEs = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Assert\NotBlank(message:"L'équipement' du logement en espagnol doit être fournie ")]
     private ?string $equipementEs = null;
 
     public function __construct()

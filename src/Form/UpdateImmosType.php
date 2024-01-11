@@ -32,6 +32,12 @@ class UpdateImmosType extends ApplicationType
                     'placeholder' => "Titre du logement en anglais"
                 ]
             ])
+            ->add('TitreEs', TextType::class, [
+                'label'=> 'Titre en espagnol',
+                'attr' =>[
+                    'placeholder' => "Titre du logement en espagnol"
+                ]
+            ])
             ->add('address', TextType::class, [
                 'label'=> 'Adresse du logement',
                 'attr' =>[
@@ -68,17 +74,26 @@ class UpdateImmosType extends ApplicationType
             ->add('descriptionEn', TextareaType::class,[
                 'label'=>'Description en anglais'
             ])
+            ->add('descriptionEs', TextareaType::class,[
+                'label'=>'Description en espagnol'
+            ])
             ->add('logement', TextareaType::class, [
                 'label'=>'Composition du logement en français (liste à puces)'
             ])
             ->add('logementEn',TextareaType::class,[
                 'label'=>'Composition du logement en anglais (liste à puces)'
             ])
+            ->add('logementEs',TextareaType::class,[
+                'label'=>'Composition du logement en espagnol (liste à puces)'
+            ])
             ->add('equipement',TextareaType::class,[
                 'label'=>'Equipement du logement en français (liste à puces)'
             ])
             ->add('equipementEn',TextareaType::class,[
                 'label'=>'Equipement du logement en anglais (liste à puces)'
+            ])
+            ->add('equipementEs',TextareaType::class,[
+                'label'=>'Equipement du logement en espagnol (liste à puces)'
             ])
             ->add('conciergerie', ChoiceType::class, [
                 'choices'=>[

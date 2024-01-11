@@ -3,12 +3,14 @@
 namespace App\Controller;
 
 use App\Entity\Immos;
+use Cocur\Slugify\Slugify;
 use App\Entity\Reservation;
 use App\Form\ReservationType;
 use App\Repository\ImmosRepository;
-use Cocur\Slugify\Slugify;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -17,7 +19,7 @@ class LogementController extends AbstractController
 {
     
     #[Route('/logement/{id}', name: 'logement')]
-    public function showLogement( Immos $immo, Request $request, EntityManagerInterface $manager):Response
+    public function showLogement( Immos $immo, Request $request, EntityManagerInterface $manager, MailerInterface $mailer):Response
     {
 
         $reservation = new Reservation;
@@ -34,6 +36,37 @@ class LogementController extends AbstractController
                 "Votre demande de réservation a bien été envoyée, nous revenons vers vous au plus vite ! / Your booking request has been sent, we'll get back to you as soon as possible  ! "
             );
             
+            // mail send
+            $email = (new TemplatedEmail())
+            ->from('site@lesvillasblue.be')
+            ->to('contact@lesvillasblue.be')
+            ->subject('Pre-reservation')
+            ->htmlTemplate('mails/reservation.html.twig')
+            ->context([
+               'booking'=>$reservation,
+               'titlefr'=>$immo->getTitre(),
+                'titleen'=>$immo->getTitreEn(),
+                'titlees'=>$immo->getTitreEs(),
+                'arrival'=>$reservation->getArrival()->format('Y-m-d'),
+                'departure'=>$reservation->getDeparture()->format('Y-m-d')
+            ]);
+           $mailer->send($email);
+           
+            // récap réservation
+            $emailrecap = (new TemplatedEmail())
+            ->from('site@lesvillasblue.be')
+            ->to('contact@lesvillasblue.be')
+            ->subject('Pre-reservation Villas Blue')
+            ->htmlTemplate('mails/recapreservation.html.twig')
+            ->context([
+                'booking'=>$reservation,
+                'titlefr'=>$immo->getTitre(),
+                'titleen'=>$immo->getTitreEn(),
+                'titlees'=>$immo->getTitreEs(),
+                'arrival'=>$reservation->getArrival()->format('Y-m-d'),
+                'departure'=>$reservation->getDeparture()->format('Y-m-d')
+            ]);
+            $mailer->send($emailrecap);
 
             return $this->redirectToRoute('logement', [
                 'id' => $immo->getId()

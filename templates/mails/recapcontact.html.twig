@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<h1> {% trans %}Demande de contact{% endtrans %} </h1>
+<p>
+    {% trans %}Hello,{% endtrans %}<b></b> <br>
+ 
+    Vous avez récemment introduit une demande de contact sur le site web Les Villas Blue : <br>
+    <p>Voici le récapitulatif de votre demande :</p>
+
+    <b>Nom d'utilisateur : {{contact.name}}</b><br>
+    <b>Email : {{contact.email}}</b><br>
+    <b>Télephone : {{contact.phone}}</b><br>
+    <p>Message :</p>
+    <p>{{contact.message}}</p>
+    <strong>Nous vous répondrons dans les plus brefs délais !</strong>
+    <strong>Ceci est un mail automatique, merci de ne pas y répondre !</strong><br>
+
+    <strong>L'équipe des Villas Blue</strong>
+    
+
+   
+</p>
+
+<h1>{% trans %}Contact Request{% endtrans %}</h1>
+<p>
+    {% trans %}Hello,{% endtrans %}<b></b> <br>
+
+    You have recently submitted a contact request on the website Villas Blue: <br>
+    <p>Here is the summary of your request:</p>
+
+    <b>Username: {{contact.name}}</b><br>
+    <b>Email: {{contact.email}}</b><br>
+    <b>Phone: {{contact.phone}}</b><br>
+    <p>Message:</p>
+    <p>{{contact.message}}</p>
+    <strong>We will get back to you as soon as possible!</strong>
+    <strong>This is an automated email, please do not reply!</strong><br>
+
+    <strong>The Villas Blue Team</strong>
+</p>
+
+<h1>{% trans %}Solicitud de contacto{% endtrans %}</h1>
+<p>
+    {% trans %}Hola,{% endtrans %}<b></b> <br>
+
+    Recientemente has enviado una solicitud de contacto en el sitio web Villas Blue: <br>
+    <p>Aquí tienes el resumen de tu solicitud:</p>
+
+    <b>Nombre de usuario: {{contact.name}}</b><br>
+    <b>Email: {{contact.email}}</b><br>
+    <b>Teléfono: {{contact.phone}}</b><br>
+    <p>Mensaje:</p>
+    <p>{{contact.message}}</p>
+    <strong>¡Te responderemos lo antes posible!</strong>
+    <strong>Este es un correo electrónico automático, ¡por favor no respondas!</strong><br>
+
+    <strong>El equipo de Villas Blue</strong>
+</p>
+</html>

@@ -3,17 +3,19 @@
 <h1> Demande de contact </h1>
 <p>
     
-    Bonjour, <b>{{user.firstName}}</b> <br>
-    Vous avez reçu une demande de contact de la part de :<br>
+    Bonjour, <b></b> <br>
+    Vous avez récemment reçu une demande de contact sur votre site les villas blue :<br>
 
-    <b>Nom d'utilisateur : {{utilisateur.firstName}}</b><br>
-    <b>Email : {{utilisateur.email}}</b><br>
-
-    <br><p>Cet utilisateur est certainement intéressé par une de vos créations et souhaite entrer en contact avec vous.</p>
-   
+    <b>Nom d'utilisateur : {{contact.name}}</b><br>
+    <b>Email : {{contact.email}}</b><br>
+    <b>Téléphone : {{contact.phone}}</b><br>
+    <p>Message :</p>
+    <p>{{contact.message}}</p>
     <strong>Ceci est un mail automatique, merci de ne pas y répondre !</strong><br>
-    À bientôt sur notre site 
+    
 
    
 </p>
+
+
 </html>

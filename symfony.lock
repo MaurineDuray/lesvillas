@@ -107,6 +107,24 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/lokalise-translation-provider": {
+        "version": "6.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "5.3",
+            "ref": "db778cb06bece4201899ca2b33542f7cd6520d06"
+        }
+    },
+    "symfony/mailchimp-mailer": {
+        "version": "6.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.4",
+            "ref": "1be490e068472fc87e226cf54bc95fb6f2e49117"
+        }
+    },
     "symfony/mailer": {
         "version": "6.4",
         "recipe": {
@@ -204,6 +222,15 @@
             "config/packages/security.yaml",
             "config/routes/security.yaml"
         ]
+    },
+    "symfony/sendgrid-mailer": {
+        "version": "6.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "4.4",
+            "ref": "224aedffb66812dc2b0965dabc14d5f800941da6"
+        }
     },
     "symfony/translation": {
         "version": "6.4",

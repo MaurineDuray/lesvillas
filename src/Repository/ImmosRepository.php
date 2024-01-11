@@ -30,8 +30,10 @@ class ImmosRepository extends ServiceEntityRepository
                    $qb->expr()->orX(
                        $qb->expr()->like('i.Titre', ':criteria'),
                        $qb->expr()->like('i.TitreEn', ':criteria'),
+                       $qb->expr()->like('i.TitreEs', ':criteria'),
                        $qb->expr()->like('i.description', ':criteria'),
                        $qb->expr()->like('i.descriptionEn', ':criteria'),
+                       $qb->expr()->like('i.descriptionEs', ':criteria'),
                        $qb->expr()->like('i.type', ':criteria'),
                        $qb->expr()->like('i.typeEn', ':criteria'),
                        $qb->expr()->like('i.address', ':criteria')

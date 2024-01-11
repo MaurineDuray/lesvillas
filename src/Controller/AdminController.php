@@ -321,7 +321,7 @@ class AdminController extends AbstractController
 
 
             
-
+            $immo->setTypeEn('');
             $immo->setSlug(rand());
             $manager->persist($immo);
             $manager->flush();
