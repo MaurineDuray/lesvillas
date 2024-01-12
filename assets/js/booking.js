@@ -14,16 +14,33 @@ console.log('js')
 const pictures = document.querySelectorAll('.diapo')
 pictures.forEach(picture=>{
    picture.addEventListener('click',()=>{
+
+      const droite = document.querySelector('.arrow-right')
+      const gauche = document.querySelector('.arrow-left')
       const diapo = document.querySelector('.containerGalery')
       const diapoimg = document.querySelector('.containerGalery img')
-     
+      const number = document.querySelectorAll('.diaporama img').length
+
+
       diapo.removeChild(diapoimg)
       var key = picture.getAttribute('key')
-
+      if ((key == "00") || (key == 0)) {
+         gauche.style.display="none"
+         droite.style.display="flex"
+      }
+      if(key == number){
+         droite.style.display="none"
+      }
+      if ((key > 0) && (key < number)) {
+         gauche.style.display="flex"
+         droite.style.display="flex"
+      }
       var newImg = document.createElement('img');
       newImg.setAttribute('src', picture.getAttribute('src'))
       newImg.setAttribute('key', key)
       diapo.appendChild(newImg)
+
+
    })
 })
 
@@ -39,6 +56,11 @@ if(diapoimg.getAttribute('key') == 0){
    gauche.style.display="flex"
 }
 
+if(number === 0){
+   gauche.style.display="none"
+   droite.style.display="none"
+}
+
 droite.addEventListener('click',()=>{
    var test = number-1
    const diapo = document.querySelector('.containerGalery')
@@ -50,7 +72,9 @@ droite.addEventListener('click',()=>{
       }else{
          gauche.style.display="flex"
       }
-
+      if((newKey == 0)||(newKey == "00")){
+         gauche.style.display="none"
+      }
       diapo.removeChild(diapoimg)
       var src = document.querySelector('[key="0' + newKey + '"]').getAttribute('src');
 
@@ -67,7 +91,7 @@ droite.addEventListener('click',()=>{
       }else{
          droite.style.display="flex"
       }
-
+      
       
 })
 
@@ -78,7 +102,13 @@ gauche.addEventListener('click',()=>{
    const oldKey = diapoimg.getAttribute('key')
    const newKey = parseInt(oldKey) - 1
    
-  
+      if(diapoimg.getAttribute('key') < number ){
+        
+      }else{
+         gauche.style.display="flex"
+         console.log('gauche disparait')
+      }
+
       diapo.removeChild(diapoimg)
       var src = document.querySelector('[key="0' + newKey + '"]').getAttribute('src');
 
@@ -86,18 +116,13 @@ gauche.addEventListener('click',()=>{
       Image.setAttribute('src', src)
       Image.setAttribute('key', newKey)
       diapo.appendChild(Image)
+      console.log("number: "+number)
 
-      if(diapoimg.getAttribute('key') <= number - 2 ){
+      if((newKey == 0)||(newKey == "00")){
          gauche.style.display="none"
-      }else{
-         gauche.style.display="flex"
       }
 
-      if(diapoimg.getAttribute('key') == 0){
-         droite.style.display="none"
-      }else{
-         droite.style.display="flex"
-      }
+      
    
 })
 
