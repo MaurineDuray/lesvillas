@@ -5,6 +5,7 @@ namespace App\Form;
 use App\Entity\Conciergerie;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -36,7 +37,7 @@ class ConciergerieType extends ApplicationType
                     'placeholder' => "Votre numéro téléphone / Your phone number / Su teléfono"
                 ]
             ])
-            ->add('superficie', NumberType::class, [
+            ->add('superficie', IntegerType::class, [
                 'label'=> 'Superficie / Surface area / Área',
                 'attr' =>[
                     'placeholder' => "Superficie du logement / Surface area of the property / Superficie del alojamiento"

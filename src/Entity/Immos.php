@@ -130,6 +130,9 @@ class Immos
     #[Assert\NotBlank(message:"L'équipement' du logement en espagnol doit être fournie ")]
     private ?string $equipementEs = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $maps = null;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -536,6 +539,18 @@ class Immos
     public function setEquipementEs(string $equipementEs): static
     {
         $this->equipementEs = $equipementEs;
+
+        return $this;
+    }
+
+    public function getMaps(): ?string
+    {
+        return $this->maps;
+    }
+
+    public function setMaps(?string $maps): static
+    {
+        $this->maps = $maps;
 
         return $this;
     }

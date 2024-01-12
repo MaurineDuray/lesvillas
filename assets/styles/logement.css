@@ -46,8 +46,10 @@
     align-items: center;
     justify-content: space-between;
     position: absolute;
+    
 }
 .arrowFond{
+    position: absolute;
     cursor: pointer;
     height: 60px;
     background-color: rgba(18, 99, 101, 0.357);
@@ -56,15 +58,20 @@
     display: flex;
     border-radius: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
 }
 .arrowFond .arrow{
     height: 30px;
     display: flex;
     align-items: center;
 }
-
+.arrow-left{
+    left: 30px;
+}
+.arrow-right{
+    right: 30px;
+}
 .containerGalery img{
     height: 100%;
 }

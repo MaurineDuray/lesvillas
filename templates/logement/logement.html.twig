@@ -11,14 +11,14 @@
     </div>
     <div class="titleLogement">
             {% if app.request.locale == "en" %}
-                <h2>{{immo.Titre}}</h2>
+                <h2>{{immo.TitreEn}}</h2>
             {% elseif app.request.locale == "es" %}
                 <h2>{{immo.TitreEs}}</h2>
             {% else %}
-                <h2>{{immo.TitreEn}}</h2>
+                <h2>{{immo.Titre}}</h2>
             {% endif %}
         <p>
-            {{immo.address}}
+            {{immo.address}} <br><i class="fa-solid fa-location-dot"></i> <a href="{{immo.maps}}" target="_blank">{% trans %} Voir sur Google Maps{% endtrans %}</a>
         </p>
         <div class="caract">
             <div class="travellers">
@@ -67,17 +67,17 @@
     </div>
     <div class="galery">
         <div class="arrowContainer">
-            <div class="arrowFond"><img class="arrow arrow-right" src="{{asset('images/triangle-right.png')}}" alt=""></div>
-            <div class="arrowFond"><img class="arrow arrow-left" src="{{asset('images/triangle-left.png')}}" alt=""></div>
+            <div class="arrowFond arrow-left"><img id="arrow-left" class="arrow " src="{{asset('images/triangle-right.png')}}" alt=""></div>
+            <div class="arrowFond arrow-right"><img id="arrow-right" class="arrow " src="{{asset('images/triangle-left.png')}}" alt=""></div>
         </div>
         <div class="containerGalery">
-             <img src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}">
+             <img src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}" key="0">
         </div>
         
     </div>
     <div class="diaporama">
-        {% for image in immo.images %}
-             <img class="diapo" src="../../upload/{{image.file}}" alt="image du logement {{image.file}}">
+        {% for key, image in immo.images %}
+             <img key="0{{key}}" class="diapo" src="../../upload/{{image.file}}" alt="image du logement {{image.file}}">
         {% endfor %}
     </div>
 
@@ -161,6 +161,7 @@
         
         {{form_start(myform)}}
             {{form_widget(myform)}}
+            <div class="alertdate"></div>
             <p>{% trans %}The charge for the addition of a baby chair and cot is 25€.{% endtrans %}</p>
             <p>{% trans %}The fee for the addition of a high chair is 15€.{% endtrans %}</p>
             <p>{% trans %}The fee for pets is €50/day per animal.{% endtrans %}</p>

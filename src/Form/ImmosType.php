@@ -108,6 +108,10 @@ class ImmosType extends ApplicationType
                 'label'=>'Lien de calendrier Google',
                 'required' => false
             ])
+            ->add('map', TextType::class,[
+                'label'=>'Lien google maps',
+                'required' => false
+            ])
             ->add('cover', FileType::class, [
                 "data_class"=>null,
                 "label"=>"Image de couverture du logement"

@@ -58,8 +58,15 @@ class ReservationType extends ApplicationType
                 'label' => 'Lit enfant requis / Baby bed required / Se necesita cuna',
                 'required' => false
             ])
-            ->add('arrival', DateType::class, $this->getConfiguration("Date d'arrivée / Arrival date" ,"Date d'arrivée / Arrival date"))
-            ->add('departure', DateType::class, $this->getConfiguration("Date de départ / Departure date / Fecha de llegada" ,"Date d'arrivée / Départure date / Fecha de llegada"))
+            ->add('arrival', DateType::class, [
+                'label'=> "Date d'arrivée / Arrival date / Fecha de llegada ",
+                'widget' => 'single_text',
+               
+            ])
+            ->add('departure', DateType::class, [
+                'label'=> "Date de départ / Departure date / Fecha de salida",
+                'widget' => 'single_text',
+            ])
             ->add('message', TextareaType::class, [
                 'label'=> 'Message / Mensaje',
                 'attr' =>[

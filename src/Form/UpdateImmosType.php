@@ -102,7 +102,11 @@ class UpdateImmosType extends ApplicationType
                 ]
             ])
             ->add('calendrier', TextType::class,[
-                'label'=>'Lien de calendrier Google',
+                'label'=>'Lien de calendrier',
+                'required' => false
+            ])
+            ->add('maps', TextType::class,[
+                'label'=>'Lien de Google Maps',
                 'required' => false
             ])
             

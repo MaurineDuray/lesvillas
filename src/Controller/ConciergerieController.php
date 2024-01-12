@@ -17,7 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class ConciergerieController extends AbstractController
 {
     #[Route('/conciergerie', name: 'conciergerie')]
-    public function index(Request $request, EntityManagerInterface $manager): Response
+    public function index(Request $request, EntityManagerInterface $manager, MailerInterface $mailer): Response
     {
         $contact = new Conciergerie;
         $form = $this->createForm(ConciergerieType::class, $contact);
@@ -27,6 +27,29 @@ class ConciergerieController extends AbstractController
             
             $manager->persist($contact);
             $manager->flush();
+
+            // mail send
+            $email = (new TemplatedEmail())
+            ->from('site@lesvillasblue.be')
+            ->to('contact@lesvillasblue.be')
+            ->subject('Conciergerie Villas Blue')
+            ->htmlTemplate('mails/conciergerie.html.twig')
+            ->context([
+               'contact'=>$contact,
+            ]);
+           $mailer->send($email);
+           
+            // récap réservation
+             $emailrecap = (new TemplatedEmail())
+             ->from('site@lesvillasblue.be')
+             ->to('contact@lesvillasblue.be')
+             ->subject('Conciergerie Villas Blue')
+             ->htmlTemplate('mails/recapconciergerie.html.twig')
+             ->context([
+                'contact'=>$contact,
+             ]);
+            $mailer->send($emailrecap);
+            
 
             $this->addFlash(
                 'success',
@@ -43,34 +66,5 @@ class ConciergerieController extends AbstractController
         ]);
     }
 
-     /**
-     * Route qui permet de notifier un auteur d'une demande de contact par l'utilisateur connecté
-     */
-    #[Route('/user/contact/{id}', name: 'contact_mail')]
-    public function contactUser(User $user, Request $request, MailerInterface $mailer, EntityManagerInterface $manager, UserInterface $utilisateur):Response
-    {
-            $id = $user->getId();
-            $user = $manager->getRepository(User::class)->findUserById($id);
-            $contactmail = $user->getEmail();
-
-             // mail send
-             $email = (new TemplatedEmail())
-             ->from('design@maurine.be')
-             ->to($contactmail)
-             ->subject('Contact')
-             ->htmlTemplate('mails/contact.html.twig')
-             ->context([
-                'utilisateur' => $utilisateur,
-                'user'=>$user
-             ]);
-            $mailer->send($email);
-            
-            $this->addFlash(
-                'success',
-                'L\'utilisateur a bien été notifiée de votre demande de contact!'
-            );
-
-            return $this->redirectToRoute('home');
-    
-    }
+     
 }

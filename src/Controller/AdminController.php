@@ -540,7 +540,7 @@ class AdminController extends AbstractController
                 $manager->flush();
             }
         }
-
+        $immo->setTypeEn('');
         $manager->remove($immo);
         $manager->flush();
 
