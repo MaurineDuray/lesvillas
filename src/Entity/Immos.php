@@ -76,7 +76,8 @@ class Immos
     #[Assert\NotBlank(message:"La conciergerie du logement doit être mentionnée")]
     private ?string $conciergerie = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    #[Assert\NotBlank(message:"L'url du calendrier de disponibilité du logement doit être mentionnée")]
     private ?string $calendrier = null;
 
     #[ORM\Column(length: 255)]

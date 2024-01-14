@@ -134,6 +134,9 @@
     margin-left: 50%;
     transform: translateX(-50%);
 }
+.calendrier{
+    width: 70%;
+}
 .simulation{
     display: flex;
     flex-wrap: wrap;
