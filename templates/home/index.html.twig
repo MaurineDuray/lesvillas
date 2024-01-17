@@ -20,10 +20,18 @@
         {% endtrans %}</h3><br>
         <h4 class="script">{% trans %}Book your dream holiday in just a few clicks!{% endtrans %}</h4>
         <p><span class="script">{% trans %}Choose your destination{% endtrans %}</span></p>
-        <div class="buttons">
+        {# <div class="buttons">
            <a href="{{path('azur')}}"> <button class="azurButton">{% trans %}Côte d'Azur{% endtrans %}</button></a>
             <a href="{{path('floride')}}"><button class="florideButton">{% trans %}Florida{% endtrans %}</button></a>
-        </div>
+        </div> #}
+
+        {% if app.request.locale == "en" %}
+            {% include "partials/filterEn.html.twig" %}
+        {% elseif app.request.locale == "es" %}
+            {% include "partials/filterEs.html.twig" %}
+        {% else %}
+            {% include "partials/filter.html.twig" %}
+        {% endif %}
     </div>
     <div class="slide top3" id="topFlorida">
         <h4><div class="script">

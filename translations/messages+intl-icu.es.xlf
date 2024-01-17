@@ -337,6 +337,70 @@
         <source>Hello,</source>
         <target>Holà</target>
       </trans-unit>
+      <trans-unit id="tzU9Rat" resname="Contact Request">
+        <source>Contact Request</source>
+        <target>__Contact Request</target>
+      </trans-unit>
+      <trans-unit id="NoVeTVt" resname="Solicitud de contacto">
+        <source>Solicitud de contacto</source>
+        <target>__Solicitud de contacto</target>
+      </trans-unit>
+      <trans-unit id="_DINcEj" resname="Hola,">
+        <source>Hola,</source>
+        <target>__Hola,</target>
+      </trans-unit>
+      <trans-unit id="LG8wVbD" resname="Find a place to stay, discover our activities and services, or suggest your own accommodation! Our team is on hand 7 days a week to help you by phone, e-mail or chat. We're here to answer all your questions 24 hours a day.">
+        <source>Find a place to stay, discover our activities and services, or suggest your own accommodation! Our team is on hand 7 days a week to help you by phone, e-mail or chat. We're here to answer all your questions 24 hours a day.</source>
+        <target>__Find a place to stay, discover our activities and services, or suggest your own accommodation! Our team is on hand 7 days a week to help you by phone, e-mail or chat. We're here to answer all your questions 24 hours a day.</target>
+      </trans-unit>
+      <trans-unit id="D6WZCnb" resname="Are you traveller ?">
+        <source>Are you traveller ?</source>
+        <target>__Are you traveller ?</target>
+      </trans-unit>
+      <trans-unit id="t46tGR4" resname="Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.">
+        <source>Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.</source>
+        <target>__Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.</target>
+      </trans-unit>
+      <trans-unit id="nmpJWDF" resname="Quartier géographique :">
+        <source>Quartier géographique :</source>
+        <target>__Quartier géographique :</target>
+      </trans-unit>
+      <trans-unit id="dlP5dVW" resname="Voir sur Google Maps">
+        <source>Voir sur Google Maps</source>
+        <target>__Voir sur Google Maps</target>
+      </trans-unit>
+      <trans-unit id="h8eNPv7" resname="Indulge yourself with unique and unforgettable activities selected and tested by our team.">
+        <source>Indulge yourself with unique and unforgettable activities selected and tested by our team.</source>
+        <target>__Indulge yourself with unique and unforgettable activities selected and tested by our team.</target>
+      </trans-unit>
+      <trans-unit id="i4uhU1R" resname="Throughout the year, they are on hand to ensure you have the best possible stay. They're the ones who make sure your vacation runs smoothly, so you can rely on them to personalize your stay just the way you want it. An in-home chef for a candlelit dinner in your rental? Breakfast delivered to the foot of your bed? A yoga class on your terrace? Personalize your stay and book activities tested by us:">
+        <source>Throughout the year, they are on hand to ensure you have the best possible stay. They're the ones who make sure your vacation runs smoothly, so you can rely on them to personalize your stay just the way you want it. An in-home chef for a candlelit dinner in your rental? Breakfast delivered to the foot of your bed? A yoga class on your terrace? Personalize your stay and book activities tested by us:</source>
+        <target>__Throughout the year, they are on hand to ensure you have the best possible stay. They're the ones who make sure your vacation runs smoothly, so you can rely on them to personalize your stay just the way you want it. An in-home chef for a candlelit dinner in your rental? Breakfast delivered to the foot of your bed? A yoga class on your terrace? Personalize your stay and book activities tested by us:</target>
+      </trans-unit>
+      <trans-unit id="cY9f2aB" resname="With LES VILLAS BLUE, renting your home has never been easier. Set your own terms and conditions, leave the management to our team and we'll advertise your property simultaneously with our partners: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.">
+        <source>With LES VILLAS BLUE, renting your home has never been easier. Set your own terms and conditions, leave the management to our team and we'll advertise your property simultaneously with our partners: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.</source>
+        <target>__With LES VILLAS BLUE, renting your home has never been easier. Set your own terms and conditions, leave the management to our team and we'll advertise your property simultaneously with our partners: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.</target>
+      </trans-unit>
+      <trans-unit id="lMf2sJn" resname="With a team of concierge travel and hospitality experts, we visit, check and evaluate your accommodation before accepting it for management and launching its worldwide distribution.">
+        <source>With a team of concierge travel and hospitality experts, we visit, check and evaluate your accommodation before accepting it for management and launching its worldwide distribution.</source>
+        <target>__With a team of concierge travel and hospitality experts, we visit, check and evaluate your accommodation before accepting it for management and launching its worldwide distribution.</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>__Home</target>
+      </trans-unit>
+      <trans-unit id="M016S71" resname="Travellers">
+        <source>Travellers</source>
+        <target>__Travellers</target>
+      </trans-unit>
+      <trans-unit id="jGvAmVN" resname="Blog">
+        <source>Blog</source>
+        <target>__Blog</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>__Contact</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

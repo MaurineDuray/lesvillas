@@ -1,9 +1,23 @@
 <form class="filter" action="{{ path('sort') }}" method="get">
     <div class="form-group">
         <select name="conciergerie" id="conciergerie">
-            <option value="Votre destination" disabled selected>{% trans %}Destination{% endtrans %}</option>
-            <option value="Azur">{% trans %}Côtes d'Azur{% endtrans %}</option>
-            <option value="Floride">Floride</option>
+            <option value="Your destination" disabled selected>{% trans %}Destination{% endtrans %}</option>
+            <optgroup label="Côte d'Azur">
+                <option value="Saint-Raphaël">Saint-Raphaël</option>
+                <option value="Fréjus">Fréjus</option>
+                <option value="Boulouris">Boulouris</option>
+                <option value="Agay">Agay</option>
+                <option value="Antheor">Antheor</option>
+            </optgroup>
+            <optgroup label="Floride">
+                <option value="Miami Beach">Miami Beach</option>
+                <option value="Coconut">Coconut</option>
+                <option value="North Miami">North Miami</option>
+                <option value="South Miami">South Miami</option>
+                <option value="Downtown">Downtown</option>
+                <option value="Midtown">Midtown</option>
+                <option value="Brickell">Brickell</option>
+            </optgroup>
         </select>
     </div>
     <div class="form-group">

@@ -1,0 +1,25 @@
+<div class="card">
+                <div class="card-title">
+                    <p>
+                        {% if app.request.locale == "en" %}
+                            {{blog.titleEn}}
+                        {% elseif app.request.locale == "es" %}
+                            {{blog.titleEs}}
+                        {% else %}
+                            {{blog.title}}
+                        {% endif %}
+                    </p>
+                    <p style="color: grey">{{blog.date | date("m/d/Y")}}</p>
+                </div>
+                <div class="card-img">
+                    {% if blog.image %}
+                        <img src="../../upload/{{blog.cover}}" alt="image de l'article {{blog.titleFr}}">
+                    {% else %}
+                        <img  src="{{asset('images/introHome.png')}}" alt="image de l'article {{blog.titleFr}}">
+                    {% endif %}
+                    
+                </div>
+                <div class="card-btn">
+                    <a href="{{path('showarticle',{'id':blog.id})}}"><button>{% trans %}Read the article{% endtrans %}</button></a>
+                </div>
+            </div>

@@ -48,7 +48,7 @@ class AzurController extends AbstractController
         $type = $request->query->get('housetype');
         $travellers = $request->query->get('travellers');
         $bedrooms = $request->query->get('bedrooms');
-        $conciergerie = $request->query->get('conciergerie');
+        $quartier = $request->query->get('conciergerie');
 
         $repository = $manager->getRepository(Immos::class);
         $queryBuilder = $repository->createQueryBuilder('i');
@@ -72,10 +72,10 @@ class AzurController extends AbstractController
                 ->setParameter('bedrooms', $bedrooms);
         }
 
-        if ($conciergerie) {
+        if ($quartier) {
             $queryBuilder
-            ->andWhere('i.conciergerie = :conciergerie')
-            ->setParameter('conciergerie', $conciergerie);
+            ->andWhere('i.quartier = :quartier')
+            ->setParameter('quartier', $quartier);
         }
 
         $immos = $queryBuilder->getQuery()->getResult();

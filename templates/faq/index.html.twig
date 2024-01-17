@@ -19,6 +19,8 @@
             <p class="question"> 
                 {% if app.request.locale == "en" %}
                     {{question.questionEn}}
+                {% elseif app.request.locale == "es" %}
+                    {{question.questionEs}}
                 {% else %}
                     {{question.question}}
                 {% endif %}
@@ -26,6 +28,8 @@
             <p class="responses">
                 {% if app.request.locale == "en" %}
                     {{question.responseEn}}
+                {% elseif app.request.locale == "es" %}
+                    {{question.responseEs}}
                 {% else %}
                     {{question.response}}
                 {% endif %}

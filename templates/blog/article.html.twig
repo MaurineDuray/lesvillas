@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Villas Blue{% endblock %}
+
+{% block body %}
+    <div class="slide" id="introGalery">
+         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+        <div class="sep">
+            <img src="{{asset('images/separation-bottom.png')}}" alt="separation">
+        </div>
+    </div>
+    <div class="slide" id="titleActivities">
+        <h2>
+        {% if app.request.locale == "en" %}
+            {{blog.titleEn}}
+        {% elseif app.request.locale == "es" %}
+            {{blog.titleEs}}
+        {% else %}
+            {{blog.titleFr}}
+        {% endif %}
+        </h2>
+        <p>{% trans %}Published :{% endtrans %} {{blog.date | date("m/d/Y")}}</p>
+    </div>
+     <div class="galery">
+        
+        <div class="containerGalery">
+              {% if blog.image %}
+                        <img src="../../upload/{{blog.cover}}" alt="image de l'article {{blog.id}}">
+                    {% else %}
+                        <img  src="{{asset('images/introHome.png')}}" alt="image de l'article {{blog.id}}">
+                    {% endif %}
+        </div>
+        
+    </div>
+    <div class="contentArticle">
+        <p style="width: 80%; margin: 0 auto; padding-bottom: 100px">
+            {% if app.request.locale == "en" %}
+                {{blog.textEn | nl2br}}
+            {% elseif app.request.locale == "es" %}
+                {{blog.textEs | nl2br}}
+            {% else %}
+                {{blog.textFr | nl2br}}
+            {% endif %}
+        </p>
+    </div>
+    <div class="slide" id="activitiesContainer">
+    
+
+
+
+        
+    </div>
+     <div class="slide" id="eventsHome">
+        <div class="sep-top">
+            <img src="{{asset('images/top-sep.png')}}" alt="separation">
+        </div>
+        <h3>
+            {% trans %}Looking for a tailor-made plan for your stay? {% endtrans %}
+        </h3>
+        <h4>
+            <span class="script">{% trans %}Contact us, we'll take care of everything!{% endtrans %}</span>
+        </h4>
+        
+        <div class="discoverButton">
+            <a href="{{path('contact')}}" id="discover"><button>{% trans %}Contact us{% endtrans %}</button></a>
+        </div>
+    </div>
+    {% include "partials/footer.html.twig" %}
+{% endblock %}

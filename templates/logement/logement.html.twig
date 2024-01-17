@@ -18,7 +18,7 @@
                 <h2>{{immo.Titre}}</h2>
             {% endif %}
         <p>
-            {{immo.address}} <br><i class="fa-solid fa-location-dot"></i> <a href="{{immo.maps}}" target="_blank">{% trans %} Voir sur Google Maps{% endtrans %}</a>
+            {% trans %}Quartier géographique : {% endtrans %} {{immo.quartier}} <br><i class="fa-solid fa-location-dot"></i> <a href="{{immo.maps}}" target="_blank">{% trans %} Voir sur Google Maps{% endtrans %}</a>
         </p>
         <div class="caract">
             <div class="travellers">

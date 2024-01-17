@@ -134,6 +134,11 @@ class Immos
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $maps = null;
 
+    #[ORM\Column(length: 255)]
+    #[Assert\NotBlank(message:"Le quartier où se situe le logement doit être mentionné")]
+    #[Assert\Length(min: 2, max:255, minMessage:"Le quartier doit faire au minimum 2 caractères", maxMessage: "Le quartier ne peut dépasser 255 caractères")]
+    private ?string $quartier = null;
+
     public function __construct()
     {
         $this->images = new ArrayCollection();
@@ -552,6 +557,18 @@ class Immos
     public function setMaps(?string $maps): static
     {
         $this->maps = $maps;
+
+        return $this;
+    }
+
+    public function getQuartier(): ?string
+    {
+        return $this->quartier;
+    }
+
+    public function setQuartier(string $quartier): static
+    {
+        $this->quartier = $quartier;
 
         return $this;
     }

@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Entity\Faq;
+use App\Entity\Blog;
 use App\Entity\Immos;
 use App\Form\FaqType;
 use App\Entity\Images;
+use App\Form\BlogType;
 use App\Entity\Contact;
 use App\Form\ImageType;
 use App\Form\ImmosType;
@@ -15,6 +17,7 @@ use App\Form\ActivityType;
 use App\Form\PartnersType;
 use App\Entity\Reservation;
 use App\Entity\Conciergerie;
+use App\Form\UpdateBlogType;
 use App\Form\UpdateImmoType;
 use App\Entity\ImmoImgModify;
 use App\Form\UpdateImmosType;
@@ -23,6 +26,7 @@ use App\Form\ImmoImgModifyType;
 use App\Form\UpdateActivityType;
 use App\Entity\ActivityImgModify;
 use App\Repository\FaqRepository;
+use App\Repository\BlogRepository;
 use App\Repository\UserRepository;
 use App\Form\ActivityImgModifyType;
 use App\Repository\ImmosRepository;
@@ -114,6 +118,16 @@ class AdminController extends AbstractController
         $contacts = $repo->findAll();
         return $this->render('admin/contact.html.twig', [
             'contacts' => $contacts,
+        ]);
+    } 
+
+    #[Route('/adminblog', name: 'admin_blog')]
+    #[IsGranted("ROLE_ADMIN")]
+    public function adminBlog(BlogRepository $repo):Response
+    {
+        $blogs = $repo->findAll();
+        return $this->render('admin/blog.html.twig', [
+            'blogs' => $blogs,
         ]);
     } 
 
@@ -384,6 +398,51 @@ class AdminController extends AbstractController
         }
 
         return $this->render("admin/addActivities.html.twig",[
+            'myform'=>$form->createView()
+        ]);
+    } 
+
+    #[Route('/adminblog/add', name: 'admin_blog_add')]
+    #[IsGranted("ROLE_ADMIN")]
+    public function adminBlogAdd(Request $request, EntityManagerInterface $manager):Response
+    {
+        $blog = new Blog;
+        $form = $this->createForm(BlogType::class, $blog);
+        $form -> handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            
+            $file = $form['image']->getData();
+            if (!empty($file)) {
+                $originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+                $safeFilename = transliterator_transliterate('Any-Latin;Latin-ASCII;[^A-Za-z0-9_]remove;Lower()', $originalFilename);
+                $newFilename = $safeFilename . "-" . uniqid() . "." . $file->guessExtension();
+                try {
+                    $file->move(
+                        $this->getParameter('uploads_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    return $e->getMessage();
+                }
+                $blog->setImage($newFilename);
+            }
+        
+            $blog->setDate(new \DateTime());
+            $manager->persist($blog);
+            $manager->flush();
+
+            $this->addFlash(
+                'success',
+                "L'article {$blog->getTitleFr()} a bien été ajouté"
+            );
+
+            return $this->redirectToRoute('admin_blog', [
+                
+            ]);
+        }
+
+        return $this->render("admin/addBlog.html.twig",[
             'myform'=>$form->createView()
         ]);
     } 
@@ -696,6 +755,42 @@ class AdminController extends AbstractController
 
     }
 
+    #[Route('/adminblog/{id}/edit', name: 'admin_blog_edit')]
+    #[IsGranted("ROLE_ADMIN")]
+    public function editBlog(Blog $blog, Request $request, EntityManagerInterface $manager):Response
+    {
+        $fileName = $blog->getImage();
+        if(!empty($fileName)){
+            $blog->setImage(new File($this->getParameter('uploads_directory').'/'.$blog->getImage()));
+        }
+
+        $form = $this->createForm(UpdateBlogType::class, $blog);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid())
+        {        
+
+            $blog-> setImage($fileName);
+            
+            $manager->persist($blog);
+            $manager->flush();
+
+            $this->addFlash(
+                'success',
+                "L'article a bien été modifié"
+            );
+
+            return $this->redirectToRoute('admin_blog',['id'=>$blog->getId()]);
+           
+        }
+
+        return $this->render("admin/addBlog.html.twig",[
+            "blog"=>$blog,
+            "myform"=>$form->createView()
+        ]);
+
+    }
+
     /**
      * Permet de modifier l'image de l'activité
      *
@@ -772,5 +867,24 @@ class AdminController extends AbstractController
         $manager->flush();
 
         return $this->redirectToRoute('admin_activities');
+    }
+
+    #[Route("/adminblog/{id}/delete", name:"admin_blog_delete")]
+    #[IsGranted("ROLE_ADMIN")]
+    public function blogdelete(Blog $blog, EntityManagerInterface $manager): Response
+    {
+        $this->addFlash(
+            'success',
+            "L'article {$blog->getTitleFr()}</strong> a bien été supprimée"
+        );
+
+        if ($blog->getImage()) {
+            unlink($this->getParameter('uploads_directory').'/'.$blog->getImage());
+        }
+
+        $manager->remove($blog);
+        $manager->flush();
+
+        return $this->redirectToRoute('admin_blog');
     }
 }

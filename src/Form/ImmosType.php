@@ -44,7 +44,8 @@ class ImmosType extends ApplicationType
             ->add('address', TextType::class, [
                 'label'=> 'Adresse du logement',
                 'attr' =>[
-                    'placeholder' => "Adresse du logement"
+                    'placeholder' => "Adresse du logement",
+                    'required'=> false
                 ]
             ])
             ->add('travellers', IntegerType::class, [
@@ -108,7 +109,25 @@ class ImmosType extends ApplicationType
                 'label'=>'Lien de calendrier Google',
                 'required' => false
             ])
-            ->add('map', TextType::class,[
+            ->add('quartier',ChoiceType::class, [
+                'choices'=>[
+                    'Saint-Raphaël' => "Saint-Raphaël",
+                    'Fréjus' => "Fréjus",
+                    'Boulouris'=>"Boulouris",
+                    'Agay'=>"Agay",
+                    'Antheor'=>"Antheor",
+                    'Miami Beach'=>"Miami Beach",
+                    'Coconut'=>"Coconut",
+                    'North Miami'=>"North Miami",
+                    'South Miami'=>"South Miami",
+                    'Downtown'=>"Downtown",
+                    'Midtown'=>"Midtown",
+                    'Brickell'=>"Brickell",
+                    'Key Biscayne'=>"Key Biscayne",
+                    'Autre'=>"Autres"
+                ]
+            ])
+            ->add('maps', TextType::class,[
                 'label'=>'Lien google maps',
                 'required' => false
             ])

@@ -1,12 +1,14 @@
 <nav>
   <div class="titre"><h1><a href="{{path('home')}}">Villas Blue</a></h1></div>
   <ul>
-    
+    <li><a href="{{path('home')}}">{% trans %}Home{% endtrans %}</a></li>
     <li><a href="{{path('azur')}}">{% trans %}Côte d'Azur{% endtrans %}</a></li>
     <li><a href="{{path('floride')}}">{% trans %}Florida{% endtrans %}</a></li>
     <li><a href="{{path('activities')}}">{% trans %}Our activities{% endtrans %}</a></li>
     <li><a href="{{path('conciergerie')}}">{% trans %}Owners{% endtrans %}</a></li>
-    <li><a href="{{path('about')}}">{% trans %}About{% endtrans %}</a></li>
+    <li><a href="{{path('about')}}">{% trans %}Travellers{% endtrans %}</a></li>
+    <li><a href="{{path('blog')}}">{% trans %}Blog{% endtrans %}</a></li>
+    <li><a href="{{path('contact')}}">{% trans %}Contact{% endtrans %}</a></li>
     <li class="sous-menu" style="cursor:pointer">{% trans %}Language<span style="font-size: 9pt"> ▼</span>{% endtrans %}
       <ul class="deroulant">
       {% for locale in locales %}
@@ -28,12 +30,15 @@
 
 <div id="menuResponsive">
   <ul>
-    
+    <li><a href="{{path('home')}}">{% trans %}Home{% endtrans %}</a></li>
     <li><a href="{{path('azur')}}">{% trans %}Côte d'Azur{% endtrans %}</a></li>
     <li><a href="{{path('floride')}}">{% trans %}Florida{% endtrans %}</a></li>
     <li><a href="{{path('activities')}}">{% trans %}Our activities{% endtrans %}</a></li>
     <li><a href="{{path('conciergerie')}}">{% trans %}Owners{% endtrans %}</a></li>
-    <li><a href="{{path('about')}}">{% trans %}About{% endtrans %}</a></li>
+    <li><a href="{{path('about')}}">{% trans %}Travellers{% endtrans %}</a></li>
+    <li><a href="{{path('blog')}}">{% trans %}Blog{% endtrans %}</a></li>
+    <li><a href="{{path('contact')}}">{% trans %}Contact{% endtrans %}</a></li>
+    
     <li id="langue">
      {% for locale in locales %}
       <li>

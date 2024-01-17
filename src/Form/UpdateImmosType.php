@@ -41,7 +41,8 @@ class UpdateImmosType extends ApplicationType
             ->add('address', TextType::class, [
                 'label'=> 'Adresse du logement',
                 'attr' =>[
-                    'placeholder' => "Adresse du logement"
+                    'placeholder' => "Adresse du logement",
+                    'required'=> false
                 ]
             ])
             ->add('travellers', IntegerType::class, [
@@ -97,13 +98,31 @@ class UpdateImmosType extends ApplicationType
             ])
             ->add('conciergerie', ChoiceType::class, [
                 'choices'=>[
-                    "Côte d'Azur" => "Cotes d'Azur",
+                    "Cotes d'Azur" => "Azur",
                     'Floride' => "Floride",
                 ]
             ])
             ->add('calendrier', TextType::class,[
                 'label'=>'Lien de calendrier',
                 'required' => false
+            ])
+            ->add('quartier',ChoiceType::class, [
+                'choices'=>[
+                    'Saint-Raphaël' => "Saint-Raphaël",
+                    'Fréjus' => "Fréjus",
+                    'Boulouris'=>"Boulouris",
+                    'Agay'=>"Agay",
+                    'Antheor'=>"Antheor",
+                    'Miami Beach'=>"Miami Beach",
+                    'Coconut'=>"Coconut",
+                    'North Miami'=>"North Miami",
+                    'South Miami'=>"South Miami",
+                    'Downtown'=>"Downtown",
+                    'Midtown'=>"Midtown",
+                    'Brickell'=>"Brickell",
+                    'Key Biscayne'=>"Key Biscayne",
+                    'Autre'=>"Autres"
+                ]
             ])
             ->add('maps', TextType::class,[
                 'label'=>'Lien de Google Maps',
