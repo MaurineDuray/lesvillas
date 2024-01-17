@@ -183,7 +183,7 @@
       </trans-unit>
       <trans-unit id="qdSsbk8" resname="$, excluding tourist tax.">
         <source>$, excluding tourist tax.</source>
-        <target>__€, hors taxes.</target>
+        <target>€, hors taxes.</target>
       </trans-unit>
       <trans-unit id="UFUY.k3" resname="I would like to book">
         <source>I would like to book</source>
@@ -235,7 +235,7 @@
       </trans-unit>
       <trans-unit id="pKtL1dh" resname="What to do during your stay? Don't ask yourself any more questions... We'll take care of everything!">
         <source>What to do during your stay? Don't ask yourself any more questions... We'll take care of everything!</source>
-        <target>__Que faire pendant votre séjour ? Ne vous posez plus de questions... Nous nous occupons de tout !</target>
+        <target>Que faire pendant votre séjour ? Ne vous posez plus de questions... Nous nous occupons de tout !</target>
       </trans-unit>
       <trans-unit id="sZOhl_3" resname="All activities">
         <source>All activities</source>
@@ -243,7 +243,7 @@
       </trans-unit>
       <trans-unit id="hM.B3Re" resname="Looking for a tailor-made plan for your stay?">
         <source>Looking for a tailor-made plan for your stay?</source>
-        <target>__Vous cherchez un plan sur mesure pour votre séjour ?</target>
+        <target>Vous cherchez un plan sur mesure pour votre séjour ?</target>
       </trans-unit>
       <trans-unit id="SdJTbKm" resname="Contact us, we'll take care of everything!">
         <source>Contact us, we'll take care of everything!</source>
@@ -261,7 +261,7 @@
         <source>Our VILLAS BLUE agency will take care of all the administrative aspects of letting your property on a seasonal basis: 
         drafting contracts, managing the schedule, monitoring payments and reminders (from the deposit to the security deposit).
         Enjoy the freedom of renting without constraints and benefit from our experience and expertise!</source>
-        <target>__Notre agence VILLAS BLUE prendra en charge tous les aspects administratifs de la location de votre propriété saisonnière : rédaction de contrats, gestion du calendrier, suivi des paiements et rappels (du dépôt de garantie à la caution). Profitez de la liberté de louer sans contraintes et bénéficiez de notre expérience et expertise !</target>
+        <target>Notre agence VILLAS BLUE prendra en charge tous les aspects administratifs de la location de votre propriété saisonnière : rédaction de contrats, gestion du calendrier, suivi des paiements et rappels (du dépôt de garantie à la caution). Profitez de la liberté de louer sans contraintes et bénéficiez de notre expérience et expertise !</target>
       </trans-unit>
       <trans-unit id="77nn9vk" resname="Offer your property for rent">
         <source>Offer your property for rent</source>
@@ -269,7 +269,7 @@
       </trans-unit>
       <trans-unit id="JwRzMYx" resname="Fill in the form and we'll get back to you as soon as possible...">
         <source>Fill in the form and we'll get back to you as soon as possible...</source>
-        <target>__Remplissez le formulaire et nous vous répondrons dès que possible...__</target>
+        <target>Remplissez le formulaire et nous vous répondrons dès que possible...</target>
       </trans-unit>
       <trans-unit id="xsTUEGA" resname="Our activities">
         <source>Our activities</source>
@@ -433,21 +433,21 @@
         <target><![CDATA[GET ONLINE : En 1 clic, votre logement sur LESVILLASBLUE.COM !</h3>
                     <p>Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!]]></target>
       </trans-unit>
-      <trans-unit id="MAGQk88" resname="Entrust the management and marketing of your property to our team! Increase your revenues by 40% and your rates by 26% with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).">
-        <source>Entrust the management and marketing of your property to our team! Increase your revenues by 40% and your rates by 26% with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).</source>
-        <target>__Entrust the management and marketing of your property to our team! Increase your revenues by 40% and your rates by 26% with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).</target>
+      <trans-unit id=".Vyxg_0" resname="Entrust the management and marketing of your property to our team! Increase your revenues by 40 percent and your rates by 26 percent with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).">
+        <source>Entrust the management and marketing of your property to our team! Increase your revenues by 40 percent and your rates by 26 percent with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).</source>
+        <target>Confiez la gestion et la commercialisation de votre bien à notre équipe ! Augmentez vos revenus de 40 pourcent et vos tarifs de 26 pourcent avec notre service photo premium de photographes spécialisés dans l'immobilier et le tourisme en ligne. Nous gérons tout, y compris la diffusion exclusive et simultanée sur les sites de nos Partenaires : Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... sans coût supplémentaire.Bénéficiez du savoir-faire hôtelier de nos concierges qui vivent sur place, accueillent vos voyageurs à leur arrivée, encadrent leur séjour et entretiennent votre logement (ménage, blanchisserie...).</target>
       </trans-unit>
       <trans-unit id="pShYL5G" resname="We communicate each rental period transparently, so you can consult your calendar to stay at home whenever you want, and stay informed of rental activity every week. Simply collect your rents and manage your rental accounting with complete peace of mind">
         <source>We communicate each rental period transparently, so you can consult your calendar to stay at home whenever you want, and stay informed of rental activity every week. Simply collect your rents and manage your rental accounting with complete peace of mind</source>
-        <target>__We communicate each rental period transparently, so you can consult your calendar to stay at home whenever you want, and stay informed of rental activity every week. Simply collect your rents and manage your rental accounting with complete peace of mind</target>
+        <target>Nous communiquons chaque période de location de manière transparente, afin que vous puissiez consulter votre calendrier pour rester chez vous quand vous le souhaitez, et rester informé de l'activité locative chaque semaine. Il vous suffit d'encaisser vos loyers et de gérer votre comptabilité locative en toute sérénité</target>
       </trans-unit>
       <trans-unit id="9c_hcqM" resname="Take advantage of our exclusive partnership with Airbnb, Abritel, Booking, Google, etc.!">
         <source>Take advantage of our exclusive partnership with Airbnb, Abritel, Booking, Google, etc.!</source>
-        <target>__Take advantage of our exclusive partnership with Airbnb, Abritel, Booking, Google, etc.!</target>
+        <target>Profitez de nos partenariats exclusifs avec Airbnb, Abritel, Booking, Google, etc.</target>
       </trans-unit>
       <trans-unit id="EDnsJS1" resname="Welcome your travellers, cleaning, linen, work, assistance, concierge service.">
         <source>Welcome your travellers, cleaning, linen, work, assistance, concierge service.</source>
-        <target>__Welcome your travellers, cleaning, linen, work, assistance, concierge service.</target>
+        <target>Accueil de vos voyageurs, nettoyage, linge, travaux, assistance, conciergerie.</target>
       </trans-unit>
     </body>
   </file>

@@ -588,7 +588,10 @@ class AdminController extends AbstractController
             "Le logement {$immo->getTitre()}</strong> a bien été supprimé"
         );
 
-        unlink($this->getParameter('uploads_directory').'/'.$immo->getCover());
+        if($immo->getCover()){
+            unlink($this->getParameter('uploads_directory').'/'.$immo->getCover());
+        }
+       
 
         $images = $immo->getImages();
         if($images){

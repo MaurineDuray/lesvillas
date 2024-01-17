@@ -86,7 +86,7 @@ class Immos
     #[Assert\File(maxSize:"2024k", maxSizeMessage:"La taille du fichier est trop grande")]
     private ?string $cover = null;
 
-    #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Images::class)]
+    #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Images::class, orphanRemoval: true,cascade:["persist"])]
     private Collection $images;
 
     #[ORM\Column(length: 255)]
@@ -99,7 +99,7 @@ class Immos
     #[ORM\Column(type: Types::TEXT)]
     private ?string $address = null;
 
-    #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Reservation::class)]
+    #[ORM\OneToMany(mappedBy: 'immoId', targetEntity: Reservation::class, orphanRemoval: true,cascade:["persist"])]
     private Collection $reservations;
 
     #[ORM\Column(nullable: true)]
