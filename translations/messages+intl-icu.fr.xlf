@@ -449,6 +449,46 @@
         <source>Welcome your travellers, cleaning, linen, work, assistance, concierge service.</source>
         <target>Accueil de vos voyageurs, nettoyage, linge, travaux, assistance, conciergerie.</target>
       </trans-unit>
+      <trans-unit id="VvIWlaZ" resname="SEARCH">
+        <source>SEARCH</source>
+        <target>RECHERCHER</target>
+      </trans-unit>
+      <trans-unit id="qo_86R_" resname="Discover all our accommodations adapted to your travel needs and find the ideal rental for your vacation.Choose a house, villa or apartment with excellent reviews, flexible booking conditions and all the amenities you need.Check availability and rates in real time and book instantly via our form!">
+        <source>Discover all our accommodations adapted to your travel needs and find the ideal rental for your vacation.Choose a house, villa or apartment with excellent reviews, flexible booking conditions and all the amenities you need.Check availability and rates in real time and book instantly via our form!</source>
+        <target>Découvrez tous nos hébergements adaptés à vos besoins de voyage et trouvez la location idéale pour vos vacances.Choisissez une maison, une villa ou un appartement avec d'excellents avis, des conditions de réservation flexibles et tous les équipements dont vous avez besoin.Vérifiez la disponibilité et les tarifs en temps réel et réservez instantanément via notre formulaire !</target>
+      </trans-unit>
+      <trans-unit id="bD.ScWD" resname="BOOK NOW">
+        <source>BOOK NOW</source>
+        <target>RÉSERVEZ MAINTENANT</target>
+      </trans-unit>
+      <trans-unit id="XaRREZl" resname="24-hour security at LES VILLAS BLUE! Instantly book your accommodation online with our stress-free payment system.Select the dates of your stay, check availability in real time, choose your payment method and confirm your booking instantly.Receive an email with your booking confirmation and access our private messaging system to organize your arrival and stay.">
+        <source>24-hour security at LES VILLAS BLUE! Instantly book your accommodation online with our stress-free payment system.Select the dates of your stay, check availability in real time, choose your payment method and confirm your booking instantly.Receive an email with your booking confirmation and access our private messaging system to organize your arrival and stay.</source>
+        <target>Sécurité 24 heures sur 24 à LES VILLAS BLUE ! Sélectionnez les dates de votre séjour, vérifiez la disponibilité en temps réel, choisissez votre mode de paiement et confirmez votre réservation instantanément.Recevez un email avec votre confirmation de réservation et accédez à notre système de messagerie privée pour organiser votre arrivée et votre séjour.</target>
+      </trans-unit>
+      <trans-unit id="VI1b5Kp" resname="TRAVEL">
+        <source>TRAVEL</source>
+        <target>VOYAGEZ</target>
+      </trans-unit>
+      <trans-unit id="HloQUqQ" resname="In complete serenity with our team. Create and personalize a trip that suits you with the help of our hosts. Select the services and experiences you need to make the most of your stay according to your desires. Using our private messaging system: organize your arrival and departure, order an airport transfer, book an additional household, book a lunch on the beach, rent a bike...">
+        <source>In complete serenity with our team. Create and personalize a trip that suits you with the help of our hosts. Select the services and experiences you need to make the most of your stay according to your desires. Using our private messaging system: organize your arrival and departure, order an airport transfer, book an additional household, book a lunch on the beach, rent a bike...</source>
+        <target>En toute sérénité avec notre équipe. Créez et personnalisez un voyage qui vous ressemble avec l'aide de nos hôtes. Sélectionnez les services et les expériences dont vous avez besoin pour profiter au mieux de votre séjour selon vos envies. Grâce à notre messagerie privée, organisez votre arrivée et votre départ, commandez un transfert aéroport, réservez un ménage supplémentaire, réservez un déjeuner sur la plage, louez un vélo...</target>
+      </trans-unit>
+      <trans-unit id="9cTrana" resname="SERVICES + BLUE VILLAS">
+        <source>SERVICES + BLUE VILLAS</source>
+        <target>SERVICES + BLUE VILLAS</target>
+      </trans-unit>
+      <trans-unit id="9vgvLlm" resname="Within 24 hours of your reservation for all accommodations. If you book on our website, benefit from the best price guarantee. Welcome, parking, housekeeping, linen, 7/7 assistance, all-inclusive concierge service.">
+        <source>Within 24 hours of your reservation for all accommodations. If you book on our website, benefit from the best price guarantee. Welcome, parking, housekeeping, linen, 7/7 assistance, all-inclusive concierge service.</source>
+        <target>Dans les 24 heures suivant votre réservation pour tous les hébergements. Si vous réservez sur notre site web, bénéficiez de la garantie du meilleur prix. Accueil, parking, ménage, linge, assistance 7/7, service de conciergerie tout compris.</target>
+      </trans-unit>
+      <trans-unit id="pcwII8w" resname="Découvrez nos partenaires">
+        <source>Découvrez nos partenaires</source>
+        <target>Découvrir nos partenaire</target>
+      </trans-unit>
+      <trans-unit id="CpWPwi9" resname="Discover our partenaires">
+        <source>Discover our partenaires</source>
+        <target>Découvrir nos partenaires</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

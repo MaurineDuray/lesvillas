@@ -24,17 +24,17 @@
         </div>
         <div class="text">
             <div>
-               <h3>SEARCH</h3>
-                <p>Discover all our accommodations adapted to your travel needs and find the ideal rental for your vacation.Choose a house, villa or apartment with excellent reviews, flexible booking conditions and all the amenities you need.Check availability and rates in real time and book instantly via our form!</p>
+               <h3>{% trans %}SEARCH{% endtrans %}</h3>
+                <p>{% trans %}Discover all our accommodations adapted to your travel needs and find the ideal rental for your vacation.Choose a house, villa or apartment with excellent reviews, flexible booking conditions and all the amenities you need.Check availability and rates in real time and book instantly via our form!{% endtrans %}</p>
             </div>
         </div>
     </div>
     <div class="line line-flex">
         <div class="text">
             <div>
-                <h3>BOOK NOW</h3>
+                <h3>{% trans %}BOOK NOW{% endtrans %}</h3>
                 <p>
-               24-hour security at LES VILLAS BLUE! Instantly book your accommodation online with our stress-free payment system.Select the dates of your stay, check availability in real time, choose your payment method and confirm your booking instantly.Receive an email with your booking confirmation and access our private messaging system to organize your arrival and stay.</p>
+               {% trans %}24-hour security at LES VILLAS BLUE! Instantly book your accommodation online with our stress-free payment system.Select the dates of your stay, check availability in real time, choose your payment method and confirm your booking instantly.Receive an email with your booking confirmation and access our private messaging system to organize your arrival and stay.{% endtrans %}</p>
             </div>
         </div>
         <div class="photo">
@@ -49,19 +49,19 @@
         </div>
         <div class="text">
             <div>
-                <h3>TRAVEL</h3>
-                <p>In complete serenity with our team. Create and personalize a trip that suits you with the help of our hosts. Select the services and experiences you need to make the most of your stay according to your desires. Using our private messaging system: organize your arrival and departure, order an airport transfer, book an additional household, book a lunch on the beach, rent a bike...</p>
+                <h3>{% trans %}TRAVEL{% endtrans %}</h3>
+                <p>{% trans %}In complete serenity with our team. Create and personalize a trip that suits you with the help of our hosts. Select the services and experiences you need to make the most of your stay according to your desires. Using our private messaging system: organize your arrival and departure, order an airport transfer, book an additional household, book a lunch on the beach, rent a bike...{% endtrans %}</p>
             </div>
         </div>
     </div>
 </div>
 <div class="slide">
-    <h3 style="width:100%; text-align:center; margin: 20px">SERVICES + BLUE VILLAS</h3>
+    <h3 style="width:100%; text-align:center; margin: 20px">{% trans %}SERVICES + BLUE VILLAS{% endtrans %}</h3>
     <p style="width:80%; text-align:center; margin: 0 auto">
-    Within 24 hours of your reservation for all accommodations. If you book on our website, benefit from the best price guarantee. Welcome, parking, housekeeping, linen, 7/7 assistance, all-inclusive concierge service. </p>
+    {% trans %}Within 24 hours of your reservation for all accommodations. If you book on our website, benefit from the best price guarantee. Welcome, parking, housekeeping, linen, 7/7 assistance, all-inclusive concierge service. {% endtrans %}</p>
 </div>
 <div class="buttons" style="width: 100%; display: flex; justify-content: center; margin-bottom: 30px">
-    <a href="{{path('partners')}}" class="azurBtn"><button class="azurButton">Découvrez nos partenaires</button></a>
+    <a href="{{path('partners')}}" class="azurBtn"><button class="azurButton">{% trans %}Discover our partenaires{% endtrans %}</button></a>
 </div>
     {% include "partials/footer.html.twig" %}
 {% endblock %}
