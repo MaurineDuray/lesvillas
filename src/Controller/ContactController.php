@@ -46,7 +46,7 @@ class ContactController extends AbstractController
             // récap contact
             $emailrecap = (new TemplatedEmail())
             ->from('site@lesvillasblue.be')
-            ->to('contact@lesvillasblue.be')
+            ->to($contact->getEmail())
             ->subject('Contact Villas Blue')
             ->htmlTemplate('mails/recapcontact.html.twig')
             ->context([

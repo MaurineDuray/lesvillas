@@ -42,7 +42,7 @@ class ConciergerieController extends AbstractController
             // récap réservation
              $emailrecap = (new TemplatedEmail())
              ->from('site@lesvillasblue.be')
-             ->to('contact@lesvillasblue.be')
+             ->to($contact->getEmail())
              ->subject('Conciergerie Villas Blue')
              ->htmlTemplate('mails/recapconciergerie.html.twig')
              ->context([

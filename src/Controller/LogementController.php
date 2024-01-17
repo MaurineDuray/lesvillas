@@ -55,7 +55,7 @@ class LogementController extends AbstractController
             // récap réservation
             $emailrecap = (new TemplatedEmail())
             ->from('site@lesvillasblue.be')
-            ->to('contact@lesvillasblue.be')
+            ->to($reservation->getEmail())
             ->subject('Pre-reservation Villas Blue')
             ->htmlTemplate('mails/recapreservation.html.twig')
             ->context([

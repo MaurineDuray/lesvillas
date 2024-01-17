@@ -5,33 +5,29 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="SazmA7O" resname="We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.">
-        <source>We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.</source>
-        <target>__We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.</target>
-      </trans-unit>
       <trans-unit id="fi5wIMl" resname="Discover the world differently...">
         <source>Discover the world differently...</source>
-        <target>__Discover the world differently...</target>
+        <target>Descubre el mundo de otra manera...</target>
       </trans-unit>
       <trans-unit id="hIOM8jz" resname="Book your dream holiday in just a few clicks!">
         <source>Book your dream holiday in just a few clicks!</source>
-        <target>__Book your dream holiday in just a few clicks!</target>
+        <target>¡Reserva tus vacaciones soñadas en tan solo unos clics!</target>
       </trans-unit>
       <trans-unit id="FMHGzru" resname="Choose your destination">
         <source>Choose your destination</source>
-        <target>__Choose your destination</target>
+        <target>Elija su destino</target>
       </trans-unit>
       <trans-unit id="sZAIvHd" resname="Côte d'Azur">
         <source>Côte d'Azur</source>
-        <target>__Côte d'Azur</target>
+        <target>Côte d'Azur</target>
       </trans-unit>
       <trans-unit id="jp4mwu_" resname="Florida">
         <source>Florida</source>
-        <target>__Florida</target>
+        <target>Floride</target>
       </trans-unit>
       <trans-unit id="imcjI6O" resname="Featured properties in Florida">
         <source>Featured properties in Florida</source>
-        <target>__Featured properties in Florida</target>
+        <target>Propiedades en el punto de mira en Florida</target>
       </trans-unit>
       <trans-unit id="rUL4xUf" resname="Discover all our homes in Florida...">
         <source>Discover all our homes in Florida...</source>
@@ -39,367 +35,411 @@
       </trans-unit>
       <trans-unit id="Q0kBrqU" resname="See&amp;nbsp;more">
         <source>See&amp;nbsp;more</source>
-        <target><![CDATA[__See&nbsp;more]]></target>
+        <target><![CDATA[Más&nbsp;información]]></target>
       </trans-unit>
       <trans-unit id="5q7ghw3" resname="Would you like your home to be part of the Villas Blue collection ...">
         <source>Would you like your home to be part of the Villas Blue collection ...</source>
-        <target>__Would you like your home to be part of the Villas Blue collection ...</target>
+        <target>¿Quiere que su casa forme parte de la colección Villas?</target>
       </trans-unit>
       <trans-unit id="KS7ucKW" resname="I offer my accommodation">
         <source>I offer my accommodation</source>
-        <target>__I offer my accommodation</target>
+        <target>Ofrezco mi alojamiento</target>
       </trans-unit>
       <trans-unit id="8NI2Ht3" resname="Featured properties on the Côte d'Azur">
         <source>Featured properties on the Côte d'Azur</source>
-        <target>__Featured properties on the Côte d'Azur</target>
+        <target>Propiedades en el punto de mira de la Costa Azul
+</target>
       </trans-unit>
       <trans-unit id="2LF_ZFi" resname="Discover all our homes on the Côte d'Azur...">
         <source>Discover all our homes on the Côte d'Azur...</source>
-        <target>__Discover all our homes on the Côte d'Azur...</target>
+        <target>Descubra todas nuestras propiedades en la Costa Azul</target>
       </trans-unit>
       <trans-unit id="dAdlZzs" resname="Looking for a tailor-made plan for your stay? We'll take care of everything!">
         <source>Looking for a tailor-made plan for your stay? We'll take care of everything!</source>
-        <target>__Looking for a tailor-made plan for your stay? We'll take care of everything!</target>
+        <target>¿Busca un plan a medida para su estancia? Nosotros nos encargamos de todo. </target>
       </trans-unit>
       <trans-unit id="0GroblX" resname="View our activities or contact us ...">
         <source>View our activities or contact us ...</source>
-        <target>__View our activities or contact us ...</target>
+        <target>Infórmese sobre nuestras actividades o póngase en contacto con nosotros...
+      </target>
       </trans-unit>
       <trans-unit id="zz8XqOL" resname="Discover our activities">
         <source>Discover our activities</source>
-        <target>__Discover our activities</target>
+        <target>Descubra nuestras actividades
+        </target>
       </trans-unit>
       <trans-unit id="R6rzG4P" resname="Contact us">
         <source>Contact us</source>
-        <target>__Contact us</target>
+        <target>Póngase en contacto con nosotros</target>
       </trans-unit>
       <trans-unit id="JkKoyKD" resname="Looking for a home? Are you a property owner?">
         <source>Looking for a home? Are you a property owner?</source>
-        <target>__Looking for a home? Are you a property owner?</target>
+        <target>¿Busca casa? ¿Es usted propietario?
+        </target>
       </trans-unit>
       <trans-unit id="Bun2Auq" resname="What about us ?">
         <source>What about us ?</source>
-        <target>__What about us ?</target>
+        <target>¿Y nosotros?</target>
       </trans-unit>
       <trans-unit id="LZwceBx" resname="Our role is to give you the chance to enjoy a dream holiday...">
         <source>Our role is to give you the chance to enjoy a dream holiday...</source>
-        <target>__Our role is to give you the chance to enjoy a dream holiday...</target>
+        <target>Nuestra función es brindarle la oportunidad de disfrutar de unas vacaciones de ensueño...</target>
       </trans-unit>
       <trans-unit id="4_TQLRl" resname="Nos partenaires">
         <source>Nos partenaires</source>
-        <target>__Nos partenaires</target>
+        <target>Nuestros socios</target>
       </trans-unit>
       <trans-unit id="637nLD8" resname="traveller(s)">
         <source>traveller(s)</source>
-        <target>__traveller(s)</target>
+        <target>viajero(s)</target>
       </trans-unit>
       <trans-unit id="x5kBXxL" resname="room(s)">
         <source>room(s)</source>
-        <target>__room(s)</target>
+        <target>habitación(es)</target>
       </trans-unit>
       <trans-unit id="5rxqCTM" resname="bathroom(s)">
         <source>bathroom(s)</source>
-        <target>__bathroom(s)</target>
+        <target>baño(s)</target>
       </trans-unit>
       <trans-unit id="EGArPB." resname="With swimming pool">
         <source>With swimming pool</source>
-        <target>__With swimming pool</target>
+        <target>con piscina</target>
       </trans-unit>
       <trans-unit id="hV9LtDz" resname="Pets allowed">
         <source>Pets allowed</source>
-        <target>__Pets allowed</target>
+        <target>animales aceptados</target>
       </trans-unit>
       <trans-unit id="4N74sHd" resname="Pets not allowed">
         <source>Pets not allowed</source>
-        <target>__Pets not allowed</target>
+        <target>animales no aceptados</target>
       </trans-unit>
       <trans-unit id="fzUBo2Q" resname="Seaside">
         <source>Seaside</source>
-        <target>__Seaside</target>
+        <target>Frente al mar</target>
       </trans-unit>
       <trans-unit id="6z9R3Ic" resname="Start from">
         <source>Start from</source>
-        <target>__Start from</target>
+        <target>Desde</target>
       </trans-unit>
       <trans-unit id="ujXYL3O" resname="Arrival after 15:00 and departure by 10:00">
         <source>Arrival after 15:00 and departure by 10:00</source>
-        <target>__Arrival after 15:00 and departure by 10:00</target>
+        <target>Llegada a las 15.00 h y salida a las 10.00 h</target>
       </trans-unit>
       <trans-unit id="Um4Ah8w" resname="Description">
         <source>Description</source>
-        <target>__Description</target>
+        <target>Descripción</target>
       </trans-unit>
       <trans-unit id="333GZ03" resname="Need to know">
         <source>Need to know</source>
-        <target>__Need to know</target>
+        <target>Es bueno saberlo</target>
       </trans-unit>
       <trans-unit id="ZBjBqSo" resname="The flat is located in a residential area and is not suitable for parties, etc. It is very quiet, so we would ask you to respect the peace and quiet and not to make any noise after 10pm. This accommodation includes steps or staircases. Smoking accommodation.">
         <source>The flat is located in a residential area and is not suitable for parties, etc. It is very quiet, so we would ask you to respect the peace and quiet and not to make any noise after 10pm. This accommodation includes steps or staircases. Smoking accommodation.</source>
-        <target>__The flat is located in a residential area and is not suitable for parties, etc. It is very quiet, so we would ask you to respect the peace and quiet and not to make any noise after 10pm. This accommodation includes steps or staircases. Smoking accommodation.</target>
+        <target>El piso está situado en una zona residencial y no es apto para fiestas, etc. Es muy tranquilo, por lo que le rogamos que respete la tranquilidad y no haga ruido después de las 22:00. Este alojamiento tiene escalones o escaleras. Alojamiento para no fumadores.</target>
       </trans-unit>
       <trans-unit id="dvWtZyL" resname="Housing">
         <source>Housing</source>
-        <target>__Housing</target>
+        <target>Vivienda</target>
       </trans-unit>
       <trans-unit id="fyRlrHz" resname="Equipment">
         <source>Equipment</source>
-        <target>__Equipment</target>
+        <target>Equipamiento</target>
       </trans-unit>
       <trans-unit id="IHFmSlg" resname="Check availability">
         <source>Check availability</source>
-        <target>__Check availability</target>
+        <target>Ver disponibilidad</target>
       </trans-unit>
       <trans-unit id="wuzSyi1" resname="Calculate the cost of my stay">
         <source>Calculate the cost of my stay</source>
-        <target>__Calculate the cost of my stay</target>
+        <target>Calcular el coste de mi estancia</target>
       </trans-unit>
       <trans-unit id="VY7LD9I" resname="Estimate">
         <source>Estimate</source>
-        <target>__Estimate</target>
+        <target>Estimación</target>
       </trans-unit>
       <trans-unit id="5cY4z0f" resname="The total cost of your">
         <source>The total cost of your</source>
-        <target>__The total cost of your</target>
+        <target>El coste minimal de su</target>
       </trans-unit>
       <trans-unit id="6T.l4.w" resname="nights stay is estimated at">
         <source>nights stay is estimated at</source>
-        <target>__nights stay is estimated at</target>
+        <target>se estima en</target>
       </trans-unit>
       <trans-unit id="qdSsbk8" resname="$, excluding tourist tax.">
         <source>$, excluding tourist tax.</source>
-        <target>__$, excluding tourist tax.</target>
+        <target>€, excluida la tasa turística.</target>
       </trans-unit>
       <trans-unit id="UFUY.k3" resname="I would like to book">
         <source>I would like to book</source>
-        <target>__I would like to book</target>
+        <target>Quiero reservar</target>
       </trans-unit>
       <trans-unit id="79hRAun" resname="Interested in this property?">
         <source>Interested in this property?</source>
-        <target>__Interested in this property?</target>
+        <target>¿Le interesa este inmueble?</target>
       </trans-unit>
       <trans-unit id=".Vt0Udy" resname="Fill in the form and we'll get back to you as soon as possible!">
         <source>Fill in the form and we'll get back to you as soon as possible!</source>
-        <target>__Fill in the form and we'll get back to you as soon as possible!</target>
+        <target>Rellene el formulario y nos pondremos en contacto con usted lo antes posible.</target>
       </trans-unit>
       <trans-unit id="EfyKvMR" resname="The charge for the addition of a baby chair and cot is 25€.">
         <source>The charge for the addition of a baby chair and cot is 25€.</source>
-        <target>__The charge for the addition of a baby chair and cot is 25€.</target>
+        <target>El coste por añadir una silla de bebé y una cuna es de 25 euros.</target>
       </trans-unit>
       <trans-unit id="xgWk8IP" resname="The fee for the addition of a high chair is 15€.">
         <source>The fee for the addition of a high chair is 15€.</source>
-        <target>__The fee for the addition of a high chair is 15€.</target>
+        <target>La tarifa por añadir una trona es de 15 euros.</target>
       </trans-unit>
       <trans-unit id="U0.TdzU" resname="The fee for pets is €50/day per animal.">
         <source>The fee for pets is €50/day per animal.</source>
-        <target>__The fee for pets is €50/day per animal.</target>
+        <target>El impuesto para animales de compañía es de 50€ por día y por animal.</target>
       </trans-unit>
       <trans-unit id="UGqsFrO" resname="Welcome on the Côte d'Azur !">
         <source>Welcome on the Côte d'Azur !</source>
-        <target>__Welcome on the Côte d'Azur !</target>
+        <target>¡Bienvenido a la Costa Azul!</target>
       </trans-unit>
       <trans-unit id="UyAtzau" resname="Are you looking for specific accommodation?">
         <source>Are you looking for specific accommodation?</source>
-        <target>__Are you looking for specific accommodation?</target>
+        <target>¿Busca un inmueble concreto?</target>
       </trans-unit>
       <trans-unit id="ACe0gyw" resname="Result(s) of your research">
         <source>Result(s) of your research</source>
-        <target>__Result(s) of your research</target>
+        <target>Resultado de su búsqueda</target>
       </trans-unit>
       <trans-unit id="tNjWsZa" resname="Welcome in Florida !">
         <source>Welcome in Florida !</source>
-        <target>__Welcome in Florida !</target>
+        <target>Bienvenido a Florida!</target>
       </trans-unit>
       <trans-unit id="W1k4Wr7" resname="Welcome !">
         <source>Welcome !</source>
-        <target>__Welcome !</target>
+        <target>Bienvenido</target>
       </trans-unit>
       <trans-unit id="Hmt0oMv" resname="Discover all our activities">
         <source>Discover all our activities</source>
-        <target>__Discover all our activities</target>
+        <target>Descubra todas nuestras actividades</target>
       </trans-unit>
       <trans-unit id="pKtL1dh" resname="What to do during your stay? Don't ask yourself any more questions... We'll take care of everything!">
         <source>What to do during your stay? Don't ask yourself any more questions... We'll take care of everything!</source>
-        <target>__What to do during your stay? Don't ask yourself any more questions... We'll take care of everything!</target>
+        <target>¿Qué hacer durante su estancia? No se haga más preguntas... Nosotros nos ocupamos de todo.</target>
       </trans-unit>
       <trans-unit id="sZOhl_3" resname="All activities">
         <source>All activities</source>
-        <target>__All activities</target>
+        <target>Todas las actividades</target>
       </trans-unit>
       <trans-unit id="hM.B3Re" resname="Looking for a tailor-made plan for your stay?">
         <source>Looking for a tailor-made plan for your stay?</source>
-        <target>__Looking for a tailor-made plan for your stay?</target>
+        <target>¿Busca un plan a medida para su estancia?</target>
       </trans-unit>
       <trans-unit id="SdJTbKm" resname="Contact us, we'll take care of everything!">
         <source>Contact us, we'll take care of everything!</source>
-        <target>__Contact us, we'll take care of everything!</target>
+        <target>Póngase en contacto con nosotros, ¡nos encargaremos de todo!</target>
       </trans-unit>
       <trans-unit id="d7ZYHga" resname="Discover our concierge service...">
         <source>Discover our concierge service...</source>
-        <target>__Discover our concierge service...</target>
+        <target>Descubra nuestro servicio de conserjería...</target>
       </trans-unit>
       <trans-unit id="OVNHSyc" resname="Join the Villas Blue collection!">
         <source>Join the Villas Blue collection!</source>
-        <target>__Join the Villas Blue collection!</target>
+        <target>Únete a la colección Villas Blue</target>
       </trans-unit>
       <trans-unit id="F1Gm8mf" resname="Our VILLAS BLUE agency will take care of all the administrative aspects of letting your property on a seasonal basis: &#10;        drafting contracts, managing the schedule, monitoring payments and reminders (from the deposit to the security deposit).&#10;        Enjoy the freedom of renting without constraints and benefit from our experience and expertise!">
         <source>Our VILLAS BLUE agency will take care of all the administrative aspects of letting your property on a seasonal basis: 
         drafting contracts, managing the schedule, monitoring payments and reminders (from the deposit to the security deposit).
         Enjoy the freedom of renting without constraints and benefit from our experience and expertise!</source>
-        <target>__Our VILLAS BLUE agency will take care of all the administrative aspects of letting your property on a seasonal basis: 
-        drafting contracts, managing the schedule, monitoring payments and reminders (from the deposit to the security deposit).
-        Enjoy the freedom of renting without constraints and benefit from our experience and expertise!</target>
+        <target>Nuestra agencia VILLAS BLUE se encargará de todos los aspectos administrativos del alquiler de su vivienda: redacción de contratos, gestión del calendario, seguimiento de los pagos y recordatorios (de fianza en fianza). Disfrute de la libertad de alquilar sin limitaciones y benefíciese de nuestra experiencia y nuestros conocimientos.</target>
       </trans-unit>
       <trans-unit id="77nn9vk" resname="Offer your property for rent">
         <source>Offer your property for rent</source>
-        <target>__Offer your property for rent</target>
+        <target>Ofrezca su vivienda en alquiler.</target>
       </trans-unit>
       <trans-unit id="JwRzMYx" resname="Fill in the form and we'll get back to you as soon as possible...">
         <source>Fill in the form and we'll get back to you as soon as possible...</source>
-        <target>__Fill in the form and we'll get back to you as soon as possible...</target>
+        <target>Rellene el formulario y nos pondremos en contacto con usted lo antes posible...</target>
       </trans-unit>
       <trans-unit id="xsTUEGA" resname="Our activities">
         <source>Our activities</source>
-        <target>__Our activities</target>
+        <target>Nuestras actividades</target>
       </trans-unit>
       <trans-unit id="WPXfmyQ" resname="Owners">
         <source>Owners</source>
-        <target>__Owners</target>
+        <target>Propietarios</target>
       </trans-unit>
       <trans-unit id="Tvyg0Qx" resname="About">
         <source>About</source>
-        <target>__About</target>
+        <target>Quiénes somos</target>
       </trans-unit>
       <trans-unit id="iMwRS9B" resname="Language&lt;span style=&quot;font-size: 9pt&quot;&gt; ▼&lt;/span&gt;">
         <source>Language&lt;span style="font-size: 9pt"&gt; ▼&lt;/span&gt;</source>
-        <target><![CDATA[__Language<span style="font-size: 9pt"> ▼</span>]]></target>
+        <target><![CDATA[Idioma<span style="font-size: 9pt"> ▼</span>]]></target>
       </trans-unit>
       <trans-unit id="KT1ASlA" resname="Destination">
         <source>Destination</source>
-        <target>__Destination</target>
+        <target>Destino</target>
       </trans-unit>
       <trans-unit id="v3Lvagk" resname="Côtes d'Azur">
         <source>Côtes d'Azur</source>
-        <target>__Côtes d'Azur</target>
+        <target>Côtes d'Azur</target>
       </trans-unit>
       <trans-unit id="Djomdcq" resname="Type of housing">
         <source>Type of housing</source>
-        <target>__Type of housing</target>
+        <target>Tipo de alojamiento</target>
       </trans-unit>
       <trans-unit id="koXO3PJ" resname="Flat">
         <source>Flat</source>
-        <target>__Flat</target>
+        <target>Plano</target>
       </trans-unit>
       <trans-unit id="jnKQ5EV" resname="Destino">
         <source>Destino</source>
-        <target>__Destino</target>
+        <target>Destino</target>
       </trans-unit>
       <trans-unit id="ih_ZANc" resname="Tipo de alojamiento">
         <source>Tipo de alojamiento</source>
-        <target>__Tipo de alojamiento</target>
+        <target>Tipo de alojamiento</target>
       </trans-unit>
       <trans-unit id="bFWAY3a" resname="Plano">
         <source>Plano</source>
-        <target>__Plano</target>
+        <target>Plan</target>
       </trans-unit>
       <trans-unit id="CJMLQdZ" resname="Côtes&amp;nbsp;d'Azur">
         <source>Côtes&amp;nbsp;d'Azur</source>
-        <target><![CDATA[__Côtes&nbsp;d'Azur]]></target>
+        <target><![CDATA[Côtes&nbsp;d'Azur]]></target>
       </trans-unit>
       <trans-unit id="OigqVoG" resname="You need more information?">
         <source>You need more information?</source>
-        <target>__You need more information?</target>
+        <target>¿Necesita más información?</target>
       </trans-unit>
       <trans-unit id="0wMwuDy" resname="Consult the FAQ">
         <source>Consult the FAQ</source>
-        <target>__Consult the FAQ</target>
+        <target>Consulte las FAQ</target>
       </trans-unit>
       <trans-unit id="FPz28o7" resname="Follow us">
         <source>Follow us</source>
-        <target>__Follow us</target>
+        <target>Síguenos</target>
       </trans-unit>
       <trans-unit id="ZK6Uwj1" resname="Type de logement">
         <source>Type de logement</source>
-        <target>__Type de logement</target>
+        <target>Tipo de alojamiento</target>
       </trans-unit>
       <trans-unit id="kvdWHE2" resname="Appartement">
         <source>Appartement</source>
-        <target>__Appartement</target>
+        <target>Plano</target>
       </trans-unit>
       <trans-unit id="CfYkImZ" resname="More information">
         <source>More information</source>
-        <target>__More information</target>
+        <target>Más información</target>
       </trans-unit>
       <trans-unit id="B4bOyY1" resname="Demande de contact">
         <source>Demande de contact</source>
-        <target>Solicitud de contacto</target>
+        <target>Póngase en contacto con nosotros</target>
       </trans-unit>
       <trans-unit id="2v52lEY" resname="Hello,">
         <source>Hello,</source>
-        <target>Holà</target>
+        <target>Hola,</target>
       </trans-unit>
       <trans-unit id="tzU9Rat" resname="Contact Request">
         <source>Contact Request</source>
-        <target>__Contact Request</target>
+        <target>Póngase en contacto con nosotros</target>
       </trans-unit>
       <trans-unit id="NoVeTVt" resname="Solicitud de contacto">
         <source>Solicitud de contacto</source>
-        <target>__Solicitud de contacto</target>
+        <target>Solicitud de contacto</target>
       </trans-unit>
       <trans-unit id="_DINcEj" resname="Hola,">
         <source>Hola,</source>
-        <target>__Hola,</target>
+        <target>Hola,</target>
       </trans-unit>
       <trans-unit id="LG8wVbD" resname="Find a place to stay, discover our activities and services, or suggest your own accommodation! Our team is on hand 7 days a week to help you by phone, e-mail or chat. We're here to answer all your questions 24 hours a day.">
         <source>Find a place to stay, discover our activities and services, or suggest your own accommodation! Our team is on hand 7 days a week to help you by phone, e-mail or chat. We're here to answer all your questions 24 hours a day.</source>
-        <target>__Find a place to stay, discover our activities and services, or suggest your own accommodation! Our team is on hand 7 days a week to help you by phone, e-mail or chat. We're here to answer all your questions 24 hours a day.</target>
+        <target>Encuentre un lugar donde alojarse, descubra nuestras actividades y servicios, o sugiera su propio alojamiento. Nuestro equipo está disponible los 7 días de la semana para ayudarle por teléfono, correo electrónico o chat. Estamos aquí para responder a todas sus preguntas las 24 horas del día.</target>
       </trans-unit>
       <trans-unit id="D6WZCnb" resname="Are you traveller ?">
         <source>Are you traveller ?</source>
-        <target>__Are you traveller ?</target>
+        <target>¿Es usted viajero?</target>
       </trans-unit>
       <trans-unit id="t46tGR4" resname="Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.">
         <source>Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.</source>
-        <target>__Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.</target>
+        <target>Nuestro equipo vive sobre el terreno, por lo que conoce al dedillo su futuro destino y las experiencias que puede ofrecerle. Aproveche su experiencia y cree con ellos un viaje a la medida de sus deseos.</target>
       </trans-unit>
       <trans-unit id="nmpJWDF" resname="Quartier géographique :">
         <source>Quartier géographique :</source>
-        <target>__Quartier géographique :</target>
+        <target>Zona geográfica :</target>
       </trans-unit>
       <trans-unit id="dlP5dVW" resname="Voir sur Google Maps">
         <source>Voir sur Google Maps</source>
-        <target>__Voir sur Google Maps</target>
+        <target>Ver en Google Maps</target>
       </trans-unit>
       <trans-unit id="h8eNPv7" resname="Indulge yourself with unique and unforgettable activities selected and tested by our team.">
         <source>Indulge yourself with unique and unforgettable activities selected and tested by our team.</source>
-        <target>__Indulge yourself with unique and unforgettable activities selected and tested by our team.</target>
+        <target>Regálese actividades únicas e inolvidables seleccionadas y probadas por nuestro equipo.</target>
       </trans-unit>
       <trans-unit id="i4uhU1R" resname="Throughout the year, they are on hand to ensure you have the best possible stay. They're the ones who make sure your vacation runs smoothly, so you can rely on them to personalize your stay just the way you want it. An in-home chef for a candlelit dinner in your rental? Breakfast delivered to the foot of your bed? A yoga class on your terrace? Personalize your stay and book activities tested by us:">
         <source>Throughout the year, they are on hand to ensure you have the best possible stay. They're the ones who make sure your vacation runs smoothly, so you can rely on them to personalize your stay just the way you want it. An in-home chef for a candlelit dinner in your rental? Breakfast delivered to the foot of your bed? A yoga class on your terrace? Personalize your stay and book activities tested by us:</source>
-        <target>__Throughout the year, they are on hand to ensure you have the best possible stay. They're the ones who make sure your vacation runs smoothly, so you can rely on them to personalize your stay just the way you want it. An in-home chef for a candlelit dinner in your rental? Breakfast delivered to the foot of your bed? A yoga class on your terrace? Personalize your stay and book activities tested by us:</target>
+        <target>Durante todo el año, están a su disposición para garantizarle la mejor estancia posible. Son ellos quienes se encargan de que sus vacaciones transcurran sin contratiempos, así que puede contar con ellos para personalizar su estancia exactamente como la desea. ¿Un chef a domicilio para una cena a la luz de las velas en su alojamiento? ¿Un desayuno a los pies de la cama? ¿Una clase de yoga en su terraza? Personalice su estancia y reserve las actividades que hemos probado:</target>
       </trans-unit>
       <trans-unit id="cY9f2aB" resname="With LES VILLAS BLUE, renting your home has never been easier. Set your own terms and conditions, leave the management to our team and we'll advertise your property simultaneously with our partners: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.">
         <source>With LES VILLAS BLUE, renting your home has never been easier. Set your own terms and conditions, leave the management to our team and we'll advertise your property simultaneously with our partners: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.</source>
-        <target>__With LES VILLAS BLUE, renting your home has never been easier. Set your own terms and conditions, leave the management to our team and we'll advertise your property simultaneously with our partners: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.</target>
+        <target>Con LES VILLAS BLUE, alquilar su vivienda nunca ha sido tan fácil. Defina sus propias condiciones, deje la gestión en manos de nuestro equipo y simultáneamente anunciaremos su propiedad con nuestros socios: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... sin coste adicional.</target>
       </trans-unit>
       <trans-unit id="lMf2sJn" resname="With a team of concierge travel and hospitality experts, we visit, check and evaluate your accommodation before accepting it for management and launching its worldwide distribution.">
         <source>With a team of concierge travel and hospitality experts, we visit, check and evaluate your accommodation before accepting it for management and launching its worldwide distribution.</source>
-        <target>__With a team of concierge travel and hospitality experts, we visit, check and evaluate your accommodation before accepting it for management and launching its worldwide distribution.</target>
+        <target>Con un equipo de expertos en viajes y hostelería, visitamos, comprobamos y evaluamos su alojamiento antes de aceptarlo para su gestión y ponerlo en distribución mundial.</target>
       </trans-unit>
       <trans-unit id="OnhpU4i" resname="Home">
         <source>Home</source>
-        <target>__Home</target>
+        <target>Inicio</target>
       </trans-unit>
       <trans-unit id="M016S71" resname="Travellers">
         <source>Travellers</source>
-        <target>__Travellers</target>
+        <target>Viajeros</target>
       </trans-unit>
       <trans-unit id="jGvAmVN" resname="Blog">
         <source>Blog</source>
-        <target>__Blog</target>
+        <target>Blog</target>
       </trans-unit>
       <trans-unit id="K1w9JnI" resname="Contact">
         <source>Contact</source>
-        <target>__Contact</target>
+        <target>Contacto</target>
+      </trans-unit>
+      <trans-unit id="fEw07zz" resname="Discover our blog">
+        <source>Discover our blog</source>
+        <target>Descubre tu blog</target>
+      </trans-unit>
+      <trans-unit id="UGCFITG" resname="Keep up to date with Villas Blue news and must-haves !">
+        <source>Keep up to date with Villas Blue news and must-haves !</source>
+        <target>¡Manténgase al día con las noticias y lo esencial de Villas Blue!</target>
+      </trans-unit>
+      <trans-unit id="mIRKPcW" resname="Published :">
+        <source>Published :</source>
+        <target>Publicado el :</target>
+      </trans-unit>
+      <trans-unit id="1w5AoHR" resname="Read the article">
+        <source>Read the article</source>
+        <target>Leer el artículo</target>
+      </trans-unit>
+      <trans-unit id="SazmA7O" resname="We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.">
+        <source>We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.</source>
+        <target>Utilizamos cookies para garantizar el correcto funcionamiento del sitio. Al continuar navegando, autoriza el uso de cookies.</target>
+      </trans-unit>
+      <trans-unit id="ivNBsAl" resname="GET ONLINE: In 1 click, your accommodation on LESVILLASBLUE.COM!&lt;/h3&gt;&#10;                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!">
+        <source>GET ONLINE: In 1 click, your accommodation on LESVILLASBLUE.COM!&lt;/h3&gt;
+                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!</source>
+        <target><![CDATA[EN LÍNEA: ¡En 1 clic, su alojamiento en LESVILLASBLUE.COM!</h3>
+                    <p>Descubra todos nuestros servicios adaptados a sus necesidades y encuentre la fórmula ideal con LES VILLAS BLUE. Reciba una visita de inspección y evaluación de su alojamiento por parte de uno de nuestros conserjes, expertos en viajes, inmobiliaria y hostelería. ¡Detallen juntos sus condiciones y fijen sus tarifas para que puedan aprobar su inscripción en nuestro catálogo!]]></target>
+      </trans-unit>
+      <trans-unit id="MAGQk88" resname="Entrust the management and marketing of your property to our team! Increase your revenues by 40% and your rates by 26% with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).">
+        <source>Entrust the management and marketing of your property to our team! Increase your revenues by 40% and your rates by 26% with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).</source>
+        <target>¡Confíe la gestión y comercialización de su propiedad a nuestro equipo! Aumente sus ingresos en un 40% y sus tarifas en un 26% con nuestro servicio fotográfico premium de fotógrafos especializados en inmobiliaria y turismo online. Gestionamos todo, incluida la difusión simultánea exclusiva en los sitios web de nuestros Partners: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... sin coste adicional.Benefíciese del saber hacer hotelero de nuestros conserjes que viven in situ, reciben a sus viajeros a su llegada, supervisan su estancia y mantienen su alojamiento (limpieza, lavandería...).</target>
+      </trans-unit>
+      <trans-unit id="pShYL5G" resname="We communicate each rental period transparently, so you can consult your calendar to stay at home whenever you want, and stay informed of rental activity every week. Simply collect your rents and manage your rental accounting with complete peace of mind">
+        <source>We communicate each rental period transparently, so you can consult your calendar to stay at home whenever you want, and stay informed of rental activity every week. Simply collect your rents and manage your rental accounting with complete peace of mind</source>
+        <target>Comunicamos cada periodo de alquiler de forma transparente, para que pueda consultar su calendario desde casa cuando quiera y mantenerse informado de la actividad de alquiler cada semana. Cobra tus alquileres de forma sencilla y gestiona tu contabilidad de alquileres con total tranquilidad</target>
+      </trans-unit>
+      <trans-unit id="9c_hcqM" resname="Take advantage of our exclusive partnership with Airbnb, Abritel, Booking, Google, etc.!">
+        <source>Take advantage of our exclusive partnership with Airbnb, Abritel, Booking, Google, etc.!</source>
+        <target>Aproveche nuestra asociación exclusiva con Airbnb, Abritel, Booking, Google, etc.</target>
+      </trans-unit>
+      <trans-unit id="EDnsJS1" resname="Welcome your travellers, cleaning, linen, work, assistance, concierge service.">
+        <source>Welcome your travellers, cleaning, linen, work, assistance, concierge service.</source>
+        <target>Bienvenida a sus viajeros, limpieza, ropa de cama, trabajo, asistencia, servicio de conserjería.</target>
       </trans-unit>
     </body>
   </file>
