@@ -359,8 +359,8 @@
         <source>Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.</source>
         <target>Nuestro equipo vive sobre el terreno, por lo que conoce al dedillo su futuro destino y las experiencias que puede ofrecerle. Aproveche su experiencia y cree con ellos un viaje a la medida de sus deseos.</target>
       </trans-unit>
-      <trans-unit id="nmpJWDF" resname="Quartier géographique :">
-        <source>Quartier géographique :</source>
+      <trans-unit id="nmpJWDF" resname="Geographical area :">
+        <source>Geographical area :</source>
         <target>Zona geográfica :</target>
       </trans-unit>
       <trans-unit id="dlP5dVW" resname="Voir sur Google Maps">
@@ -419,10 +419,10 @@
         <source>We use cookies to ensure that the site functions properly. By continuing your browsing, you authorise the use of cookies.</source>
         <target>Utilizamos cookies para garantizar el correcto funcionamiento del sitio. Al continuar navegando, autoriza el uso de cookies.</target>
       </trans-unit>
-      <trans-unit id="ivNBsAl" resname="GET ONLINE: In 1 click, your accommodation on LESVILLASBLUE.COM!&lt;/h3&gt;&#10;                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!">
-        <source>GET ONLINE: In 1 click, your accommodation on LESVILLASBLUE.COM!&lt;/h3&gt;
+      <trans-unit id="D3OaOVx" resname="GET ONLINE: In 1 click, your accommodation on our website!&lt;/h3&gt;&#10;                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!">
+        <source>GET ONLINE: In 1 click, your accommodation on our website!&lt;/h3&gt;
                     &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!</source>
-        <target><![CDATA[EN LÍNEA: ¡En 1 clic, su alojamiento en LESVILLASBLUE.COM!</h3>
+        <target><![CDATA[EN LÍNEA: En 1 clic, su alojamiento en nuestra página web.</h3>
                     <p>Descubra todos nuestros servicios adaptados a sus necesidades y encuentre la fórmula ideal con LES VILLAS BLUE. Reciba una visita de inspección y evaluación de su alojamiento por parte de uno de nuestros conserjes, expertos en viajes, inmobiliaria y hostelería. ¡Detallen juntos sus condiciones y fijen sus tarifas para que puedan aprobar su inscripción en nuestro catálogo!]]></target>
       </trans-unit>
       <trans-unit id=".Vyxg_0" resname="Entrust the management and marketing of your property to our team! Increase your revenues by 40 percent and your rates by 26 percent with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).">
@@ -480,6 +480,24 @@
       <trans-unit id="CpWPwi9" resname="Discover our partenaires">
         <source>Discover our partenaires</source>
         <target>Descubra nuestros socios</target>
+      </trans-unit>
+      <trans-unit id="aSY0n45" resname="GET ONLINE: In 1 click, your accommodation on our website !&lt;/h3&gt;&#10;                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!">
+        <source>GET ONLINE: In 1 click, your accommodation on our website !&lt;/h3&gt;
+                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!</source>
+        <target><![CDATA[EN LÍNEA: En 1 clic, su alojamiento en nuestra página web.</h3>
+                    <p>Descubra todos nuestros servicios adaptados a sus necesidades y encuentre la fórmula ideal con LES VILLAS BLUE. Reciba una visita de inspección y evaluación de su alojamiento por parte de uno de nuestros conserjes, expertos en viajes, inmobiliaria y hostelería. ¡Detallen juntos sus condiciones y fijen sus tarifas para que puedan aprobar su inscripción en nuestro catálogo!]]></target>
+      </trans-unit>
+      <trans-unit id="28RooUt" resname="FAQ">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </trans-unit>
+      <trans-unit id="l_Pqj8L" resname="WE ARE CONSTANTLY CONCERNED ABOUT THE WELL-BEING OF OUR TRAVELLERS, WHICH IS WHY YOUR ARRIVAL WILL BE WELL LOOKED AFTER">
+        <source>WE ARE CONSTANTLY CONCERNED ABOUT THE WELL-BEING OF OUR TRAVELLERS, WHICH IS WHY YOUR ARRIVAL WILL BE WELL LOOKED AFTER</source>
+        <target>NOS PREOCUPAMOS CONSTANTEMENTE POR EL BIENESTAR DE NUESTROS VIAJEROS, POR LO QUE SU LLEGADA ESTARÁ BIEN ATENDIDA</target>
+      </trans-unit>
+      <trans-unit id="qn0KHDB" resname="Basic necessities, baby equipment, housekeeping, concierge service...">
+        <source>Basic necessities, baby equipment, housekeeping, concierge service...</source>
+        <target>Necesidades básicas, equipamiento para bebés, limpieza, servicio de conserjería...</target>
       </trans-unit>
     </body>
   </file>

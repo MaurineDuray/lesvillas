@@ -18,7 +18,7 @@
                 <h2>{{immo.Titre}}</h2>
             {% endif %}
         <p>
-            {% trans %}Quartier géographique : {% endtrans %} {{immo.quartier}} <br><i class="fa-solid fa-location-dot"></i> <a href="{{immo.maps}}" target="_blank">{% trans %} Voir sur Google Maps{% endtrans %}</a>
+            {% trans %}Geographical area : {% endtrans %} {{immo.quartier}} <br><i class="fa-solid fa-location-dot"></i> <a href="{{immo.maps}}" target="_blank">{% trans %} Voir sur Google Maps{% endtrans %}</a>
         </p>
         <div class="caract">
             <div class="travellers">
@@ -82,8 +82,8 @@
     </div>
 
     <div class="textIntro">
-        <p>WE ARE CONSTANTLY CONCERNED ABOUT THE WELL-BEING OF OUR TRAVELLERS, WHICH IS WHY YOUR ARRIVAL WILL BE WELL LOOKED AFTER</p>
-        <p>Basic necessities, baby equipment, housekeeping, concierge service...</p>
+        <p>{% trans %}WE ARE CONSTANTLY CONCERNED ABOUT THE WELL-BEING OF OUR TRAVELLERS, WHICH IS WHY YOUR ARRIVAL WILL BE WELL LOOKED AFTER{% endtrans %}</p>
+        <p>{% trans %}Basic necessities, baby equipment, housekeeping, concierge service...{% endtrans %}</p>
     </div>
 
     <div class="contentLogement">
@@ -160,11 +160,21 @@
         <p style="text-align: center" class="script">{% trans %}Fill in the form and we'll get back to you as soon as possible!{% endtrans %}</p>
         
         {{form_start(myform)}}
-            {{form_widget(myform)}}
-            <div class="alertdate"></div>
-            <p>{% trans %}The charge for the addition of a baby chair and cot is 25€.{% endtrans %}</p>
-            <p>{% trans %}The fee for the addition of a high chair is 15€.{% endtrans %}</p>
+            {{form_row(myform.name)}}
+            {{form_row(myform.email)}}
+            {{form_row(myform.phone)}}
+            {{form_row(myform.arrival)}}
+            {{form_row(myform.departure)}}
+            {{form_row(myform.animal)}}
             <p>{% trans %}The fee for pets is €50/day per animal.{% endtrans %}</p>
+            {{form_row(myform.nbAnimals)}}
+            {{form_row(myform.adults)}}
+            {{form_row(myform.kids)}}
+            {{form_row(myform.kidbed)}}
+              <p>{% trans %}The charge for the addition of a baby chair and cot is 25€.{% endtrans %}</p>
+              <p>{% trans %}The fee for the addition of a high chair is 15€.{% endtrans %}</p>
+            {{form_row(myform.message)}}
+            <div class="alertdate"></div>
         {{form_end(myform)}}
     </div>
     {% include "partials/footer.html.twig" %}

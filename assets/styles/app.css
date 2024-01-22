@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Comfortaa:wght@300;400;500;600;700&family=Whisper&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
     --cursive: 'script';
-    --normal: 'Arapey', serif;
+    --normal: 'Roboto', sans-serif;
 }
 @font-face {
     font-family: 'script';
@@ -21,8 +21,9 @@ h1, h2, h3{
 html, body {
     width: 100vw;
     background-color: rgb(255, 255, 255);
-    font-family: 'Arapey', serif;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    font-weight: 300;
 }    
 /* Cookies */
 .cookies{
@@ -89,6 +90,7 @@ button{
     color: white;
     font-size: 15pt;
     text-decoration: none;
+    
 }
 #langue{
     padding-top: 50px !important;
@@ -123,6 +125,7 @@ nav ul li a{
     text-decoration: none;
     color: white;
     cursor: pointer;
+    font-size: 15pt;
 }
 .drapeau{
     width: 20px;
@@ -170,7 +173,7 @@ span #script{
     background-position: center center;
     background-size: cover;
     width: 100%;
-    min-height: 100vh;
+    min-height: 80vh;
     position: relative;
     display: flex;
     justify-content: center;
@@ -199,13 +202,14 @@ span #script{
 #sepDiscover h3, #sepDiscover h4, #sepDiscover p{
     width: 100% !important;
     text-align: center;
+    font-size: 18pt;
 }
 #sepDiscover h3{
     font-size: 2em;
     font-weight: 400 !important;
 }
 #sepDiscover h4{
-    font-size: 1em;
+    font-size: 15pt;
 }
 .buttons{
     margin-top: 20px;
@@ -436,6 +440,7 @@ span #script{
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100% 30vh;
+    background-size: cover;
 }
 #eventsHome h3{
     color: white !important;
@@ -599,7 +604,7 @@ footer{
     width: 100%;
     color: white;
 }
-@media all and (max-width: 1100px){
+@media all and (max-width: 1400px){
     nav ul{
         display: none;
     }
@@ -699,5 +704,11 @@ footer{
     }
     .reseaux p{
         margin-top: 30px !important;
+    }
+    .reseaux a{
+        color: white !important;
+    }
+    .reseaux svg{
+        color: white;
     }
 }

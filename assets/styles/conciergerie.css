@@ -7,14 +7,17 @@
     margin-top: 50px;
     width: 100%;
     text-align: center;
+    
 }
 #conciergerieText p{
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+    font-size: 15pt;
 }
 #conciergerieText .script{
     margin-bottom: 30px;
+    font-size: 18pt;
 }
 #formulaireConc{
     width: 80%;
@@ -28,6 +31,7 @@
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
+    
 }
 #addConciergerie{
     background-color:rgba(8, 196, 217, 0.1) ;

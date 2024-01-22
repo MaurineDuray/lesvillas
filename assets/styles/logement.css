@@ -205,6 +205,11 @@
     line-height: 0;
 }
 
+/* agenda */
+.st-c-pos{
+    background-color: aqua !important;
+}
+
 @media all and (max-width: 850px){
     .textIntro{
         margin-top: 20px;

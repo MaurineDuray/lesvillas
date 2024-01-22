@@ -9,6 +9,7 @@
     <li><a href="{{path('about')}}">{% trans %}Travellers{% endtrans %}</a></li>
     <li><a href="{{path('blog')}}">{% trans %}Blog{% endtrans %}</a></li>
     <li><a href="{{path('contact')}}">{% trans %}Contact{% endtrans %}</a></li>
+    <li><a href="{{path('faq')}}">{% trans %}FAQ{% endtrans %}</a></li>
     <li class="sous-menu" style="cursor:pointer">{% trans %}Language<span style="font-size: 9pt"> ▼</span>{% endtrans %}
       <ul class="deroulant">
       {% for locale in locales %}
@@ -38,6 +39,8 @@
     <li><a href="{{path('about')}}">{% trans %}Travellers{% endtrans %}</a></li>
     <li><a href="{{path('blog')}}">{% trans %}Blog{% endtrans %}</a></li>
     <li><a href="{{path('contact')}}">{% trans %}Contact{% endtrans %}</a></li>
+    <li><a href="{{path('faq')}}">{% trans %}FAQ{% endtrans %}</a></li>
+
     
     <li id="langue">
      {% for locale in locales %}

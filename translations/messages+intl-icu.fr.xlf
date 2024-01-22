@@ -43,11 +43,11 @@
       </trans-unit>
       <trans-unit id="jp4mwu_" resname="Florida">
         <source>Florida</source>
-        <target>Florida</target>
+        <target>Floride</target>
       </trans-unit>
       <trans-unit id="imcjI6O" resname="Featured properties in Florida">
         <source>Featured properties in Florida</source>
-        <target>Logement à la une en Florida</target>
+        <target>Logement à la une en Floride</target>
       </trans-unit>
       <trans-unit id="rUL4xUf" resname="Discover all our homes in Florida...">
         <source>Discover all our homes in Florida...</source>
@@ -255,7 +255,7 @@
       </trans-unit>
       <trans-unit id="OVNHSyc" resname="Join the Villas Blue collection!">
         <source>Join the Villas Blue collection!</source>
-        <target>Rejoignez la collection Villas Blue !</target>
+        <target>Rejoignez la collection Les Villas Blue !</target>
       </trans-unit>
       <trans-unit id="F1Gm8mf" resname="Our VILLAS BLUE agency will take care of all the administrative aspects of letting your property on a seasonal basis: &#10;        drafting contracts, managing the schedule, monitoring payments and reminders (from the deposit to the security deposit).&#10;        Enjoy the freedom of renting without constraints and benefit from our experience and expertise!">
         <source>Our VILLAS BLUE agency will take care of all the administrative aspects of letting your property on a seasonal basis: 
@@ -371,8 +371,8 @@
         <source>Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.</source>
         <target>Notre équipe vit sur place, elle connaît donc votre future destination et les expériences à vivre sur le bout des doigts. Profitez de leur expertise et créez un voyage sur mesure selon vos envies avec eux.</target>
       </trans-unit>
-      <trans-unit id="nmpJWDF" resname="Quartier géographique :">
-        <source>Quartier géographique :</source>
+      <trans-unit id="nmpJWDF" resname="Geographical area :">
+        <source>Geographical area :</source>
         <target>Quartier géographique :</target>
       </trans-unit>
       <trans-unit id="dlP5dVW" resname="Voir sur Google Maps">
@@ -417,7 +417,7 @@
       </trans-unit>
       <trans-unit id="UGCFITG" resname="Keep up to date with Villas Blue news and must-haves !">
         <source>Keep up to date with Villas Blue news and must-haves !</source>
-        <target>Restez informé des actualités et des incontournables de Villas Blue !</target>
+        <target>Restez informé des actualités et des incontournables Les Villas Blue !</target>
       </trans-unit>
       <trans-unit id="mIRKPcW" resname="Published :">
         <source>Published :</source>
@@ -427,11 +427,11 @@
         <source>Read the article</source>
         <target>Lire l'article</target>
       </trans-unit>
-      <trans-unit id="ivNBsAl" resname="GET ONLINE: In 1 click, your accommodation on LESVILLASBLUE.COM!&lt;/h3&gt;&#10;                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!">
-        <source>GET ONLINE: In 1 click, your accommodation on LESVILLASBLUE.COM!&lt;/h3&gt;
+      <trans-unit id="aSY0n45" resname="GET ONLINE: In 1 click, your accommodation on our website !&lt;/h3&gt;&#10;                    &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!">
+        <source>GET ONLINE: In 1 click, your accommodation on our website !&lt;/h3&gt;
                     &lt;p&gt;Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!</source>
-        <target><![CDATA[GET ONLINE : En 1 clic, votre logement sur LESVILLASBLUE.COM !</h3>
-                    <p>Discover all our services tailored to your needs and find the ideal formula with LES VILLAS BLUE. Receive an inspection and evaluation visit of your accommodation from one of our concierges, experts in travel, real estate and hospitality. Detail your conditions and set your rates together so that they can approve your listing in our catalog!]]></target>
+        <target><![CDATA[ÊTRE EN LIGNE : En 1 clic, votre logement sur notre site !</h3>
+                    <p>Découvrez tous nos services adaptés à vos besoins et trouvez la formule idéale avec LES VILLAS BLUE. Recevez une visite d'inspection et d'évaluation de votre logement par l'un de nos concierges, experts en voyage, en immobilier et en hôtellerie. Détaillez vos conditions et fixez ensemble vos tarifs afin qu'ils approuvent votre inscription à notre catalogue !]]></target>
       </trans-unit>
       <trans-unit id=".Vyxg_0" resname="Entrust the management and marketing of your property to our team! Increase your revenues by 40 percent and your rates by 26 percent with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).">
         <source>Entrust the management and marketing of your property to our team! Increase your revenues by 40 percent and your rates by 26 percent with our premium photo service from photographers specialized in real estate and online tourism. We manage everything, including exclusive simultaneous broadcasting on our Partners' websites: Google Voyage, Airbnb, Booking, Abritel, Tripadvisor... at no extra cost.Benefit from the hotel-quality know-how of our concierges who live on site, welcome your travelers on arrival, supervise their stay and maintain your accommodation (cleaning, laundry...).</source>
@@ -488,6 +488,18 @@
       <trans-unit id="CpWPwi9" resname="Discover our partenaires">
         <source>Discover our partenaires</source>
         <target>Découvrir nos partenaires</target>
+      </trans-unit>
+      <trans-unit id="28RooUt" resname="FAQ">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </trans-unit>
+      <trans-unit id="l_Pqj8L" resname="WE ARE CONSTANTLY CONCERNED ABOUT THE WELL-BEING OF OUR TRAVELLERS, WHICH IS WHY YOUR ARRIVAL WILL BE WELL LOOKED AFTER">
+        <source>WE ARE CONSTANTLY CONCERNED ABOUT THE WELL-BEING OF OUR TRAVELLERS, WHICH IS WHY YOUR ARRIVAL WILL BE WELL LOOKED AFTER</source>
+        <target>NOUS SOMMES CONSTAMMENT SOUCIEUX DU BIEN-ÊTRE DE NOS VOYAGEURS, C'EST POURQUOI VOTRE ARRIVÉE SERA SOIGNÉE.</target>
+      </trans-unit>
+      <trans-unit id="qn0KHDB" resname="Basic necessities, baby equipment, housekeeping, concierge service...">
+        <source>Basic necessities, baby equipment, housekeeping, concierge service...</source>
+        <target>Produits de première nécessité, équipement pour bébé, ménage, service de conciergerie...</target>
       </trans-unit>
     </body>
   </file>
