@@ -19,6 +19,8 @@
     <h1 style="text-align: center">Ajout d'un article</h1>
          {{form_start(myform)}}
                   {{form_widget(myform)}}
+                  {# {{ form_row(myform.textFr, {'attr': {'class': 'ckeditor'}}) }}
+                    {{ ckeditor_assets() }} #}
         {{form_end(myform)}}
     </div>
     {% include "partials/footer.html.twig" %}

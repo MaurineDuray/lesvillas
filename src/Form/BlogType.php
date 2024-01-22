@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Blog;
 use Symfony\Component\Form\AbstractType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -34,18 +35,36 @@ class BlogType extends AbstractType
                     'placeholder' => "Titre en espagnol"
                 ]
             ])
+            // ->add('textFr', CKEditorType::class, [
+            //     'label'=> "Contenu en français",
+            //     'attr' =>[
+            //         'placeholder' => "Contenu en français"
+            //     ]
+            // ])
             ->add('textFr', TextareaType::class, [
                 'label'=> "Contenu en français",
                 'attr' =>[
                     'placeholder' => "Contenu en français"
                 ]
             ])
+            // ->add('textEn', CKEditorType::class, [
+            //     'label'=> "Contenu en anglais",
+            //     'attr' =>[
+            //         'placeholder' => "Contenu en anglais"
+            //     ]
+            // ])
             ->add('textEn', TextareaType::class, [
                 'label'=> "Contenu en anglais",
                 'attr' =>[
                     'placeholder' => "Contenu en anglais"
                 ]
             ])
+            // ->add('textEs', CKEditorType::class, [
+            //     'label'=> "Contenu en Espagnol",
+            //     'attr' =>[
+            //         'placeholder' => "Contenu en Espagnol"
+            //     ]
+            // ])
             ->add('textEs', TextareaType::class, [
                 'label'=> "Contenu en espagnol",
                 'attr' =>[
