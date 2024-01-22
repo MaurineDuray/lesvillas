@@ -16,16 +16,17 @@ class SearchType extends AbstractType
         ->add('search', TextType::class, [
             'label' => false,
             'attr' => [
+                'label'=>'Rechercher',
                 'class' => 'form-control',
                 'id'=>'inputsearch',
                 'placeholder' => 'Rechercher / Research / Buscar'
             ]
-        ])
-        ->add('Research', SubmitType::class, [
-            'attr' => [
-                'class' => 'btn btn-warning',
-            ]
-        ]);
+            ]);
+        // ->add('Research', SubmitType::class, [
+        //     'attr' => [
+        //         'class' => 'btn btn-warning',
+        //     ]
+        // ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

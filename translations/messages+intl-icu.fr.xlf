@@ -371,7 +371,7 @@
         <source>Our team lives on site, so they know your future destination and the experiences to be had there inside out. Take advantage of their expertise and create a trip tailored to your desires with them.</source>
         <target>Notre équipe vit sur place, elle connaît donc votre future destination et les expériences à vivre sur le bout des doigts. Profitez de leur expertise et créez un voyage sur mesure selon vos envies avec eux.</target>
       </trans-unit>
-      <trans-unit id="nmpJWDF" resname="Geographical area :">
+      <trans-unit id="lVoKFEK" resname="Geographical area :">
         <source>Geographical area :</source>
         <target>Quartier géographique :</target>
       </trans-unit>
@@ -500,6 +500,10 @@
       <trans-unit id="qn0KHDB" resname="Basic necessities, baby equipment, housekeeping, concierge service...">
         <source>Basic necessities, baby equipment, housekeeping, concierge service...</source>
         <target>Produits de première nécessité, équipement pour bébé, ménage, service de conciergerie...</target>
+      </trans-unit>
+      <trans-unit id="NrR5YM0" resname="See on Google Maps">
+        <source>See on Google Maps</source>
+        <target>Voir sur Google Maps</target>
       </trans-unit>
     </body>
   </file>

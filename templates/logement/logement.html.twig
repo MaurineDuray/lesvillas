@@ -4,9 +4,10 @@
 
 {% block body %}
     <div class="slide" id="introGalery">
-         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo">
+         <img id="intro-logo" src="{{asset('images/logo-03.png')}}" alt="Logo" style="z-index: 50">
         <div class="sep">
             <img src="{{asset('images/blue-sep.png')}}" alt="separation">
+            <img src="../../upload/{{immo.cover}}" alt="image du logement {{immo.titre}}" key="0">
         </div>
     </div>
     <div class="titleLogement">
@@ -18,7 +19,7 @@
                 <h2>{{immo.Titre}}</h2>
             {% endif %}
         <p>
-            {% trans %}Geographical area : {% endtrans %} {{immo.quartier}} <br><i class="fa-solid fa-location-dot"></i> <a href="{{immo.maps}}" target="_blank">{% trans %} Voir sur Google Maps{% endtrans %}</a>
+            {% trans %}Geographical area : {% endtrans %} {{immo.quartier}} <br><i class="fa-solid fa-location-dot"></i> <a href="{{immo.maps}}" target="_blank">{% trans %} See on Google Maps{% endtrans %}</a>
         </p>
         <div class="caract">
             <div class="travellers">
@@ -166,8 +167,8 @@
             {{form_row(myform.arrival)}}
             {{form_row(myform.departure)}}
             {{form_row(myform.animal)}}
-            <p>{% trans %}The fee for pets is €50/day per animal.{% endtrans %}</p>
             {{form_row(myform.nbAnimals)}}
+            <p>{% trans %}The fee for pets is €50/day per animal.{% endtrans %}</p>
             {{form_row(myform.adults)}}
             {{form_row(myform.kids)}}
             {{form_row(myform.kidbed)}}
@@ -175,6 +176,9 @@
               <p>{% trans %}The fee for the addition of a high chair is 15€.{% endtrans %}</p>
             {{form_row(myform.message)}}
             <div class="alertdate"></div>
+          
+            
+            
         {{form_end(myform)}}
     </div>
     {% include "partials/footer.html.twig" %}

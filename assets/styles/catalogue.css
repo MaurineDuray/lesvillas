@@ -16,6 +16,13 @@
     width: 100%;
     text-align: center;
 }
+#searching{
+    background-color: #024959;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
 .galery{
     padding-top: 30px;
     display: flex;

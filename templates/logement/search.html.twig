@@ -13,9 +13,20 @@
         <h2>{% trans %}Welcome !{% endtrans %}</h2>
         <h2>{% trans %}Are you looking for specific accommodation?{% endtrans %}</h2>
         {{form_start(search)}}
+            {{form_row(search.search)}}
+            {% if app.request.locale == "en" %}
+                <input type="submit" id="searching" class="btn btn-warning" value="Research">
+            {% elseif app.request.locale == "es" %}
+                <input type="submit" id="searching" class="btn btn-warning" value="Buscar">
+            {% else %}
+                <input type="submit" id="searching" class="btn btn-warning" value="Rechercher">
+            {% endif %}
         {{form_end(search)}}
+
         {% if app.request.locale =="en" %}
             {% include "partials/filterEn.html.twig" %} 
+        {% elseif app.request.locale =="es" %}
+            {% include "partials/filterEs.html.twig" %} 
         {% else %}
             {% include "partials/filter.html.twig" %} 
         {% endif %}
